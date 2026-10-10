@@ -84,9 +84,11 @@ async function loadAll() {
     }
   }
   S.dates = [...dateSet].sort();
-  const cs = $('#citySel');
-  cs.innerHTML = '<option value="">全台灣</option>' +
-    Object.keys(S.cities).sort(cmpCity).map(c => `<option value="${esc(c)}">${esc(c)}</option>`).join('');
+  // 縣市下拉
+  ddCity.setOptions([{ value: '', label: '全台灣' },
+    ...Object.keys(S.cities).sort(cmpCity).map(c => ({ value: c, label: c }))]);
+  ddDist.setOptions([{ value: '', label: '全部區' }]);
+  ddDist.disable();
   const a = $('#dStart'), b = $('#dEnd');
   a.min = S.dates[0]; a.max = S.dates[S.dates.length - 1];
   b.min = S.dates[0]; b.max = S.dates[S.dates.length - 1];
@@ -367,6 +369,85 @@ function setupStickyFilters() {
   });
 }
 
+/* ---------- 自定義下拉選單(主題融合,不彈系統選單) ---------- */
+function closeAllDropdowns() {
+  document.querySelectorAll('.dd.open').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.dd-btn').setAttribute('aria-expanded', 'false');
+  });
+}
+function makeDropdown(rootId, { placeholder, onSelect }) {
+  const root = document.getElementById(rootId);
+  const btn = root.querySelector('.dd-btn');
+  const label = root.querySelector('.dd-label');
+  const search = root.querySelector('.dd-search input');
+  const list = root.querySelector('.dd-list');
+  let options = [];
+  let value = '';
+  let enabled = true;
+
+  function renderOpts() {
+    const f = search.value.trim();
+    const shown = options.filter(o => !f || o.label.includes(f));
+    list.innerHTML = shown.map(o => `
+      <button type="button" class="dd-opt${o.value === value ? ' sel' : ''}" data-v="${esc(o.value)}" role="option" aria-selected="${o.value === value}">
+        <span>${esc(o.label)}</span>
+        ${o.value === value ? '<svg class="dd-check" viewBox="0 0 16 16"><path d="M3 8.5 6.5 12 13 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
+      </button>`).join('') || '<div class="dd-empty">沒有符合的選項</div>';
+  }
+  function applyValue(v, fire) {
+    value = v;
+    const o = options.find(x => x.value === v);
+    label.textContent = o ? o.label : placeholder;
+    renderOpts();
+    if (fire) onSelect(v);
+  }
+  function open() {
+    if (!enabled) return;
+    closeAllDropdowns();
+    root.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    search.value = '';
+    renderOpts();
+    setTimeout(() => search.focus(), 60);
+  }
+  function close() {
+    root.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    root.classList.contains('open') ? close() : open();
+  });
+  list.addEventListener('click', e => {
+    const b = e.target.closest('.dd-opt');
+    if (!b) return;
+    applyValue(b.dataset.v, true);
+    close();
+    btn.focus();
+  });
+  search.addEventListener('input', renderOpts);
+  search.addEventListener('click', e => e.stopPropagation());
+  search.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { close(); btn.focus(); }
+    e.stopPropagation();
+  });
+  return {
+    setOptions(opts) { options = opts; renderOpts(); },
+    setValue(v) { applyValue(v, false); },
+    getValue: () => value,
+    select: v => applyValue(v, true),
+    enable() { enabled = true; root.classList.remove('disabled'); },
+    disable() { enabled = false; root.classList.add('disabled'); close(); },
+  };
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.dd')) closeAllDropdowns();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeAllDropdowns();
+});
+
 function updateSummary() {
   const r = $('#fsRange'), g = $('#fsRegion');
   if (!r || !g) return;
@@ -378,6 +459,7 @@ function updateSummary() {
   g.textContent = region;
 }
 
+let ddCity = null, ddDist = null;
 function bindUI() {
   $('#themeToggle').addEventListener('click', () => {
     const next = isLight() ? 'dark' : 'light';
@@ -406,25 +488,33 @@ function bindUI() {
   };
   $('#dStart').addEventListener('change', customGo);
   $('#dEnd').addEventListener('change', customGo);
-  $('#citySel').addEventListener('change', async e => {
-    S.city = e.target.value; S.district = '';
-    const ds = $('#distSel');
-    if (S.city && S.cities[S.city]) {
-      ds.innerHTML = '<option value="">全部區</option>' + S.cities[S.city].map(d => `<option value="${esc(d)}">${esc(d)}</option>`).join('');
-      ds.disabled = false;
-    } else {
-      ds.innerHTML = '<option value="">全部區</option>'; ds.disabled = true;
-    }
-    await render();
+  ddCity = makeDropdown('ddCity', {
+    placeholder: '全台灣',
+    onSelect: async v => {
+      S.city = v; S.district = '';
+      if (v && S.cities[v]) {
+        ddDist.setOptions([{ value: '', label: '全部區' },
+          ...S.cities[v].map(d => ({ value: d, label: d }))]);
+        ddDist.enable();
+      } else {
+        ddDist.setOptions([{ value: '', label: '全部區' }]);
+        ddDist.disable();
+      }
+      ddDist.setValue('');
+      await render();
+    },
   });
-  $('#distSel').addEventListener('change', async e => { S.district = e.target.value; await render(); });
+  ddDist = makeDropdown('ddDist', {
+    placeholder: '全部區',
+    onSelect: async v => { S.district = v; await render(); },
+  });
 }
 
 (async function init() {
   initTheme();
   chartDefaults();
-  await loadAll();
   bindUI();
+  await loadAll();
   setupStickyFilters();
   await render();
 })();
