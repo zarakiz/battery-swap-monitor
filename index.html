@@ -7,7 +7,7 @@
 <meta name="description" content="每日監測 Gogoro GoStation 與 Ionex 換電站的增減變化：7/30/90 天趨勢折線圖、行政區篩選到區級。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='11' fill='%23CDEB4D'/%3E%3Cpath d='M7 22h7l3.5-9 4.5 16 3.5-11 2.5 4H33' fill='none' stroke='%230B100C' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css?v=20261010i">
+<link rel="stylesheet" href="styles.css?v=20261010j">
 </head>
 <body>
 <header class="topbar">
@@ -61,8 +61,32 @@
         地區
       </span>
       <div class="sel-row">
-        <select id="citySel" aria-label="縣市"><option value="">全台灣</option></select>
-        <select id="distSel" aria-label="區" disabled><option value="">全部區</option></select>
+        <div class="dd" id="ddCity">
+          <button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="選擇縣市">
+            <span class="dd-label">全台灣</span>
+            <svg class="dd-chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <div class="dd-pop">
+            <div class="dd-search">
+              <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <input type="text" placeholder="搜尋縣市…" aria-label="搜尋縣市">
+            </div>
+            <div class="dd-list" role="listbox"></div>
+          </div>
+        </div>
+        <div class="dd" id="ddDist">
+          <button type="button" class="dd-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="選擇區域">
+            <span class="dd-label">全部區</span>
+            <svg class="dd-chev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <div class="dd-pop">
+            <div class="dd-search">
+              <svg viewBox="0 0 16 16"><circle cx="7" cy="7" r="4.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10.5 10.5 14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <input type="text" placeholder="搜尋區域…" aria-label="搜尋區域">
+            </div>
+            <div class="dd-list" role="listbox"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -128,6 +152,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="app.js?v=20261010i"></script>
+<script src="app.js?v=20261010j"></script>
 </body>
 </html>
