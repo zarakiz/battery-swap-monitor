@@ -168,7 +168,6 @@ select:disabled{opacity:.45;cursor:not-allowed}
   .filters.is-stuck .fgroup{flex-direction:row}
   .filters.is-stuck .chips{display:flex;grid-template-columns:none}
   .filters.is-stuck .sel-row{display:flex;grid-template-columns:none}
-  .filters.is-stuck .custom-range{display:flex}
   /* 手機捲動後:收成摘要列,點一下展開 */
   .filter-summary{display:none}
   .filters.is-stuck .filter-summary{
@@ -181,11 +180,11 @@ select:disabled{opacity:.45;cursor:not-allowed}
   .filter-summary .chev{width:14px;height:14px;margin-left:auto;color:var(--muted);transition:transform .2s}
   .filters.is-stuck.expanded .filter-summary .chev{transform:rotate(180deg)}
   .filters.is-stuck .fgroup{display:none}
-  .filters.is-stuck.expanded .fgroup{display:flex;flex-direction:column}
-  .filters.is-stuck.expanded{overflow:visible}
+  .filters.is-stuck.expanded{flex-wrap:wrap;overflow:visible;align-items:stretch}
+  .filters.is-stuck.expanded .fgroup{display:flex;flex-direction:column;flex:1 1 100%;min-width:0}
   .filters.is-stuck.expanded .chips{display:grid;grid-template-columns:1fr 1fr}
   .filters.is-stuck.expanded .sel-row{display:grid;grid-template-columns:1fr 1fr}
-  .filters.is-stuck.expanded .custom-range{display:grid}
+  .filters.is-stuck.expanded .custom-range:not([hidden]){display:grid}
 }
 
 /* ── 統計橫條(緊湊) ────────────────────── */
