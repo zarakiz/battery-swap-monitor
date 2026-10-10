@@ -447,6 +447,124 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeAllDropdowns();
 });
 
+/* ---------- 桌面端自訂月曆彈窗(手機保持原生日期選擇器) ---------- */
+const mqCalDesktop = matchMedia('(min-width:721px)');
+let calPop = null, calInput = null, calY = 0, calM = 0;
+const CAL_DOW = ['日', '一', '二', '三', '四', '五', '六'];
+const p2 = n => String(n).padStart(2, '0');
+const dsOf = (y, m, d) => `${y}-${p2(m + 1)}-${p2(d)}`;
+const calBounds = () => S.dates.length ? [S.dates[0], S.dates[S.dates.length - 1]] : [null, null];
+const calKeyOf = s => { const a = s.split('-').map(Number); return a[0] * 12 + a[1] - 1; };
+
+function applyCalMode() {
+  const desktop = mqCalDesktop.matches;
+  for (const id of ['dStart', 'dEnd']) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    if (desktop) { el.type = 'text'; el.readOnly = true; el.inputMode = 'none'; el.autocomplete = 'off'; }
+    else { el.type = 'date'; el.readOnly = false; }
+  }
+  if (!desktop) closeCal();
+}
+
+function openCal(input) {
+  if (!mqCalDesktop.matches) return;
+  closeCal();
+  calInput = input;
+  const [mn, mx] = calBounds();
+  let y, m;
+  const v = input.value;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(v)) { const a = v.split('-').map(Number); y = a[0]; m = a[1] - 1; }
+  else { const t = new Date(); y = t.getFullYear(); m = t.getMonth(); }
+  const key = y * 12 + m;
+  if (mn && key < calKeyOf(mn)) { const a = mn.split('-').map(Number); y = a[0]; m = a[1] - 1; }
+  if (mx && key > calKeyOf(mx)) { const a = mx.split('-').map(Number); y = a[0]; m = a[1] - 1; }
+  calY = y; calM = m;
+  calPop = document.createElement('div');
+  calPop.className = 'cal-pop';
+  calPop.setAttribute('role', 'dialog');
+  calPop.setAttribute('aria-label', '選擇日期');
+  calPop.addEventListener('click', e => {
+    const nav = e.target.closest('[data-nav]');
+    if (nav && !nav.disabled) { shiftCal(Number(nav.dataset.nav)); return; }
+    const b = e.target.closest('[data-d]');
+    if (!b || b.disabled) return;
+    const inp = calInput;
+    inp.value = b.dataset.d;
+    inp.dispatchEvent(new Event('change', { bubbles: true }));
+    closeCal();
+    inp.focus();
+  });
+  document.body.appendChild(calPop);
+  renderCal();
+  const r = input.getBoundingClientRect();
+  const pw = 272, ph = calPop.offsetHeight || 330;
+  const left = Math.max(8, Math.min(r.left, window.innerWidth - pw - 8));
+  let top = r.bottom + 6;
+  if (top + ph > window.innerHeight - 8) top = Math.max(8, r.top - ph - 6);
+  calPop.style.left = left + 'px';
+  calPop.style.top = top + 'px';
+  requestAnimationFrame(() => requestAnimationFrame(() => calPop && calPop.classList.add('open')));
+}
+
+function renderCal() {
+  if (!calPop) return;
+  const [mn, mx] = calBounds();
+  const cur = calY * 12 + calM;
+  const prevDis = !!(mn && cur <= calKeyOf(mn));
+  const nextDis = !!(mx && cur >= calKeyOf(mx));
+  const t = new Date();
+  const today = dsOf(t.getFullYear(), t.getMonth(), t.getDate());
+  const sel = calInput ? calInput.value : '';
+  const startDow = new Date(calY, calM, 1).getDay();
+  let h = `<div class="cal-head">`
+    + `<button type="button" class="cal-nbtn" data-nav="-1" aria-label="上個月"${prevDis ? ' disabled' : ''}>‹</button>`
+    + `<div class="cal-title">${calY} 年 ${calM + 1} 月</div>`
+    + `<button type="button" class="cal-nbtn" data-nav="1" aria-label="下個月"${nextDis ? ' disabled' : ''}>›</button>`
+    + `</div><div class="cal-grid">`
+    + CAL_DOW.map(d => `<div class="cal-dow">${d}</div>`).join('');
+  for (let i = 0; i < 42; i++) {
+    const dt = new Date(calY, calM, 1 - startDow + i);
+    const ds = dsOf(dt.getFullYear(), dt.getMonth(), dt.getDate());
+    const inM = dt.getMonth() === calM;
+    const dis = (mn && ds < mn) || (mx && ds > mx);
+    const c = ['cal-day'];
+    if (!inM) c.push('dim');
+    if (ds === today) c.push('today');
+    if (ds === sel) c.push('sel');
+    h += `<button type="button" class="${c.join(' ')}" data-d="${ds}"${dis ? ' disabled' : ''}>${dt.getDate()}</button>`;
+  }
+  calPop.innerHTML = h + '</div>';
+}
+
+function shiftCal(d) {
+  calM += d;
+  if (calM < 0) { calM = 11; calY--; }
+  if (calM > 11) { calM = 0; calY++; }
+  renderCal();
+}
+
+function closeCal() {
+  if (calPop) { calPop.remove(); calPop = null; }
+  calInput = null;
+}
+
+function bindCalInputs() {
+  for (const id of ['dStart', 'dEnd']) {
+    document.getElementById(id).addEventListener('click', e => {
+      if (mqCalDesktop.matches) openCal(e.currentTarget);
+    });
+  }
+  document.addEventListener('click', e => {
+    if (!calPop) return;
+    if (calPop.contains(e.target)) return;
+    if (calInput && e.target === calInput) return;
+    closeCal();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCal(); });
+  mqCalDesktop.addEventListener('change', applyCalMode);
+}
+
 function updateSummary() {
   const r = $('#fsRange'), g = $('#fsRegion');
   if (!r || !g) return;
@@ -460,6 +578,8 @@ function updateSummary() {
 
 let ddCity = null, ddDist = null;
 function bindUI() {
+  applyCalMode();
+  bindCalInputs();
   $('#themeToggle').addEventListener('click', () => {
     const next = isLight() ? 'dark' : 'light';
     document.documentElement.dataset.theme = next;
