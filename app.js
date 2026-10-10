@@ -330,7 +330,16 @@ async function renderFeed(dates) {
     total += cnt.a + cnt.r + cnt.c;
     const div = document.createElement('div');
     div.className = 'dayblock';
-    div.innerHTML = `<div class="dayhead">${esc(d)} <span class="dcount">新增 ${cnt.a}・移除 ${cnt.r}・異動 ${cnt.c}</span></div>${html}`;
+    div.innerHTML = `<button type="button" class="dayhead" aria-expanded="false">`
+      + `<svg class="daychev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`
+      + `<span class="daydate">${esc(d)}</span>`
+      + `<span class="dcount">新增 ${cnt.a}・移除 ${cnt.r}・異動 ${cnt.c}</span>`
+      + `</button><div class="daybody"><div class="daybody-in"><div class="daybody-pad">${html}</div></div></div>`;
+    const head = div.querySelector('.dayhead');
+    head.addEventListener('click', () => {
+      const open = div.classList.toggle('open');
+      head.setAttribute('aria-expanded', String(open));
+    });
     box.appendChild(div);
   }
   if (!total) box.innerHTML = '<div class="feed-empty">這段期間、這個地區沒有站點異動。</div>';
@@ -607,6 +616,14 @@ function bindUI() {
   };
   $('#dStart').addEventListener('change', customGo);
   $('#dEnd').addEventListener('change', customGo);
+  const setAllDays = open => {
+    document.querySelectorAll('#feedList .dayblock').forEach(b => {
+      b.classList.toggle('open', open);
+      b.querySelector('.dayhead').setAttribute('aria-expanded', String(open));
+    });
+  };
+  $('#expandAll').addEventListener('click', () => setAllDays(true));
+  $('#collapseAll').addEventListener('click', () => setAllDays(false));
   ddCity = makeDropdown('ddCity', {
     placeholder: '全台灣',
     onSelect: async v => {

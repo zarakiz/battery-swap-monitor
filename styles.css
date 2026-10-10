@@ -376,12 +376,35 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 .feedsec{margin-bottom:40px}
 .feedhead{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
 .feedhead h2{font-size:19px;font-family:var(--serif)}
-.dayblock{margin-bottom:16px}
+.dayblock{margin-bottom:12px;background:var(--card);border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;transition:border-color .2s ease}
+.dayblock:hover{border-color:var(--line)}
+.dayblock.open{border-color:var(--line)}
 .dayhead{
-  display:flex;align-items:center;gap:12px;margin-bottom:10px;
-  font-size:14.5px;font-weight:700;
+  width:100%;display:flex;align-items:center;gap:10px;
+  padding:13px 16px;background:transparent;border:0;cursor:pointer;
+  font-family:inherit;font-size:14.5px;font-weight:700;color:var(--ink);text-align:left;
 }
-.dayhead .dcount{font-weight:400;font-size:12.5px;color:var(--faint)}
+.dayhead:hover .daydate{color:var(--lime)}
+.daydate{transition:color .18s ease}
+.daychev{width:14px;height:14px;flex:none;color:var(--muted);transform:rotate(-90deg);transition:transform .28s cubic-bezier(.4,0,.2,1)}
+.dayblock.open .daychev{transform:rotate(0deg);color:var(--lime)}
+.dayhead .dcount{font-weight:400;font-size:12.5px;color:var(--faint);margin-left:auto}
+.daybody{display:grid;grid-template-rows:0fr;transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1)}
+.dayblock.open .daybody{grid-template-rows:1fr}
+.daybody-in{overflow:hidden;min-height:0}
+.daybody-pad{padding:4px 16px 14px}
+.feed-tools{margin-left:auto;display:flex;gap:8px}
+.feed-tools button{
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  font-family:inherit;font-size:12.5px;padding:6px 14px;border-radius:999px;cursor:pointer;
+  transition:all .18s ease;white-space:nowrap;
+}
+.feed-tools button:hover{border-color:var(--lime);color:var(--ink);transform:translateY(-1px)}
+.feed-tools button:active{transform:none}
+@media (prefers-reduced-motion:reduce){
+  .daybody{transition:none}
+  .daychev{transition:none}
+}
 .station{
   display:flex;gap:14px;align-items:flex-start;
   background:var(--card);border:1px solid var(--line-soft);border-radius:12px;
