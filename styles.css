@@ -152,39 +152,30 @@ select:disabled{opacity:.45;cursor:not-allowed}
 .filters.is-stuck select{padding:7px 30px 7px 11px;font-size:12.5px;min-width:0}
 .filters.is-stuck .custom-range input{padding:6px 8px;font-size:12.5px}
 @media (max-width:720px){
-  .filters.is-stuck{overflow-x:auto}
-  .filters.is-stuck .fgroup{flex:none}
-  /* 手機版篩選:直式排版,大觸控目標 */
-  .filters{padding:16px;gap:14px}
-  .fgroup{flex-direction:column;align-items:stretch;gap:10px}
-  .flabel{font-size:13px}
-  .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .chips button{padding:11px 8px;font-size:14px;text-align:center;white-space:nowrap}
-  .custom-range{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px}
-  .custom-range input[type="date"]{width:100%;min-width:0;padding:10px 8px;font-size:14px}
-  .sel-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-  .sel-row select{width:100%;min-width:0;padding:11px 30px 11px 12px;font-size:14px}
-  /* slim 模式維持橫滑 */
-  .filters.is-stuck .fgroup{flex-direction:row}
-  .filters.is-stuck .chips{display:flex;grid-template-columns:none}
-  .filters.is-stuck .sel-row{display:flex;grid-template-columns:none}
-  /* 手機捲動後:收成摘要列,點一下展開 */
-  .filter-summary{display:none}
-  .filters.is-stuck .filter-summary{
-    display:flex;align-items:center;gap:8px;width:100%;
+  /* ── 手機版:選單式篩選 ──────────────────────────
+     不黏貼、跟著頁面捲動;平時只顯示選單按鈕,點開才展開 */
+  .filters{position:static;padding:8px 16px;gap:0;overflow:hidden;max-width:100%}
+  .filters .fgroup{display:none}
+  .filters.expanded .fgroup{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:6px 0 10px}
+  .filters.expanded .fgroup + .fgroup{border-top:1px solid var(--line-soft);padding-top:14px}
+  .filter-summary{
+    display:flex;align-items:center;gap:8px;width:100%;max-width:100%;
     background:transparent;border:0;color:var(--ink);font-family:inherit;
     font-size:14px;font-weight:700;padding:12px 4px;cursor:pointer;
+    white-space:nowrap;overflow:hidden;
   }
   .filter-summary .ic{color:var(--lime);width:16px;height:16px;flex:none}
-  .filter-summary .sep{color:var(--faint);font-weight:400}
-  .filter-summary .chev{width:14px;height:14px;margin-left:auto;color:var(--muted);transition:transform .2s}
-  .filters.is-stuck.expanded .filter-summary .chev{transform:rotate(180deg)}
-  .filters.is-stuck .fgroup{display:none}
-  .filters.is-stuck.expanded{flex-wrap:wrap;overflow:visible;align-items:stretch}
-  .filters.is-stuck.expanded .fgroup{display:flex;flex-direction:column;flex:1 1 100%;min-width:0}
-  .filters.is-stuck.expanded .chips{display:grid;grid-template-columns:1fr 1fr}
-  .filters.is-stuck.expanded .sel-row{display:grid;grid-template-columns:1fr 1fr}
-  .filters.is-stuck.expanded .custom-range:not([hidden]){display:grid}
+  .filter-summary .sep{color:var(--faint);font-weight:400;flex:none}
+  .filter-summary #fsRange,.filter-summary #fsRegion{overflow:hidden;text-overflow:ellipsis}
+  .filter-summary .chev{width:14px;height:14px;margin-left:auto;flex:none;color:var(--muted);transition:transform .2s}
+  .filters.expanded .filter-summary .chev{transform:rotate(180deg)}
+  .flabel{font-size:13px}
+  .chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+  .chips button{padding:11px 8px;font-size:14px;text-align:center;white-space:nowrap;min-width:0}
+  .custom-range{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;min-width:0}
+  .custom-range input[type="date"]{width:100%;min-width:0;max-width:100%;padding:10px 8px;font-size:14px}
+  .sel-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;min-width:0}
+  .sel-row select{width:100%;min-width:0;max-width:100%;padding:11px 30px 11px 12px;font-size:14px}
 }
 
 /* ── 統計橫條(緊湊) ────────────────────── */
