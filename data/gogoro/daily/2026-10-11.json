@@ -1,0 +1,47 @@
+{
+ "date": "2026-10-11",
+ "network": "gogoro",
+ "total": 4030,
+ "active": 3995,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "52042004-7db6-4899-b276-fa3f4d04564a",
+   "rid": "TW2054201A",
+   "name": "過港里里民活動中心站A",
+   "city": "基隆市",
+   "district": "暖暖區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": 2,
+    "maint_start": "2026-10-12T02:00:00Z",
+    "maint_end": "2026-10-12T04:00:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7,
+    "maint_start": "2026-10-12T04:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-12T04:00:00Z",
+    "end": "2026-10-13T10:00:00Z",
+    "state_raw": 98
+   }
+  }
+ ]
+}
