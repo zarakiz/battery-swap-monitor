@@ -23,7 +23,13 @@
     "state": 0
    },
    "city": "新北市",
-   "district": "金山區"
+   "district": "金山區",
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-10T04:30:00Z",
+    "end": "2026-10-12T10:00:00Z",
+    "state_raw": 98
+   }
   },
   {
    "id": "1788740e-7c54-40ff-a233-ef92f65b519b",
@@ -39,7 +45,13 @@
     "state": 0
    },
    "city": "桃園市",
-   "district": "桃園區"
+   "district": "桃園區",
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-09T18:30:00Z",
+    "end": "2026-10-12T10:00:00Z",
+    "state_raw": 98
+   }
   },
   {
    "id": "7f5176c7-a9ed-42e3-8d82-972c3ce235b4",
@@ -55,7 +67,13 @@
     "state": 0
    },
    "city": "宜蘭縣",
-   "district": "蘇澳鎮"
+   "district": "蘇澳鎮",
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-10T07:00:00Z",
+    "end": "2026-10-15T10:00:00Z",
+    "state_raw": 98
+   }
   },
   {
    "id": "c7a8daef-4888-4bb4-863b-84f6d64bb736",
