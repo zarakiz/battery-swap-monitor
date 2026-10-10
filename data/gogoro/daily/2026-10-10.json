@@ -5,10 +5,76 @@
  "active": 3996,
  "added_count": 0,
  "removed_count": 0,
- "changed_count": 1,
+ "changed_count": 4,
  "added": [],
  "removed": [],
  "changed": [
+  {
+   "id": "070b33a7-5ddc-4245-b584-fda6103f47bd",
+   "rid": "TW2084301A",
+   "name": "新北市中角灣站",
+   "city": "新北市",
+   "district": "金山區",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-10T04:30:00Z",
+    "end": "2026-10-12T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "1788740e-7c54-40ff-a233-ef92f65b519b",
+   "rid": "TW3307101B",
+   "name": "全家桃園莊園店站B",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-09T18:30:00Z",
+    "end": "2026-10-12T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "7f5176c7-a9ed-42e3-8d82-972c3ce235b4",
+   "rid": "TW2704702A",
+   "name": "中油大佳加油站",
+   "city": "宜蘭縣",
+   "district": "蘇澳鎮",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-10T07:00:00Z",
+    "end": "2026-10-15T10:00:00Z",
+    "state_raw": 98
+   }
+  },
   {
    "id": "909c5879-f96d-4655-8c5a-b222525518cb",
    "rid": "TW7024401A",
@@ -16,16 +82,13 @@
    "city": "台南市",
    "district": "南區",
    "fields": [
-    "state",
-    "state_raw"
+    "state"
    ],
    "before": {
-    "state": 1,
-    "state_raw": 1
+    "state": 1
    },
    "after": {
-    "state": 0,
-    "state_raw": 98
+    "state": 0
    },
    "maint": {
     "reason": 7,
