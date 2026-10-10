@@ -268,7 +268,8 @@ function stationRow(net, s, badge) {
     <span class="badge ${nc}">${nl}</span>
     <span class="badge ${badge.cls}">${badge.tx}</span>
     <div class="grow">
-      <div class="nm">${esc(s.name || '(未命名)')} ${dist ? `<span class="badge b-dist">${esc(dist)}</span>` : ''}</div>
+      <div class="nm">${esc(s.name || '(未命名)')}</div>
+      ${dist ? `<div class="distline">${esc(dist)}</div>` : ''}
       <div class="ad">${esc(s.address || '')}</div>
       <div class="hrs">
         <svg viewBox="0 0 16 16" class="ic"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5V8l2.5 1.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -297,6 +298,7 @@ function changedRow(net, c) {
     <span class="badge b-chg">異動</span>
     <div class="grow">
       <div class="nm">${esc(c.name || '(未命名)')}</div>
+      ${[c.city, c.district].filter(Boolean).join('・') ? `<div class="distline">${esc([c.city, c.district].filter(Boolean).join('・'))}</div>` : ''}
       ${maint}
       <details class="chg"><summary>變更 ${c.fields.length} 個欄位</summary>
         <table class="chg-table"><tr><th>欄位</th><th>變更前</th><th>變更後</th></tr>${rows}</table>
