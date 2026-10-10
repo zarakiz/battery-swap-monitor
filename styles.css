@@ -183,6 +183,13 @@ button{font-family:inherit;cursor:pointer}
   .cal-day.sel{background:var(--lime);color:var(--onlime);font-weight:700;box-shadow:0 2px 10px var(--lime-dim)}
   .cal-day.sel:hover{background:var(--lime)}
 }
+/* ── 寬螢幕:篩選列強制維持一列(點自訂區間也不換行) ── */
+@media (min-width:1180px){
+  .filters{flex-wrap:nowrap}
+  .filters .fgroup{flex-wrap:nowrap}
+  .filters .chips{flex-wrap:nowrap}
+  .filters .custom-range input{width:112px;flex:none}
+}
 .tilde{color:var(--faint)}
 .sel-row{display:flex;gap:8px;flex-wrap:wrap}
 select{
