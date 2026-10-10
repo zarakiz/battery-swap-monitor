@@ -324,6 +324,7 @@ async function renderFeed(dates) {
 async function render() {
   const dates = currentDates();
   if (!dates.length) return;
+  updateSummary();
   renderStats(dates);
   renderCharts(dates);
   await renderFeed(dates);
@@ -342,8 +343,25 @@ function setupStickyFilters() {
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(setTop);
   const stickyPx = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--sticky-top')) || 86;
   new IntersectionObserver(([e]) => {
-    bar.classList.toggle('is-stuck', e.boundingClientRect.top < stickyPx());
+    const stuck = e.boundingClientRect.top < stickyPx();
+    bar.classList.toggle('is-stuck', stuck);
+    if (!stuck) bar.classList.remove('expanded');
   }, { threshold: 0 }).observe(sentinel);
+  // 手機摘要列:點一下展開/收合
+  $('#filterSummary').addEventListener('click', () => {
+    bar.classList.toggle('expanded');
+  });
+}
+
+function updateSummary() {
+  const r = $('#fsRange'), g = $('#fsRegion');
+  if (!r || !g) return;
+  const chip = document.querySelector('#rangeChips button.on');
+  r.textContent = chip ? chip.textContent.trim() : '';
+  let region = S.city || '全台灣';
+  if (S.district) region += '・' + S.district;
+  else if (S.city) region += '・全部區';
+  g.textContent = region;
 }
 
 function bindUI() {
