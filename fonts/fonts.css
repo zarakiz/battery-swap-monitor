@@ -1,0 +1,51 @@
+/* Noto 字體 (fontsource, SIL OFL),經 jsDelivr CDN 載入 — 取代 Google Fonts 外部依賴 */
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-chinese-traditional-400-normal.woff2') format('woff2');
+  unicode-range: U+3000-303F, U+3041-3096, U+3099-30FF, U+3105-312D, U+3131-318E, U+3190-31BA, U+31C0-31E3, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2CEB0-2EBEF, U+2F800-2FA1F, U+FF00-FFEF;
+}
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 400; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-latin-400-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-chinese-traditional-500-normal.woff2') format('woff2');
+  unicode-range: U+3000-303F, U+3041-3096, U+3099-30FF, U+3105-312D, U+3131-318E, U+3190-31BA, U+31C0-31E3, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2CEB0-2EBEF, U+2F800-2FA1F, U+FF00-FFEF;
+}
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 500; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-latin-500-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-chinese-traditional-700-normal.woff2') format('woff2');
+  unicode-range: U+3000-303F, U+3041-3096, U+3099-30FF, U+3105-312D, U+3131-318E, U+3190-31BA, U+31C0-31E3, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2CEB0-2EBEF, U+2F800-2FA1F, U+FF00-FFEF;
+}
+@font-face {
+  font-family: 'Noto Sans TC'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-sans-tc@5.1.0/files/noto-sans-tc-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Noto Serif TC'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.1.0/files/noto-serif-tc-chinese-traditional-700-normal.woff2') format('woff2');
+  unicode-range: U+3000-303F, U+3041-3096, U+3099-30FF, U+3105-312D, U+3131-318E, U+3190-31BA, U+31C0-31E3, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2CEB0-2EBEF, U+2F800-2FA1F, U+FF00-FFEF;
+}
+@font-face {
+  font-family: 'Noto Serif TC'; font-style: normal; font-weight: 700; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.1.0/files/noto-serif-tc-latin-700-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Noto Serif TC'; font-style: normal; font-weight: 900; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.1.0/files/noto-serif-tc-chinese-traditional-900-normal.woff2') format('woff2');
+  unicode-range: U+3000-303F, U+3041-3096, U+3099-30FF, U+3105-312D, U+3131-318E, U+3190-31BA, U+31C0-31E3, U+31F0-31FF, U+3400-4DBF, U+4E00-9FFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2CEB0-2EBEF, U+2F800-2FA1F, U+FF00-FFEF;
+}
+@font-face {
+  font-family: 'Noto Serif TC'; font-style: normal; font-weight: 900; font-display: swap;
+  src: url('https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-tc@5.1.0/files/noto-serif-tc-latin-900-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
