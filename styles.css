@@ -17,6 +17,7 @@
   --ionex:#FFC078;
   --up:#8CE99A;
   --down:#FF8787;
+  --amber:#FFC078;
   --serif:"Noto Serif TC","Songti TC",serif;
   --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
   --r:14px;
@@ -40,6 +41,7 @@
   --ionex:#C77700;
   --up:#16A34A;
   --down:#DC2626;
+  --amber:#C47A12;
   --topbar-bg:rgba(242,244,237,.85);
 }
 *{box-sizing:border-box}
@@ -112,9 +114,11 @@ button{font-family:inherit;cursor:pointer}
 .chips button.on{background:var(--lime);border-color:var(--lime);color:var(--onlime);font-weight:700}
 .custom-range{display:flex;align-items:center;gap:8px}
 .custom-range[hidden]{display:none}
+/* 手機摘要列按鈕:預設隱藏,只在手機黏貼時顯示 */
+.filter-summary{display:none}
 .custom-range input[type="date"]{
   background:var(--bg2);border:1px solid var(--line);color:var(--ink);
-  border-radius:10px;padding:8px 10px;font-family:inherit;font-size:14px;color-scheme:dark;
+  border-radius:10px;padding:8px 10px;font-family:inherit;font-size:14px;
 }
 .custom-range input[type="date"]:focus{outline:2px solid var(--lime);outline-offset:1px;border-color:transparent}
 .tilde{color:var(--faint)}
