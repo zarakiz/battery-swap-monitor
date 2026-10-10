@@ -121,6 +121,32 @@ button{font-family:inherit;cursor:pointer}
   border-radius:10px;padding:8px 10px;font-family:inherit;font-size:14px;
 }
 .custom-range input[type="date"]:focus{outline:2px solid var(--lime);outline-offset:1px;border-color:transparent}
+/* ── 桌面端日期選擇器美化(手機維持原樣) ── */
+@media (min-width:721px){
+  .custom-range{
+    background:var(--card);border:1px solid var(--line-soft);border-radius:12px;
+    padding:5px 6px;box-shadow:0 1px 2px rgba(0,0,0,.12);
+  }
+  .custom-range input[type="date"]{
+    background:transparent;border:1px solid transparent;border-radius:8px;
+    padding:7px 8px 7px 10px;font-size:13.5px;letter-spacing:.02em;cursor:pointer;
+    transition:border-color .18s ease,box-shadow .18s ease,background .18s ease;
+  }
+  .custom-range input[type="date"]:hover{border-color:var(--line);background:var(--bg2)}
+  .custom-range input[type="date"]:focus{
+    outline:none;border-color:var(--lime);
+    box-shadow:0 0 0 3px var(--lime-dim);background:var(--bg2);
+  }
+  .custom-range input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor:pointer;opacity:.6;margin-left:4px;
+    transition:opacity .18s ease,transform .18s ease;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.5' y='2.5' width='13' height='12' rx='2.5' fill='none' stroke='%23CDEB4D' stroke-width='1.6'/%3E%3Cpath d='M1.5 6.5h13M5 1v3M11 1v3' stroke='%23CDEB4D' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+  [data-theme="light"] .custom-range input[type="date"]::-webkit-calendar-picker-indicator{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1.5' y='2.5' width='13' height='12' rx='2.5' fill='none' stroke='%234D7C0F' stroke-width='1.6'/%3E%3Cpath d='M1.5 6.5h13M5 1v3M11 1v3' stroke='%234D7C0F' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+  .custom-range input[type="date"]:hover::-webkit-calendar-picker-indicator{opacity:1;transform:scale(1.12)}
+}
 .tilde{color:var(--faint)}
 .sel-row{display:flex;gap:8px;flex-wrap:wrap}
 select{
