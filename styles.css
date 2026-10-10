@@ -154,7 +154,7 @@ select:disabled{opacity:.45;cursor:not-allowed}
 @media (max-width:720px){
   /* ── 手機版:選單式篩選 ──────────────────────────
      不黏貼、跟著頁面捲動;平時只顯示選單按鈕,點開才展開 */
-  .filters{position:static;display:block;padding:8px 16px;overflow:hidden;max-width:100%}
+  .filters{position:sticky;top:var(--sticky-top,86px);z-index:40;display:block;padding:8px 16px;overflow:hidden;max-width:100%}
   .filters .fgroup{display:none}
   .filters.expanded .fgroup{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:6px 0 10px;width:100%}
   .filters.expanded .fgroup + .fgroup{border-top:1px solid var(--line-soft);padding-top:14px}
@@ -222,7 +222,8 @@ select:disabled{opacity:.45;cursor:not-allowed}
 }
 .station:hover{border-color:var(--line)}
 .station .grow{flex:1;min-width:0}
-.station .nm{font-weight:700;font-size:15.5px;margin-bottom:4px}
+.station .nm{font-weight:700;font-size:15.5px;margin-bottom:2px}
+.station .distline{font-size:12.5px;color:var(--muted);margin-bottom:4px}
 .station .ad{font-size:13px;color:var(--muted);line-height:1.55}
 .station .hrs{font-size:12.5px;color:var(--faint);margin-top:4px;display:flex;align-items:center;gap:6px}
 .station .hrs .ic{width:13px;height:13px}
