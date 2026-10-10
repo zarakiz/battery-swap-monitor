@@ -215,6 +215,9 @@ select:disabled{opacity:.45;cursor:not-allowed}
 .chg-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
 .chg-table th,.chg-table td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line-soft)}
 .chg-table th{color:var(--faint);font-weight:500;width:88px}
+.maint-note{display:flex;gap:8px;align-items:flex-start;margin:8px 0 2px;padding:9px 12px;border-radius:10px;font-size:13px;line-height:1.55;background:color-mix(in srgb,var(--amber) 13%,transparent);border:1px solid color-mix(in srgb,var(--amber) 38%,transparent);color:var(--ink)}
+.maint-note .mnt-ic{flex:none;font-size:15px;line-height:1.4}
+.maint-note b{font-weight:700}
 .chg-table td.b{color:var(--muted);text-decoration:line-through}
 .chg-table td.a{color:var(--lime)}
 details.chg{margin-top:8px}
