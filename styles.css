@@ -146,7 +146,7 @@ select:disabled{opacity:.45;cursor:not-allowed}
 .filters.is-stuck .chips{flex-wrap:nowrap}
 .filters.is-stuck .chips button{padding:6px 13px;font-size:12.5px}
 .filters.is-stuck select{padding:7px 30px 7px 11px;font-size:12.5px;min-width:0}
-.filters.is-stuck .custom-range{display:none}
+.filters.is-stuck .custom-range input{padding:6px 8px;font-size:12.5px}
 @media (max-width:720px){
   .filters.is-stuck{overflow-x:auto}
   .filters.is-stuck .fgroup{flex:none}
