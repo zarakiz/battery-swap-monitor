@@ -154,9 +154,9 @@ select:disabled{opacity:.45;cursor:not-allowed}
 @media (max-width:720px){
   /* ── 手機版:選單式篩選 ──────────────────────────
      不黏貼、跟著頁面捲動;平時只顯示選單按鈕,點開才展開 */
-  .filters{position:static;padding:8px 16px;gap:0;overflow:hidden;max-width:100%}
+  .filters{position:static;display:block;padding:8px 16px;overflow:hidden;max-width:100%}
   .filters .fgroup{display:none}
-  .filters.expanded .fgroup{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:6px 0 10px}
+  .filters.expanded .fgroup{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:6px 0 10px;width:100%}
   .filters.expanded .fgroup + .fgroup{border-top:1px solid var(--line-soft);padding-top:14px}
   .filter-summary{
     display:flex;align-items:center;gap:8px;width:100%;max-width:100%;
