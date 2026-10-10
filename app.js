@@ -409,7 +409,6 @@ function makeDropdown(rootId, { placeholder, onSelect }) {
     btn.setAttribute('aria-expanded', 'true');
     search.value = '';
     renderOpts();
-    setTimeout(() => search.focus(), 60);
   }
   function close() {
     root.classList.remove('open');
