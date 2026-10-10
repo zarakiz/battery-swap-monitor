@@ -35,11 +35,26 @@ const S = {
   dailyCache: {},        // net -> {date: daily}
   charts: {},
 };
-const FIELD_ZH = { rid: '站點編號', name: '站名', address: '地址', city: '縣市', district: '區', zip: '郵遞區號', lat: '緯度', lng: '經度', state: '營運狀態', h24: '24小時營業', hours: '營業時間' };
+const FIELD_ZH = { rid: '站點編號', name: '站名', address: '地址', city: '縣市', district: '區', zip: '郵遞區號', lat: '緯度', lng: '經度', state: '營運狀態', state_raw: '原始狀態碼', reason: '暫停原因碼', maint_start: '暫停開始', maint_end: '暫停結束', h24: '24小時營業', hours: '營業時間' };
+const REASON_ZH = { 2: '設備保養' };
+const fmtTWT = iso => {
+  if (!iso) return '—';
+  try {
+    const d = new Date(iso);
+    const p = n => String(n).padStart(2, '0');
+    const tz = 'Asia/Taipei';
+    const M = Number(new Intl.DateTimeFormat('en', { timeZone: tz, month: 'numeric' }).format(d));
+    const D = Number(new Intl.DateTimeFormat('en', { timeZone: tz, day: 'numeric' }).format(d));
+    const h = new Intl.DateTimeFormat('en', { timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false }).format(d);
+    return `${M}/${D} ${h}`;
+  } catch (e) { return String(iso); }
+};
 const fmtVal = (f, v) => {
   if (v === null || v === undefined) return '—';
   if (f === 'state') return v === 1 ? '營運中' : '非營運中';
   if (f === 'h24') return v ? '是' : '否';
+  if (f === 'maint_start' || f === 'maint_end') return fmtTWT(v);
+  if (f === 'reason') return REASON_ZH[v] ? `${REASON_ZH[v]} (${v})` : `暫停服務 (${v})`;
   return String(v);
 };
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -257,11 +272,20 @@ function changedRow(net, c) {
     `<tr><th>${esc(FIELD_ZH[f] || f)}</th><td class="b">${esc(fmtVal(f, c.before[f]))}</td><td class="a">${esc(fmtVal(f, c.after[f]))}</td></tr>`).join('');
   const nc = net === 'gogoro' ? 'b-net-g' : 'b-net-i';
   const nl = net === 'gogoro' ? 'Gogoro' : 'Ionex';
+  // 暫停服務詳細公告 (如:設備保養期間)
+  let maint = '';
+  if (c.maint && (c.maint.reason != null || c.maint.start)) {
+    const r = c.maint.reason;
+    const rtx = r != null ? (REASON_ZH[r] || '暫停服務') : '暫停服務';
+    const period = c.maint.start ? `${fmtTWT(c.maint.start)}${c.maint.end ? ' → ' + fmtTWT(c.maint.end) : ''}` : '';
+    maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
+  }
   return `<div class="station">
     <span class="badge ${nc}">${nl}</span>
     <span class="badge b-chg">異動</span>
     <div class="grow">
       <div class="nm">${esc(c.name || '(未命名)')}</div>
+      ${maint}
       <details class="chg"><summary>變更 ${c.fields.length} 個欄位</summary>
         <table class="chg-table"><tr><th>欄位</th><th>變更前</th><th>變更後</th></tr>${rows}</table>
       </details>
