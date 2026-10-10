@@ -1,0 +1,77 @@
+{
+ "date": "2026-10-10",
+ "network": "gogoro",
+ "total": 4030,
+ "active": 3996,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 4,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "070b33a7-5ddc-4245-b584-fda6103f47bd",
+   "rid": "TW2084301A",
+   "name": "新北市中角灣站",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "city": "新北市",
+   "district": "金山區"
+  },
+  {
+   "id": "1788740e-7c54-40ff-a233-ef92f65b519b",
+   "rid": "TW3307101B",
+   "name": "全家桃園莊園店站B",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "city": "桃園市",
+   "district": "桃園區"
+  },
+  {
+   "id": "7f5176c7-a9ed-42e3-8d82-972c3ce235b4",
+   "rid": "TW2704702A",
+   "name": "中油大佳加油站",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "city": "宜蘭縣",
+   "district": "蘇澳鎮"
+  },
+  {
+   "id": "c7a8daef-4888-4bb4-863b-84f6d64bb736",
+   "rid": "TW9084501A",
+   "name": "中油長治加油站",
+   "fields": [
+    "state"
+   ],
+   "before": {
+    "state": 1
+   },
+   "after": {
+    "state": 0
+   },
+   "city": "屏東縣",
+   "district": "長治鄉"
+  }
+ ]
+}
