@@ -211,11 +211,15 @@ function renderCharts(dates) {
   };
   const lineDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
+    const data = idx.map(i => aligned(net, key)[i]);
+    const npts = data.filter(v => v != null).length;
     return {
       label: n.label,
-      data: idx.map(i => aligned(net, key)[i]),
+      data,
       borderColor: netColor(net), backgroundColor: netColor(net),
-      tension: .28, borderWidth: 2.2, pointRadius: 0, pointHoverRadius: 5,
+      tension: .28, borderWidth: 2.2,
+      // 單一資料點時顯示圓點,否則線條本身已足夠
+      pointRadius: npts < 2 ? 4 : 0, pointHoverRadius: 5,
       spanGaps: true,
     };
   };
@@ -234,15 +238,23 @@ function renderCharts(dates) {
     data: { labels, datasets: [lineDS('gogoro', 'total'), lineDS('ionex', 'total')] },
     options: common,
   });
+  // 長條圖:Y 軸不顯示負值
+  const barOpts = {
+    ...common,
+    scales: {
+      ...common.scales,
+      y: { ...common.scales.y, suggestedMin: 0 },
+    },
+  };
   S.charts.add = new Chart($('#chAdd'), {
     type: 'bar',
     data: { labels, datasets: [barDS('gogoro', 'added'), barDS('ionex', 'added')] },
-    options: common,
+    options: barOpts,
   });
   S.charts.rm = new Chart($('#chRm'), {
     type: 'bar',
     data: { labels, datasets: [barDS('gogoro', 'removed'), barDS('ionex', 'removed')] },
-    options: common,
+    options: barOpts,
   });
 }
 
