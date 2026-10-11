@@ -646,10 +646,24 @@ function bindUI() {
   });
 }
 
+/* ---------- 訪客計數 (Cloudflare Worker) ---------- */
+const COUNTER_URL = 'https://swap-counter.powerpoint977.workers.dev/hit';
+async function loadVisitorCount() {
+  try {
+    const r = await fetch(COUNTER_URL, { cache: 'no-store' });
+    if (!r.ok) return;
+    const j = await r.json();
+    const t = $('#visitCount'), y = $('#visitCountY');
+    if (t && j.today != null) t.textContent = Number(j.today).toLocaleString('en-US');
+    if (y && j.yesterday != null) y.textContent = Number(j.yesterday).toLocaleString('en-US');
+  } catch (e) { /* 計數器掛掉不影響主站 */ }
+}
+
 (async function init() {
   initTheme();
   chartDefaults();
   bindUI();
+  loadVisitorCount(); // 不阻塞主流程，失敗靜默
   await loadAll();
   setupStickyFilters();
   await render();
