@@ -647,7 +647,7 @@ function bindUI() {
 }
 
 /* ---------- 訪客計數 (Cloudflare Worker) ---------- */
-const COUNTER_URL = 'https://swap-counter.powerpoint977.workers.dev/hit';
+const COUNTER_URL = 'https://swap-counter.foodman.workers.dev/hit';
 async function loadVisitorCount() {
   try {
     const r = await fetch(COUNTER_URL, { cache: 'no-store' });
