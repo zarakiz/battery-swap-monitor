@@ -33,13 +33,3 @@
 
 1. `daily_update.sh` → `fetch_all.py`（抓取＋比對）
 2. `git_push.sh` → 經 SSH deploy key 推送 `site/` 到 GitHub（`push_site.py` 僅供手動推送）
-
-## 訪客計數
-
-GitHub Pages 是純靜態站，無法自己記數，因此以 Cloudflare Worker 自建：
-
-- Worker：`swap-counter`（程式碼見 `counter-worker/worker.js`）
-- 儲存：Workers KV（namespace `swap-counter-kv`，綁定變數 `COUNTER_KV`）
-- 語意：IP 經 SHA-256 雜湊後儲存（不存原始 IP），同 IP 每日只計一次（台灣時區的日為界），舊資料 90 天自動過期
-- 前端：`app.js` 的 `COUNTER_URL` 指向 `https://swap-counter.foodman.workers.dev/hit`；
-  頁尾顯示今日／昨日人數；計數器故障時靜默失敗，不影響主站
