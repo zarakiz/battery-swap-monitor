@@ -1,5 +1,5 @@
 /**
- * 換電觀測所 — 訪客計數器 (Cloudflare Worker)
+ * 換電觀測站 — 訪客計數器 (Cloudflare Worker)
  *
  * 部署方式 (Cloudflare Dashboard):
  *  1. Workers & Pages → Create → Create Worker,取名如 swap-counter

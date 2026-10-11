@@ -1,4 +1,4 @@
-/* 換電觀測所 — 前端 (Gogoro + Ionex 合併視圖) */
+/* 換電觀測站 — 前端 (Gogoro + Ionex 合併視圖) */
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
