@@ -262,7 +262,7 @@ function renderCharts(dates) {
 
 function stationRow(net, s, badge) {
   const gmap = (s.lat != null && s.lng != null)
-    ? `<a class="maplink" target="_blank" rel="noopener" href="https://www.google.com.tw/maps/dir//${s.lat},${s.lng}">地圖</a>` : '';
+    ? `<a class="maplink" target="_blank" rel="noopener" href="https://www.google.com.tw/maps/search/?api=1&query=${s.lat},${s.lng}">地圖</a>` : '';
   const dist = [s.city, s.district].filter(Boolean).join('・');
   const nc = net === 'gogoro' ? 'b-net-g' : 'b-net-i';
   const nl = net === 'gogoro' ? 'Gogoro' : 'Ionex';
