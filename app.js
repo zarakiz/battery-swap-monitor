@@ -27,7 +27,7 @@ const cmpStroke = (a, b) => {
 };
 
 const S = {
-  range: 3, start: null, end: null,
+  range: 30, start: null, end: null,
   city: '', district: '',
   manifest: null, cities: {},
   T: {},                 // net -> trends.json
@@ -189,33 +189,27 @@ function renderCharts(dates) {
   const light = isLight();
   const labels = dates.map(shortDate);
   const idx = dates.map(d => S.dates.indexOf(d));
-  const gridColor = light ? 'rgba(28,35,27,.07)' : 'rgba(241,236,223,.06)';
-  // 注意:Chart.js 會原地修改傳入的 options(寫回解析後的 scales 等),故每張圖
-  // 都必須用此函式產生全新的物件,不可共用同一份,否則長條圖第一組柱子會被算到畫面外。
-  const baseOpts = () => ({
+  const grid = { color: light ? 'rgba(28,35,27,.07)' : 'rgba(241,236,223,.06)' };
+  const tooltip = {
+    backgroundColor: light ? 'rgba(255,255,255,.97)' : 'rgba(16,22,16,.97)',
+    titleColor: light ? '#1C231B' : '#F1ECDF',
+    bodyColor: light ? '#1C231B' : '#F1ECDF',
+    borderColor: light ? 'rgba(28,35,27,.16)' : 'rgba(205,235,77,.4)',
+    borderWidth: 1, padding: 12, cornerRadius: 10, displayColors: true,
+    titleFont: { weight: '700', size: 13 }, bodyFont: { size: 13 },
+  };
+  const common = {
     responsive: true, maintainAspectRatio: false,
     interaction: { mode: 'index', intersect: false },
     plugins: {
       legend: { labels: { boxWidth: 14, boxHeight: 14, usePointStyle: true, padding: 16 } },
-      tooltip: {
-        backgroundColor: light ? 'rgba(255,255,255,.97)' : 'rgba(16,22,16,.97)',
-        titleColor: light ? '#1C231B' : '#F1ECDF',
-        bodyColor: light ? '#1C231B' : '#F1ECDF',
-        borderColor: light ? 'rgba(28,35,27,.16)' : 'rgba(205,235,77,.4)',
-        borderWidth: 1, padding: 12, cornerRadius: 10, displayColors: true,
-        titleFont: { weight: '700', size: 13 }, bodyFont: { size: 13 },
-      },
+      tooltip,
     },
     scales: {
       x: { grid: { display: false }, ticks: { maxTicksLimit: 8, maxRotation: 0 } },
-      y: { grid: { color: gridColor }, ticks: { precision: 0 } },
+      y: { grid, ticks: { precision: 0 } },
     },
     animation: reduceMotion ? false : { duration: 700, easing: 'easeOutQuart' },
-  });
-  const barOpts = () => {
-    const o = baseOpts();
-    o.scales.y.suggestedMin = 0;
-    return o;
   };
   const lineDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
@@ -231,13 +225,6 @@ function renderCharts(dates) {
       spanGaps: true,
     };
   };
-  // 兩品牌柱子貼在一起:組寬固定≈40px(2 根 20px),不隨天數撐開;
-  // 剩單一品牌時 maxBarThickness 會把柱子限在 20px 置中。
-  const barGroupPct = (() => {
-    const w = ($('#chAdd')?.clientWidth || 600);
-    const catW = w / Math.max(dates.length, 1);
-    return Math.min(0.95, 40 / catW);
-  })();
   const barDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
     return {
@@ -246,29 +233,30 @@ function renderCharts(dates) {
       backgroundColor: netColor(net) + 'D9',
       hoverBackgroundColor: netColor(net),
       borderRadius: 5, maxBarThickness: 20, borderSkipped: false,
-      barPercentage: 1.0, categoryPercentage: barGroupPct,
     };
-  };
-  // 該區間全為 0/null 的品牌不畫,只剩一組時柱子自動置中對齊日期
-  const liveBarDS = (net, key) => {
-    const ds = barDS(net, key);
-    return ds.data.some(v => v) ? ds : null;
   };
   S.charts.total = new Chart($('#chTotal'), {
     type: 'line',
     data: { labels, datasets: [lineDS('gogoro', 'total'), lineDS('ionex', 'total')] },
-    options: baseOpts(),
+    options: common,
   });
   // 長條圖:Y 軸不顯示負值
+  const barOpts = {
+    ...common,
+    scales: {
+      ...common.scales,
+      y: { ...common.scales.y, suggestedMin: 0 },
+    },
+  };
   S.charts.add = new Chart($('#chAdd'), {
     type: 'bar',
-    data: { labels, datasets: [liveBarDS('gogoro', 'added'), liveBarDS('ionex', 'added')].filter(Boolean) },
-    options: barOpts(),
+    data: { labels, datasets: [barDS('gogoro', 'added'), barDS('ionex', 'added')] },
+    options: barOpts,
   });
   S.charts.rm = new Chart($('#chRm'), {
     type: 'bar',
-    data: { labels, datasets: [liveBarDS('gogoro', 'removed'), liveBarDS('ionex', 'removed')].filter(Boolean) },
-    options: barOpts(),
+    data: { labels, datasets: [barDS('gogoro', 'removed'), barDS('ionex', 'removed')] },
+    options: barOpts,
   });
 }
 
@@ -326,8 +314,7 @@ async function renderFeed(dates) {
   box.innerHTML = '';
   let total = 0;
   for (const d of [...dates].reverse()) {
-    let cnt = { a: 0, r: 0, c: 0 };
-    const groups = { a: [], r: [], c: [] };
+    let html = '', cnt = { a: 0, r: 0, c: 0 };
     for (const n of NETS) {
       const daily = await getDaily(n.id, d);
       if (!daily) continue;
@@ -335,11 +322,10 @@ async function renderFeed(dates) {
       const removed = (daily.removed || []).filter(inRegion);
       const changed = (daily.changed || []).filter(inRegion);
       cnt.a += added.length; cnt.r += removed.length; cnt.c += changed.length;
-      groups.a.push(...added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })));
-      groups.r.push(...removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })));
-      groups.c.push(...changed.map(c => changedRow(n.id, c)));
+      html += added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })).join('')
+        + removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })).join('')
+        + changed.map(c => changedRow(n.id, c)).join('');
     }
-    const html = groups.a.join('') + groups.r.join('') + groups.c.join('');
     if (!html) continue;
     total += cnt.a + cnt.r + cnt.c;
     const div = document.createElement('div');
