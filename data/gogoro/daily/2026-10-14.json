@@ -1,0 +1,1231 @@
+{
+ "date": "2026-10-14",
+ "network": "gogoro",
+ "total": 4030,
+ "active": 3979,
+ "added_count": 1,
+ "removed_count": 2,
+ "changed_count": 48,
+ "added": [
+  {
+   "id": "c5c1bb12-1dd0-48ac-a303-46e7a323d70d",
+   "rid": "TW4045902C",
+   "name": "全聯台中健行店站C",
+   "address": "台中市北區健行路447號(近健行路/五常街路口)",
+   "city": "台中市",
+   "district": "北區",
+   "zip": "40459",
+   "lat": 24.159041,
+   "lng": 120.680621,
+   "state": 0,
+   "state_raw": 99,
+   "reason": null,
+   "h24": true,
+   "hours": "24 小時營業"
+  }
+ ],
+ "removed": [
+  {
+   "id": "76640c4f-c1dd-4644-bfe2-4a4e55cb9841",
+   "rid": "TW4067402B",
+   "name": "EVOASIS 北屯山西站B",
+   "address": "台中市北屯區山西路三段與昌平東六路交叉口(近山西路三段/昌平東六路口)",
+   "city": "台中市",
+   "district": "北屯區",
+   "zip": "40674",
+   "lat": 24.18532,
+   "lng": 120.69097,
+   "state": 1,
+   "state_raw": 1,
+   "reason": 5,
+   "h24": true,
+   "hours": "24 小時營業",
+   "maint_start": "2026-10-13T01:00:00Z",
+   "maint_end": "2026-10-13T04:00:00Z"
+  },
+  {
+   "id": "eb9b2c85-03db-4c34-94e7-ee3aaf6adefb",
+   "rid": "TW4067402A",
+   "name": "EVOASIS 北屯山西站A",
+   "address": "台中市北屯區山西路三段與昌平東六路交叉口(近山西路三段/昌平東六路口)",
+   "city": "台中市",
+   "district": "北屯區",
+   "zip": "40674",
+   "lat": 24.18532,
+   "lng": 120.69057,
+   "state": 1,
+   "state_raw": 1,
+   "reason": 5,
+   "h24": true,
+   "hours": "24 小時營業",
+   "maint_start": "2026-10-13T01:00:00Z",
+   "maint_end": "2026-10-13T04:00:00Z"
+  }
+ ],
+ "changed": [
+  {
+   "id": "03ee4084-1a51-4c99-9013-ef826d1d1140",
+   "rid": "TW4288002B",
+   "name": "台亞中科加油站B",
+   "city": "台中市",
+   "district": "大雅區",
+   "fields": [
+    "lat"
+   ],
+   "before": {
+    "lat": 24.233817
+   },
+   "after": {
+    "lat": 24.233912
+   }
+  },
+  {
+   "id": "04f9a0a1-2179-46e0-b740-6da67dc5f153",
+   "rid": "TW9634302A",
+   "name": "中油荒野加油站",
+   "city": "台東縣",
+   "district": "太麻里鄉",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:30:00Z",
+    "end": "2026-10-14T07:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "05b5e3ce-f21c-4e02-abea-39a36320f18b",
+   "rid": "TW7104801A",
+   "name": "全聯永康大橋店站",
+   "city": "台南市",
+   "district": "永康區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T05:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "15d86be9-3bff-48ab-821c-3da562b7f8de",
+   "rid": "TW3345503A",
+   "name": "中油白鷺加油站A",
+   "city": "桃園市",
+   "district": "八德區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "18f00c02-a541-471f-9b99-a61cd1776c4c",
+   "rid": "TW3206501B",
+   "name": "7-ELEVEN 長業店站B",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:00:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "217f2232-cc34-4433-87e7-02228ae6b78f",
+   "rid": "TW8065201A",
+   "name": "中油民權路加油站",
+   "city": "高雄市",
+   "district": "前鎮區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 6,
+    "maint_start": "2026-10-12T02:00:00Z",
+    "maint_end": "2026-10-15T10:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "30deffa5-4051-427f-96ba-99f8e88318bb",
+   "rid": "TW9504301A",
+   "name": "享溫馨KTV 台東店站A",
+   "city": "台東縣",
+   "district": "臺東市",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:00:00Z",
+    "maint_end": "2026-10-13T09:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "31a8a9fa-eebf-4d1f-9a50-ed7cf73f56f1",
+   "rid": "TW5424601A",
+   "name": "中油楠埔加油站",
+   "city": "南投縣",
+   "district": "草屯鎮",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:30:00Z",
+    "maint_end": "2026-10-13T05:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "33beadc2-342d-420c-97f2-0892a32fa28a",
+   "rid": "TW3505401A",
+   "name": "中油皇家加油站",
+   "city": "苗栗縣",
+   "district": "竹南鎮",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T06:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "362a6b47-b5d3-4e19-80c9-2e312123cff8",
+   "rid": "TW4035602B",
+   "name": "楓康超市東興店站B",
+   "city": "台中市",
+   "district": "西區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 1,
+    "maint_start": "2026-10-12T08:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "3aa7d11c-8233-42d7-b223-2e726c73310e",
+   "rid": "TW8844102A",
+   "name": "中油通梁加油站",
+   "city": "澎湖縣",
+   "district": "白沙鄉",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:30:00Z",
+    "end": "2026-10-16T05:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "42d4cfe2-8399-48ca-961e-9ed870e571f2",
+   "rid": "TW7096001A",
+   "name": "本原街三段停1停車場站A",
+   "city": "台南市",
+   "district": "安南區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:30:00Z",
+    "maint_end": "2026-10-13T06:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "507f0698-ca9b-49dd-8b9c-a8b2a8127a66",
+   "rid": "TW3207202A",
+   "name": "桃園市莊敬停車場站",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:00:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "51a3582d-a56f-436a-a871-55baf073c7f6",
+   "rid": "TW6374501A",
+   "name": "中油崙背加油站",
+   "city": "雲林縣",
+   "district": "崙背鄉",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T05:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "54bf6542-94e0-4b3e-91e6-216c53cfa0e5",
+   "rid": "TW2374102A",
+   "name": "Gogoro 三峽復興門市站",
+   "city": "新北市",
+   "district": "三峽區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "586c0d7f-c2b6-49e6-b5ed-7f5e064bb4fd",
+   "rid": "TW3074403A",
+   "name": "中油竹林加油站",
+   "city": "新竹縣",
+   "district": "芎林鄉",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T06:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "5aed6082-0b07-4b89-be0e-43ab5be92da3",
+   "rid": "TW3304404B",
+   "name": "全聯桃園天祥店站B",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "5f746cbb-6f55-4687-8dc3-a8c9043e84e2",
+   "rid": "TW2245102A",
+   "name": "新北市水湳洞遊客中心站",
+   "city": "新北市",
+   "district": "瑞芳區",
+   "fields": [
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "maint_start": "2026-10-12T09:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "maint_start": "2026-10-13T10:00:00Z",
+    "maint_end": "2026-10-15T10:00:00Z"
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-13T10:00:00Z",
+    "end": "2026-10-15T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "663398b2-e90b-495c-8903-73cbc2603114",
+   "rid": "TW3345503B",
+   "name": "中油白鷺加油站B",
+   "city": "桃園市",
+   "district": "八德區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "69a719ec-e578-497a-a89f-e2f89e6a97f7",
+   "rid": "TW4115702A",
+   "name": "全家太平金城店站A",
+   "city": "台中市",
+   "district": "太平區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T05:30:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "7c56cf1c-6df9-49f5-a676-bb1089c24190",
+   "rid": "TW4065405B",
+   "name": "特力屋台中北屯店站B",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:30:00Z",
+    "end": "2026-10-14T06:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "7d5915e0-c312-4c5d-98f0-49448f23c7cd",
+   "rid": "TW6365401A",
+   "name": "中油台西加油站",
+   "city": "雲林縣",
+   "district": "台西鄉",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T08:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "82956e19-612b-4bae-9cd8-74ca5caa1c4f",
+   "rid": "TW3037302A",
+   "name": "HiLife 竹縣東光店站",
+   "city": "新竹縣",
+   "district": "湖口鄉",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "92fdf938-500d-44b5-bd90-5e2b32f3b994",
+   "rid": "TW3304502A",
+   "name": "桃園市文小二停車場站",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "state",
+    "state_raw",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "maint_start": "2026-10-13T04:00:00Z",
+    "maint_end": "2026-10-14T04:00:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "maint_start": "2026-10-14T04:30:00Z",
+    "maint_end": "2026-10-14T10:00:00Z"
+   },
+   "maint": {
+    "reason": 4,
+    "start": "2026-10-14T04:30:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "99c6a86f-7c30-4179-82c2-f2b7e1680e5e",
+   "rid": "TW4065405A",
+   "name": "特力屋台中北屯店站A",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "state",
+    "state_raw",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "maint_end": "2026-10-14T05:30:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "maint_end": "2026-10-14T06:30:00Z"
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:30:00Z",
+    "end": "2026-10-14T06:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "99d9fdb1-2409-4591-8613-dce1f83813d1",
+   "rid": "TW2386702B",
+   "name": "新北市樹林國民運動中心站B",
+   "city": "新北市",
+   "district": "樹林區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T03:30:00Z",
+    "end": "2026-10-14T05:30:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "a2038987-43fa-4deb-8b00-f1dde72b1eef",
+   "rid": "TW5424301A",
+   "name": "中油中宏加油站",
+   "city": "南投縣",
+   "district": "草屯鎮",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T05:30:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "a2ba7de4-43b7-4ee7-8ee4-b0e8e781ead2",
+   "rid": "TW3026407A",
+   "name": "全聯竹北自強店站A",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 1
+   },
+   "maint": {
+    "reason": 1,
+    "start": "2026-10-14T04:00:00Z",
+    "end": "2026-10-14T06:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "a426f2e2-4ddc-4738-8281-7aafd04fc05e",
+   "rid": "TW3204101A",
+   "name": "Gogoro 中壢復興店站",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-13T15:30:00Z",
+    "end": "2026-10-14T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "a8f40b40-8ba9-4b91-a974-35dfdeb21aea",
+   "rid": "TW7374202A",
+   "name": "YAMAHA 台南月津店站A",
+   "city": "台南市",
+   "district": "鹽水區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:30:00Z",
+    "maint_end": "2026-10-13T06:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "b040c1b5-2de9-4216-b9e3-fa9aff3bb20a",
+   "rid": "TW2515802B",
+   "name": "新北市淡水稽徵所旁機車場站B",
+   "city": "新北市",
+   "district": "淡水區",
+   "fields": [
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "maint_start": "2026-10-12T09:30:00Z",
+    "maint_end": "2026-10-14T10:00:00Z"
+   },
+   "after": {
+    "maint_start": "2026-10-14T10:00:00Z",
+    "maint_end": "2026-10-15T10:00:00Z"
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-14T10:00:00Z",
+    "end": "2026-10-15T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "b6c04881-0d8d-45d4-9a49-afef2884c798",
+   "rid": "TW2614301A",
+   "name": "全聯頭城青雲店站",
+   "city": "宜蘭縣",
+   "district": "頭城鎮",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:30:00Z",
+    "maint_end": "2026-10-13T05:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "b8895bb0-69c2-4f81-b2c1-bb654c23e2a9",
+   "rid": "TW7014901A",
+   "name": "台南東區環保局停車場站",
+   "city": "台南市",
+   "district": "東區",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:30:00Z",
+    "end": "2026-10-14T06:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "b9abdf7c-c320-4917-944f-fbdfc3eec0bf",
+   "rid": "TW3104702A",
+   "name": "臺鐵竹東車站A",
+   "city": "新竹縣",
+   "district": "竹東鎮",
+   "fields": [
+    "state",
+    "state_raw"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T06:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "bec4f5da-ca6a-4b30-ae3a-619530ab2829",
+   "rid": "TW2374204A",
+   "name": "新北市三角湧平面停車場站",
+   "city": "新北市",
+   "district": "三峽區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "c0a9af60-99d4-49fa-b554-2ec241d374cf",
+   "rid": "TW8115601A",
+   "name": "中油後勁加油站",
+   "city": "高雄市",
+   "district": "楠梓區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:30:00Z",
+    "end": "2026-10-14T06:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "c0b57c80-c3fd-490f-a521-d9454d694259",
+   "rid": "TW2664401A",
+   "name": "中油宜蘭大埔加油站",
+   "city": "宜蘭縣",
+   "district": "三星鄉",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 2,
+    "maint_start": "2026-10-14T02:00:00Z",
+    "maint_end": "2026-10-14T06:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "c1be0b1c-1544-4689-871b-3dceac7d947e",
+   "rid": "TW4115302A",
+   "name": "全家太平新興店站",
+   "city": "台中市",
+   "district": "太平區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:30:00Z",
+    "maint_end": "2026-10-13T05:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "d0da8e13-0297-421c-85d0-97e9703c20a9",
+   "rid": "TW6314601A",
+   "name": "7-ELEVEN 大埤店站",
+   "city": "雲林縣",
+   "district": "大埤鄉",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T08:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "d730e1ab-59a1-4a80-9e75-0359d8ace57a",
+   "rid": "TW9707101A",
+   "name": "北基中央路加油站",
+   "city": "花蓮縣",
+   "district": "花蓮市",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:30:00Z",
+    "maint_end": "2026-10-13T08:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "dabbea89-e74a-4a8e-9316-36e61315833d",
+   "rid": "TW4064103A",
+   "name": "全家台中睿景店站A",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "state",
+    "state_raw",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "maint_end": "2026-10-14T05:30:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "maint_end": "2026-10-14T07:30:00Z"
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T01:30:00Z",
+    "end": "2026-10-14T07:30:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "df88f112-d64f-4179-b93c-d8c9760af4e0",
+   "rid": "TW3304404A",
+   "name": "全聯桃園天祥店站A",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "e9078e90-ccc3-4a26-96cc-b2fbd1539cc7",
+   "rid": "TW5254101A",
+   "name": "中油竹塘加油站",
+   "city": "彰化縣",
+   "district": "竹塘鄉",
+   "fields": [
+    "state",
+    "state_raw",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "maint_start": "2026-10-14T01:30:00Z",
+    "maint_end": "2026-10-14T05:30:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "maint_start": "2026-10-14T02:00:00Z",
+    "maint_end": "2026-10-14T07:00:00Z"
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-14T02:00:00Z",
+    "end": "2026-10-14T07:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "f24a990d-7edd-4bc3-ba5e-04f4667cccec",
+   "rid": "TW2054401A",
+   "name": "暖暖里民活動中心站",
+   "city": "基隆市",
+   "district": "暖暖區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": 2,
+    "maint_start": "2026-10-14T02:00:00Z",
+    "maint_end": "2026-10-14T04:00:00Z"
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "f34d6247-fa90-4ad2-9057-6d0513d1294f",
+   "rid": "TW3275002A",
+   "name": "全聯新屋中山店站",
+   "city": "桃園市",
+   "district": "新屋區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-16T01:00:00Z",
+    "end": "2026-10-16T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "f865fdf1-d6b6-4cae-a8e6-d43883740576",
+   "rid": "TW3284401A",
+   "name": "7-ELEVEN 觀成店站",
+   "city": "桃園市",
+   "district": "觀音區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-10-16T01:00:00Z",
+    "end": "2026-10-16T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "f99d62da-e901-4279-8908-939d7a2f1d04",
+   "rid": "TW3054401A",
+   "name": "中油五分埔加油站",
+   "city": "新竹縣",
+   "district": "新埔鎮",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T02:00:00Z",
+    "maint_end": "2026-10-13T06:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "feb7ba4d-fb4b-4aaa-ad30-e471846fc260",
+   "rid": "TW4207401A",
+   "name": "愛買豐原店站A",
+   "city": "台中市",
+   "district": "豐原區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 2,
+    "maint_start": "2026-10-13T01:30:00Z",
+    "maint_end": "2026-10-13T05:30:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "date": "2026-10-14",
+ "network": "ionex",
+ "total": 2331,
+ "active": 2319,
+ "added_count": 0,
+ "removed_count": 1,
+ "changed_count": 0,
+ "added": [],
+ "removed": [
+  {
+   "id": "1181",
+   "rid": "1a1f3a55",
+   "name": "苗栗-尚麒機車行",
+   "address": "苗栗縣竹南鎮光復路341號",
+   "city": "苗栗縣",
+   "district": "竹南鎮",
+   "zip": "350",
+   "lat": 24.69549,
+   "lng": 120.87941,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  }
+ ],
+ "changed": []
+}
