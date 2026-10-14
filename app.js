@@ -241,6 +241,11 @@ function renderCharts(dates) {
       borderRadius: 5, maxBarThickness: 20, borderSkipped: false,
     };
   };
+  // 該區間全為 0/null 的品牌不畫,只剩一組時柱子自動置中對齊日期
+  const liveBarDS = (net, key) => {
+    const ds = barDS(net, key);
+    return ds.data.some(v => v) ? ds : null;
+  };
   S.charts.total = new Chart($('#chTotal'), {
     type: 'line',
     data: { labels, datasets: [lineDS('gogoro', 'total'), lineDS('ionex', 'total')] },
@@ -249,12 +254,12 @@ function renderCharts(dates) {
   // 長條圖:Y 軸不顯示負值
   S.charts.add = new Chart($('#chAdd'), {
     type: 'bar',
-    data: { labels, datasets: [barDS('gogoro', 'added'), barDS('ionex', 'added')] },
+    data: { labels, datasets: [liveBarDS('gogoro', 'added'), liveBarDS('ionex', 'added')].filter(Boolean) },
     options: barOpts(),
   });
   S.charts.rm = new Chart($('#chRm'), {
     type: 'bar',
-    data: { labels, datasets: [barDS('gogoro', 'removed'), barDS('ionex', 'removed')] },
+    data: { labels, datasets: [liveBarDS('gogoro', 'removed'), liveBarDS('ionex', 'removed')].filter(Boolean) },
     options: barOpts(),
   });
 }
