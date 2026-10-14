@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://zarakiz.github.io/battery-swap-monitor/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect x='2' y='2' width='36' height='36' rx='11' fill='%23CDEB4D'/%3E%3Cpath d='M7 22h7l3.5-9 4.5 16 3.5-11 2.5 4H33' fill='none' stroke='%230B100C' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css?v=20261011d">
+<link rel="stylesheet" href="styles.css?v=20261014a">
 </head>
 <body>
 <header class="topbar">
@@ -59,8 +59,10 @@
         期間
       </span>
       <div class="chips" id="rangeChips" role="group" aria-label="日期區間">
+        <button type="button" data-range="1" class="on">今天</button>
+        <button type="button" data-range="3">近 3 天</button>
         <button type="button" data-range="7">近 7 天</button>
-        <button type="button" data-range="30" class="on">近 30 天</button>
+        <button type="button" data-range="30">近 30 天</button>
         <button type="button" data-range="90">近 90 天</button>
         <button type="button" data-range="custom">自訂區間</button>
       </div>
@@ -172,6 +174,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-<script src="app.js?v=20261011d"></script>
+<script src="app.js?v=20261014a"></script>
 </body>
 </html>
