@@ -231,6 +231,13 @@ function renderCharts(dates) {
       spanGaps: true,
     };
   };
+  // 兩品牌柱子貼在一起:組寬固定≈40px(2 根 20px),不隨天數撐開;
+  // 剩單一品牌時 maxBarThickness 會把柱子限在 20px 置中。
+  const barGroupPct = (() => {
+    const w = ($('#chAdd')?.clientWidth || 600);
+    const catW = w / Math.max(dates.length, 1);
+    return Math.min(0.95, 40 / catW);
+  })();
   const barDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
     return {
@@ -239,6 +246,7 @@ function renderCharts(dates) {
       backgroundColor: netColor(net) + 'D9',
       hoverBackgroundColor: netColor(net),
       borderRadius: 5, maxBarThickness: 20, borderSkipped: false,
+      barPercentage: 1.0, categoryPercentage: barGroupPct,
     };
   };
   // 該區間全為 0/null 的品牌不畫,只剩一組時柱子自動置中對齊日期
