@@ -189,27 +189,33 @@ function renderCharts(dates) {
   const light = isLight();
   const labels = dates.map(shortDate);
   const idx = dates.map(d => S.dates.indexOf(d));
-  const grid = { color: light ? 'rgba(28,35,27,.07)' : 'rgba(241,236,223,.06)' };
-  const tooltip = {
-    backgroundColor: light ? 'rgba(255,255,255,.97)' : 'rgba(16,22,16,.97)',
-    titleColor: light ? '#1C231B' : '#F1ECDF',
-    bodyColor: light ? '#1C231B' : '#F1ECDF',
-    borderColor: light ? 'rgba(28,35,27,.16)' : 'rgba(205,235,77,.4)',
-    borderWidth: 1, padding: 12, cornerRadius: 10, displayColors: true,
-    titleFont: { weight: '700', size: 13 }, bodyFont: { size: 13 },
-  };
-  const common = {
+  const gridColor = light ? 'rgba(28,35,27,.07)' : 'rgba(241,236,223,.06)';
+  // 注意:Chart.js 會原地修改傳入的 options(寫回解析後的 scales 等),故每張圖
+  // 都必須用此函式產生全新的物件,不可共用同一份,否則長條圖第一組柱子會被算到畫面外。
+  const baseOpts = () => ({
     responsive: true, maintainAspectRatio: false,
     interaction: { mode: 'index', intersect: false },
     plugins: {
       legend: { labels: { boxWidth: 14, boxHeight: 14, usePointStyle: true, padding: 16 } },
-      tooltip,
+      tooltip: {
+        backgroundColor: light ? 'rgba(255,255,255,.97)' : 'rgba(16,22,16,.97)',
+        titleColor: light ? '#1C231B' : '#F1ECDF',
+        bodyColor: light ? '#1C231B' : '#F1ECDF',
+        borderColor: light ? 'rgba(28,35,27,.16)' : 'rgba(205,235,77,.4)',
+        borderWidth: 1, padding: 12, cornerRadius: 10, displayColors: true,
+        titleFont: { weight: '700', size: 13 }, bodyFont: { size: 13 },
+      },
     },
     scales: {
       x: { grid: { display: false }, ticks: { maxTicksLimit: 8, maxRotation: 0 } },
-      y: { grid, ticks: { precision: 0 } },
+      y: { grid: { color: gridColor }, ticks: { precision: 0 } },
     },
     animation: reduceMotion ? false : { duration: 700, easing: 'easeOutQuart' },
+  });
+  const barOpts = () => {
+    const o = baseOpts();
+    o.scales.y.suggestedMin = 0;
+    return o;
   };
   const lineDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
@@ -238,25 +244,18 @@ function renderCharts(dates) {
   S.charts.total = new Chart($('#chTotal'), {
     type: 'line',
     data: { labels, datasets: [lineDS('gogoro', 'total'), lineDS('ionex', 'total')] },
-    options: common,
+    options: baseOpts(),
   });
   // 長條圖:Y 軸不顯示負值
-  const barOpts = {
-    ...common,
-    scales: {
-      ...common.scales,
-      y: { ...common.scales.y, suggestedMin: 0 },
-    },
-  };
   S.charts.add = new Chart($('#chAdd'), {
     type: 'bar',
     data: { labels, datasets: [barDS('gogoro', 'added'), barDS('ionex', 'added')] },
-    options: barOpts,
+    options: barOpts(),
   });
   S.charts.rm = new Chart($('#chRm'), {
     type: 'bar',
     data: { labels, datasets: [barDS('gogoro', 'removed'), barDS('ionex', 'removed')] },
-    options: barOpts,
+    options: barOpts(),
   });
 }
 
