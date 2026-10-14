@@ -27,7 +27,7 @@ const cmpStroke = (a, b) => {
 };
 
 const S = {
-  range: 1, start: null, end: null,
+  range: 3, start: null, end: null,
   city: '', district: '',
   manifest: null, cities: {},
   T: {},                 // net -> trends.json
