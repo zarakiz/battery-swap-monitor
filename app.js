@@ -314,7 +314,8 @@ async function renderFeed(dates) {
   box.innerHTML = '';
   let total = 0;
   for (const d of [...dates].reverse()) {
-    let html = '', cnt = { a: 0, r: 0, c: 0 };
+    let cnt = { a: 0, r: 0, c: 0 };
+    const groups = { a: [], r: [], c: [] };
     for (const n of NETS) {
       const daily = await getDaily(n.id, d);
       if (!daily) continue;
@@ -322,10 +323,11 @@ async function renderFeed(dates) {
       const removed = (daily.removed || []).filter(inRegion);
       const changed = (daily.changed || []).filter(inRegion);
       cnt.a += added.length; cnt.r += removed.length; cnt.c += changed.length;
-      html += added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })).join('')
-        + removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })).join('')
-        + changed.map(c => changedRow(n.id, c)).join('');
+      groups.a.push(...added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })));
+      groups.r.push(...removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })));
+      groups.c.push(...changed.map(c => changedRow(n.id, c)));
     }
+    const html = groups.a.join('') + groups.r.join('') + groups.c.join('');
     if (!html) continue;
     total += cnt.a + cnt.r + cnt.c;
     const div = document.createElement('div');
