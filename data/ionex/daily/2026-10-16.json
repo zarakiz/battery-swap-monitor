@@ -1,0 +1,69 @@
+{
+ "date": "2026-10-16",
+ "network": "ionex",
+ "total": 2327,
+ "active": 2315,
+ "added_count": 0,
+ "removed_count": 4,
+ "changed_count": 0,
+ "added": [],
+ "removed": [
+  {
+   "id": "1026",
+   "rid": "7b2b49c3",
+   "name": "台中-祥盛機車行",
+   "address": "台中市北區英才路363號",
+   "city": "台中市",
+   "district": "北區",
+   "zip": "404",
+   "lat": 24.15487,
+   "lng": 120.66892,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "2775",
+   "rid": "66d110d8",
+   "name": "新北-儀芳機車行",
+   "address": "新北市汐止區連興街144號",
+   "city": "新北市",
+   "district": "汐止區",
+   "zip": "221",
+   "lat": 25.06145,
+   "lng": 121.65396,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "680",
+   "rid": "a469ee41",
+   "name": "新北-轟源車行",
+   "address": "新北市永和區成功路二段92號",
+   "city": "新北市",
+   "district": "永和區",
+   "zip": "234",
+   "lat": 24.9986,
+   "lng": 121.52651,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "747",
+   "rid": "5a50743f",
+   "name": "台北-運詳機車有限公司",
+   "address": "台北市文山區久康街1號",
+   "city": "台北市",
+   "district": "文山區",
+   "zip": "116",
+   "lat": 24.98869,
+   "lng": 121.56443,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  }
+ ],
+ "changed": []
+}
