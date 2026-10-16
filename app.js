@@ -217,6 +217,42 @@ function renderCharts(dates) {
     o.scales.y.suggestedMin = 0;
     return o;
   };
+  // 趨勢圖專用:y 軸截斷(不從 0 開始)＋雙軸分帶。
+  // Gogoro 用左軸、線走上半;Ionex 用右軸、線走下半,兩線不重疊。
+  // 做法:先取緊貼資料的範圍,再把另一側撐開一個範圍的空間,線就被擠到要的那半。
+  const trendBand = (arr, top) => {
+    const v = arr.filter(x => x != null);
+    if (!v.length) return null;
+    const pad = Math.max(2, Math.round((Math.max(...v) - Math.min(...v)) * 0.6) || 2);
+    let lo = Math.min(...v) - pad, hi = Math.max(...v) + pad;
+    const r = hi - lo;
+    if (top) lo -= r; else hi += r;
+    return { min: lo, max: hi };
+  };
+  const trendOpts = (gData, iData) => {
+    const o = baseOpts();
+    const gC = netColor('gogoro'), iC = netColor('ionex');
+    const gR = trendBand(gData, true);
+    o.scales.y = { ...o.scales.y, ...(gR || {}),
+      title: { display: true, text: 'Gogoro 站數', color: gC, font: { weight: '700' } },
+      ticks: { precision: 0, color: gC } };
+    if (iData.some(v => v != null)) {
+      const iR = trendBand(iData, false);
+      o.scales.y1 = { ...(iR || {}), position: 'right',
+        title: { display: true, text: 'Ionex 站數', color: iC, font: { weight: '700' } },
+        grid: { drawOnChartArea: false }, ticks: { precision: 0, color: iC } };
+    }
+    return o;
+  };
+  // 趨勢圖 dataset:直線段(tension 0,一天一個點用折線最誠實)、綁定所屬 y 軸;
+  // 全空的品牌不畫(避免空軸)。
+  const trendDS = (net, key) => {
+    const ds = lineDS(net, key);
+    if (!ds.data.some(v => v != null)) return null;
+    ds.yAxisID = net === 'gogoro' ? 'y' : 'y1';
+    ds.tension = 0;
+    return ds;
+  };
   const lineDS = (net, key) => {
     const n = NETS.find(x => x.id === net);
     const data = idx.map(i => aligned(net, key)[i]);
@@ -254,10 +290,12 @@ function renderCharts(dates) {
     const ds = barDS(net, key);
     return ds.data.some(v => v) ? ds : null;
   };
+  const gTrend = idx.map(i => aligned('gogoro', 'total')[i]);
+  const iTrend = idx.map(i => aligned('ionex', 'total')[i]);
   S.charts.total = new Chart($('#chTotal'), {
     type: 'line',
-    data: { labels, datasets: [lineDS('gogoro', 'total'), lineDS('ionex', 'total')] },
-    options: baseOpts(),
+    data: { labels, datasets: [trendDS('gogoro', 'total'), trendDS('ionex', 'total')].filter(Boolean) },
+    options: trendOpts(gTrend, iTrend),
   });
   // 長條圖:Y 軸不顯示負值
   S.charts.add = new Chart($('#chAdd'), {
