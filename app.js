@@ -230,6 +230,32 @@ function renderCharts(dates) {
     if (top === true) lo -= r; else if (top === false) hi += r;
     return { min: lo, max: hi };
   };
+  // 趨勢圖 legend 點擊後重新佈局：
+  // 雙線→分帶雙軸；單線→移除另一軸、剩餘線置中(左軸)。
+  const relayoutTrend = chart => {
+    const ds = chart.data.datasets;
+    const vis = ds.filter((d, i) => chart.isDatasetVisible(i));
+    if (!vis.length) return;
+    const gC = netColor('gogoro'), iC = netColor('ionex');
+    const o = chart.options.scales;
+    const mkTitle = (t, c) => ({ display: true, text: t, color: c, font: { weight: '700' } });
+    if (vis.length === 2) {
+      const g = vis.find(d => d._net === 'gogoro'), i = vis.find(d => d._net === 'ionex');
+      const gR = trendBand(g.data, true), iR = trendBand(i.data, false);
+      Object.assign(o.y, gR, { title: mkTitle('Gogoro 站數', gC), ticks: { precision: 0, color: gC } });
+      o.y1 = { ...iR, position: 'right', display: true, title: mkTitle('Ionex 站數', iC),
+        grid: { drawOnChartArea: false }, ticks: { precision: 0, color: iC } };
+      g.yAxisID = 'y'; i.yAxisID = 'y1';
+    } else {
+      const d = vis[0], isI = d._net === 'ionex';
+      const c = isI ? iC : gC, t = isI ? 'Ionex 站數' : 'Gogoro 站數';
+      const r = trendBand(d.data, null);
+      Object.assign(o.y, r, { title: mkTitle(t, c), ticks: { precision: 0, color: c } });
+      // 注意:Chart.js 的 update() 不會移除已建立的 scale,故用 display:false 隱藏右軸
+      if (o.y1) o.y1.display = false;
+      d.yAxisID = 'y';
+    }
+  };
   const trendOpts = (gData, iData) => {
     const o = baseOpts();
     const gC = netColor('gogoro'), iC = netColor('ionex');
@@ -251,6 +277,14 @@ function renderCharts(dates) {
       o.scales.y = { ...o.scales.y, ...(r || {}),
         title: axTitle(t, c), ticks: { precision: 0, color: c } };
     }
+    // legend 點擊開關品牌時,同步調整軸(移除隱藏品牌的軸、剩餘線置中)
+    o.plugins.legend.onClick = (e, item, legend) => {
+      const chart = legend.chart, i = item.datasetIndex;
+      if (chart.isDatasetVisible(i)) { chart.hide(i); item.hidden = true; }
+      else { chart.show(i); item.hidden = false; }
+      relayoutTrend(chart);
+      chart.update();
+    };
     return o;
   };
   // 趨勢圖 dataset:直線段(tension 0,一天一個點用折線最誠實)、綁定所屬 y 軸;
@@ -258,6 +292,7 @@ function renderCharts(dates) {
   const trendDS = (net, key, yAxisID) => {
     const ds = lineDS(net, key);
     if (!ds.data.some(v => v != null)) return null;
+    ds._net = net;
     ds.yAxisID = yAxisID;
     ds.tension = 0;
     return ds;
