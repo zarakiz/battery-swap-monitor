@@ -218,7 +218,8 @@ function renderCharts(dates) {
     return o;
   };
   // 趨勢圖專用:y 軸截斷(不從 0 開始)＋雙軸分帶。
-  // Gogoro 用左軸、線走上半;Ionex 用右軸、線走下半,兩線不重疊。
+  // 雙品牌時 Gogoro 用左軸、線走上半;Ionex 用右軸、線走下半,兩線不重疊。
+  // 單品牌時不分帶,線置中(跟每日新增/移除的單柱置中同理)。
   // 做法:先取緊貼資料的範圍,再把另一側撐開一個範圍的空間,線就被擠到要的那半。
   const trendBand = (arr, top) => {
     const v = arr.filter(x => x != null);
@@ -226,30 +227,38 @@ function renderCharts(dates) {
     const pad = Math.max(2, Math.round((Math.max(...v) - Math.min(...v)) * 0.6) || 2);
     let lo = Math.min(...v) - pad, hi = Math.max(...v) + pad;
     const r = hi - lo;
-    if (top) lo -= r; else hi += r;
+    if (top === true) lo -= r; else if (top === false) hi += r;
     return { min: lo, max: hi };
   };
   const trendOpts = (gData, iData) => {
     const o = baseOpts();
     const gC = netColor('gogoro'), iC = netColor('ionex');
-    const gR = trendBand(gData, true);
-    o.scales.y = { ...o.scales.y, ...(gR || {}),
-      title: { display: true, text: 'Gogoro 站數', color: gC, font: { weight: '700' } },
-      ticks: { precision: 0, color: gC } };
-    if (iData.some(v => v != null)) {
+    const gHas = gData.some(v => v != null), iHas = iData.some(v => v != null);
+    const axTitle = (tx, c) => ({ display: true, text: tx, color: c, font: { weight: '700' } });
+    if (gHas && iHas) {
+      const gR = trendBand(gData, true);
+      o.scales.y = { ...o.scales.y, ...(gR || {}),
+        title: axTitle('Gogoro 站數', gC), ticks: { precision: 0, color: gC } };
       const iR = trendBand(iData, false);
       o.scales.y1 = { ...(iR || {}), position: 'right',
-        title: { display: true, text: 'Ionex 站數', color: iC, font: { weight: '700' } },
+        title: axTitle('Ionex 站數', iC),
         grid: { drawOnChartArea: false }, ticks: { precision: 0, color: iC } };
+    } else {
+      // 單品牌:只用左軸、不分帶,線垂直置中
+      const onlyI = iHas;
+      const r = trendBand(onlyI ? iData : gData, null);
+      const c = onlyI ? iC : gC, t = onlyI ? 'Ionex 站數' : 'Gogoro 站數';
+      o.scales.y = { ...o.scales.y, ...(r || {}),
+        title: axTitle(t, c), ticks: { precision: 0, color: c } };
     }
     return o;
   };
   // 趨勢圖 dataset:直線段(tension 0,一天一個點用折線最誠實)、綁定所屬 y 軸;
-  // 全空的品牌不畫(避免空軸)。
-  const trendDS = (net, key) => {
+  // 全空的品牌不畫(避免空軸)。單品牌時綁左軸。
+  const trendDS = (net, key, yAxisID) => {
     const ds = lineDS(net, key);
     if (!ds.data.some(v => v != null)) return null;
-    ds.yAxisID = net === 'gogoro' ? 'y' : 'y1';
+    ds.yAxisID = yAxisID;
     ds.tension = 0;
     return ds;
   };
@@ -292,9 +301,14 @@ function renderCharts(dates) {
   };
   const gTrend = idx.map(i => aligned('gogoro', 'total')[i]);
   const iTrend = idx.map(i => aligned('ionex', 'total')[i]);
+  const gHas = gTrend.some(v => v != null), iHas = iTrend.some(v => v != null);
+  const both = gHas && iHas;
   S.charts.total = new Chart($('#chTotal'), {
     type: 'line',
-    data: { labels, datasets: [trendDS('gogoro', 'total'), trendDS('ionex', 'total')].filter(Boolean) },
+    data: { labels, datasets: [
+      gHas ? trendDS('gogoro', 'total', 'y') : null,
+      iHas ? trendDS('ionex', 'total', both ? 'y1' : 'y') : null,
+    ].filter(Boolean) },
     options: trendOpts(gTrend, iTrend),
   });
   // 長條圖:Y 軸不顯示負值
