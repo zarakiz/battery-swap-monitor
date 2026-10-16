@@ -277,11 +277,15 @@ function renderCharts(dates) {
       o.scales.y = { ...o.scales.y, ...(r || {}),
         title: axTitle(t, c), ticks: { precision: 0, color: c } };
     }
-    // legend 點擊開關品牌時,同步調整軸(移除隱藏品牌的軸、剩餘線置中)
+    // legend 點擊開關品牌時,同步調整軸(移除隱藏品牌的軸、剩餘線置中)。
+    // 注意:用 setDatasetVisibility 只改可見性 flag、不觸發 update,
+    // 再加軸調整一起做一次 chart.update(),線條淡出＋軸縮放同步動畫才絲滑。
+    // 若用 hide()/show() 會先觸發一次 update,跟後面的 update 打架造成卡頓。
     o.plugins.legend.onClick = (e, item, legend) => {
       const chart = legend.chart, i = item.datasetIndex;
-      if (chart.isDatasetVisible(i)) { chart.hide(i); item.hidden = true; }
-      else { chart.show(i); item.hidden = false; }
+      const vis = chart.isDatasetVisible(i);
+      chart.setDatasetVisibility(i, !vis);
+      item.hidden = vis;
       relayoutTrend(chart);
       chart.update();
     };
