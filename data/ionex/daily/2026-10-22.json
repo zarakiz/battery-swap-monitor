@@ -1,0 +1,83 @@
+{
+ "date": "2026-10-22",
+ "network": "ionex",
+ "total": 2322,
+ "active": 2310,
+ "added_count": 0,
+ "removed_count": 5,
+ "changed_count": 0,
+ "added": [],
+ "removed": [
+  {
+   "id": "3035",
+   "rid": "73e27c10",
+   "name": "花蓮-合歡山遊客中心站",
+   "address": "花蓮縣秀林鄉7弄33號",
+   "city": "花蓮縣",
+   "district": "秀林鄉",
+   "zip": "972",
+   "lat": 24.14248,
+   "lng": 121.28427,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "4350",
+   "rid": "6ef25a47",
+   "name": "台北-盛鑫電能有限公司",
+   "address": "台北市士林區永平街35號",
+   "city": "台北市",
+   "district": "士林區",
+   "zip": "111",
+   "lat": 25.09071,
+   "lng": 121.50503,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "4369",
+   "rid": "1859d2f9",
+   "name": "台北-安忻車業",
+   "address": "台北市南港區南港路三段314巷16號",
+   "city": "台北市",
+   "district": "南港區",
+   "zip": "115",
+   "lat": 25.0521,
+   "lng": 121.58138,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "4618",
+   "rid": "es-ionex-1785206742719-5byr1od3dw",
+   "name": "彰化-二林三和街站",
+   "address": "彰化縣二林鎮北平里三和街124號",
+   "city": "彰化縣",
+   "district": "二林鎮",
+   "zip": "526",
+   "lat": 23.90237,
+   "lng": 120.36779,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "4619",
+   "rid": "es-ionex-1768448418575-fdd9uxccry",
+   "name": "台北-信興車業",
+   "address": "台北市士林區福港街214號",
+   "city": "台北市",
+   "district": "士林區",
+   "zip": "111",
+   "lat": 25.08574,
+   "lng": 121.51762,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  }
+ ],
+ "changed": []
+}
