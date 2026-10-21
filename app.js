@@ -27,7 +27,7 @@ const cmpStroke = (a, b) => {
 };
 
 const S = {
-  range: 3, start: null, end: null,
+  range: 30, start: null, end: null,
   city: '', district: '',
   manifest: null, cities: {},
   T: {},                 // net -> trends.json
@@ -415,13 +415,19 @@ function changedRow(net, c) {
 async function renderFeed(dates) {
   const box = $('#feedList');
   box.innerHTML = '';
+  // 並行抓取所有日期×品牌的 daily JSON(每個只有幾 KB),避免一個一個等;
+  // 抓完再一次渲染,卡片就不會逐張跳出來。
+  const rev = [...dates].reverse();
+  const fetched = await Promise.all(
+    rev.map(d => Promise.all(NETS.map(n => getDaily(n.id, d))))
+  );
   let total = 0;
-  for (const d of [...dates].reverse()) {
+  rev.forEach((d, di) => {
     let cnt = { a: 0, r: 0, c: 0 };
     const groups = { a: [], r: [], c: [] };
-    for (const n of NETS) {
-      const daily = await getDaily(n.id, d);
-      if (!daily) continue;
+    NETS.forEach((n, ni) => {
+      const daily = fetched[di][ni];
+      if (!daily) return;
       const added = (daily.added || []).filter(inRegion);
       const removed = (daily.removed || []).filter(inRegion);
       const changed = (daily.changed || []).filter(inRegion);
@@ -429,9 +435,9 @@ async function renderFeed(dates) {
       groups.a.push(...added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })));
       groups.r.push(...removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })));
       groups.c.push(...changed.map(c => changedRow(n.id, c)));
-    }
+    });
     const html = groups.a.join('') + groups.r.join('') + groups.c.join('');
-    if (!html) continue;
+    if (!html) return;
     total += cnt.a + cnt.r + cnt.c;
     const div = document.createElement('div');
     div.className = 'dayblock';
@@ -446,7 +452,7 @@ async function renderFeed(dates) {
       head.setAttribute('aria-expanded', String(open));
     });
     box.appendChild(div);
-  }
+  });
   if (!total) box.innerHTML = '<div class="feed-empty">這段期間、這個地區沒有站點異動。</div>';
 }
 
