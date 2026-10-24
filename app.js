@@ -37,6 +37,12 @@ const S = {
 };
 const FIELD_ZH = { rid: '站點編號', name: '站名', address: '地址', city: '縣市', district: '區', zip: '郵遞區號', lat: '緯度', lng: '經度', state: '營運狀態', state_raw: '原始狀態碼', reason: '暫停原因碼', maint_start: '暫停開始', maint_end: '暫停結束', h24: '24小時營業', hours: '營業時間' };
 const REASON_ZH = { 2: '設備保養' };
+// Iconoir 圖標 (inline SVG，取代 emoji；stroke 用 currentColor 跟著文字顏色)
+const IC = {
+  tools: '<svg width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0503 10.6066L2.97923 17.6777C2.19818 18.4587 2.19818 19.7251 2.97923 20.5061V20.5061C3.76027 21.2872 5.0266 21.2872 5.80765 20.5061L12.8787 13.4351" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.1927 13.7994L21.071 17.6777C21.8521 18.4587 21.8521 19.7251 21.071 20.5061V20.5061C20.29 21.2872 19.0236 21.2872 18.2426 20.5061L12.0341 14.2977" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.73267 5.90381L4.61135 6.61092L2.49003 3.07539L3.90424 1.66117L7.43978 3.78249L6.73267 5.90381ZM6.73267 5.90381L9.5629 8.73404" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0503 10.6066C9.2065 8.45359 9.37147 5.62861 11.111 3.8891C12.8505 2.14958 16.0607 1.76778 17.8285 2.82844L14.7878 5.86911L14.5052 8.98015L17.6162 8.69754L20.6569 5.65686C21.7176 7.42463 21.3358 10.6349 19.5963 12.3744C17.8567 14.1139 15.0318 14.2789 12.8788 13.435" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  checkCircle: '<svg width="15" height="15" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 12.5L10 15.5L17 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  pause: '<svg width="15" height="15" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18.4V5.6C6 5.26863 6.26863 5 6.6 5H9.4C9.73137 5 10 5.26863 10 5.6V18.4C10 18.7314 9.73137 19 9.4 19H6.6C6.26863 19 6 18.7314 6 18.4Z" stroke="currentColor" stroke-width="1.5"/><path d="M14 18.4V5.6C14 5.26863 14.2686 5 14.6 5H17.4C17.7314 5 18 5.26863 18 5.6V18.4C18 18.7314 17.7314 19 17.4 19H14.6C14.2686 19 14 18.7314 14 18.4Z" stroke="currentColor" stroke-width="1.5"/></svg>',
+};
 const fmtTWT = iso => {
   if (!iso) return '—';
   try {
@@ -396,12 +402,12 @@ function changedRow(net, c) {
     const r = c.maint.reason;
     const rtx = r != null ? (REASON_ZH[r] || '暫停服務') : '暫停服務';
     const period = c.maint.start ? `${fmtTWT(c.maint.start)}${c.maint.end ? ' → ' + fmtTWT(c.maint.end) : ''}` : '';
-    // 設備保養用 🔧，其他暫停原因用 ⏸️（更符合「暫停」的意思）
-    const ic = r === 2 ? '🔧' : '⏸️';
+    // 設備保養用 tools，暫停服務用 pause
+    const ic = r === 2 ? IC.tools : IC.pause;
     maint = `<div class="maint-note"><span class="mnt-ic">${ic}</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
   } else if (c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null) {
     // 保養完成：暫停原因從設備保養變回空值，位置與風格跟設備保養公告相同
-    maint = `<div class="maint-note"><span class="mnt-ic">✅</span><span><b>保養完成</b></span></div>`;
+    maint = `<div class="maint-note"><span class="mnt-ic">${IC.checkCircle}</span><span><b>保養完成</b></span></div>`;
   }
   return `<div class="station">
     <span class="badge ${nc}">${nl}</span>
@@ -469,8 +475,6 @@ async function render() {
   renderStats(dates);
   renderCharts(dates);
   await renderFeed(dates);
-  // 第三方 emoji (Twemoji) 轉換動態產生的內容
-  if (window.twemoji) twemoji.parse(document.body);
 }
 
 function setupStickyFilters() {
@@ -781,8 +785,6 @@ async function loadVisitorCount() {
   initTheme();
   chartDefaults();
   bindUI();
-  // 靜態內容（今日訪客 👁 等）先轉一次，不等動態渲染
-  if (window.twemoji) twemoji.parse(document.body);
   loadVisitorCount(); // 不阻塞主流程，失敗靜默
   await loadAll();
   setupStickyFilters();
