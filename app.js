@@ -390,8 +390,6 @@ function changedRow(net, c) {
     `<tr><th>${esc(FIELD_ZH[f] || f)}</th><td class="b">${esc(fmtVal(f, c.before[f]))}</td><td class="a">${esc(fmtVal(f, c.after[f]))}</td></tr>`).join('');
   const nc = net === 'gogoro' ? 'b-net-g' : 'b-net-i';
   const nl = net === 'gogoro' ? 'Gogoro' : 'Ionex';
-  // 保養完成：暫停原因從設備保養 (reason=2) 變回空值
-  const maintDone = c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null;
   // 暫停服務詳細公告 (如:設備保養期間)
   let maint = '';
   if (c.maint && (c.maint.reason != null || c.maint.start)) {
@@ -399,11 +397,14 @@ function changedRow(net, c) {
     const rtx = r != null ? (REASON_ZH[r] || '暫停服務') : '暫停服務';
     const period = c.maint.start ? `${fmtTWT(c.maint.start)}${c.maint.end ? ' → ' + fmtTWT(c.maint.end) : ''}` : '';
     maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
+  } else if (c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null) {
+    // 保養完成：暫停原因從設備保養變回空值，位置與風格跟設備保養公告相同
+    const period = c.before.maint_start ? `${fmtTWT(c.before.maint_start)}${c.before.maint_end ? ' → ' + fmtTWT(c.before.maint_end) : ''}` : '';
+    maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>保養完成</b>${period ? `：${esc(period)}` : ''}</span></div>`;
   }
   return `<div class="station">
     <span class="badge ${nc}">${nl}</span>
     <span class="badge b-chg">異動</span>
-    ${maintDone ? `<span class="badge b-done">保養完成</span>` : ''}
     <div class="grow">
       <div class="nm">${esc(c.name || '(未命名)')}</div>
       ${[c.city, c.district].filter(Boolean).join('・') ? `<div class="distline">${esc([c.city, c.district].filter(Boolean).join('・'))}</div>` : ''}
