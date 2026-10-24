@@ -1,0 +1,259 @@
+{
+ "date": "2026-10-25",
+ "network": "gogoro",
+ "total": 4038,
+ "active": 3973,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 9,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "0718ae07-9ec3-4983-84ec-c26b88774332",
+   "rid": "TW1124603B",
+   "name": "第一銀行北投分行站B",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T12:30:00Z",
+    "end": "2026-10-28T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "1ba9d448-4743-486c-88af-55d44a747c4f",
+   "rid": "TW3205602A",
+   "name": "A21 環北站",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T20:00:00Z",
+    "end": "2026-10-27T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "2ea2c804-e187-4311-b9bc-b381376dbddc",
+   "rid": "TW3209101B",
+   "name": "山隆龍興加油站B",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T18:00:00Z",
+    "end": "2026-10-27T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "51fec953-4c47-407e-a000-5f2d301b9e17",
+   "rid": "TW2534101A",
+   "name": "新北市白沙灣遊客中心站",
+   "city": "新北市",
+   "district": "石門區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T19:00:00Z",
+    "end": "2026-10-28T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "74d5832c-8c2b-46c4-8b51-1485a7f5267a",
+   "rid": "TW4374901A",
+   "name": "7-ELEVEN 鈺英店站",
+   "city": "台中市",
+   "district": "大甲區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7,
+    "maint_start": "2026-10-23T17:30:00Z",
+    "maint_end": "2026-10-25T10:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "814b8a4f-0bb3-43d8-9ae7-14dcd0eee7f3",
+   "rid": "TW3206801A",
+   "name": "萬家福中原店站A",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 8
+   },
+   "maint": {
+    "reason": 8,
+    "start": "2026-10-24T20:00:00Z",
+    "end": "2026-10-26T19:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "88a6072f-b06b-4881-a823-71b3444d0020",
+   "rid": "TW3209101A",
+   "name": "山隆龍興加油站A",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T18:00:00Z",
+    "end": "2026-10-27T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "9b8f6b2b-7353-4aee-a150-8394036bb64f",
+   "rid": "TW1124604B",
+   "name": "台北捷運北投站B",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 6
+   },
+   "maint": {
+    "reason": 6,
+    "start": "2026-10-24T19:30:00Z",
+    "end": "2026-10-29T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "fc780fa3-cf9e-430f-a87a-f5aa3e83b046",
+   "rid": "TW3208701C",
+   "name": "大全聯中壢店站C",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-24T23:00:00Z",
+    "end": "2026-10-27T10:00:00Z",
+    "state_raw": 1
+   }
+  }
+ ]
+}

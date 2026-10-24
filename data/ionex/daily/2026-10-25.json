@@ -1,0 +1,29 @@
+{
+ "date": "2026-10-25",
+ "network": "ionex",
+ "total": 2322,
+ "active": 2310,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1062",
+   "rid": "8a1227e5",
+   "name": "新竹-遠倫車業",
+   "city": "新竹市",
+   "district": "東區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
