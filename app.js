@@ -399,8 +399,7 @@ function changedRow(net, c) {
     maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
   } else if (c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null) {
     // 保養完成：暫停原因從設備保養變回空值，位置與風格跟設備保養公告相同
-    const period = c.before.maint_start ? `${fmtTWT(c.before.maint_start)}${c.before.maint_end ? ' → ' + fmtTWT(c.before.maint_end) : ''}` : '';
-    maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>保養完成</b>${period ? `：${esc(period)}` : ''}</span></div>`;
+    maint = `<div class="maint-note"><span class="mnt-ic">✅</span><span><b>保養完成</b></span></div>`;
   }
   return `<div class="station">
     <span class="badge ${nc}">${nl}</span>
@@ -468,6 +467,8 @@ async function render() {
   renderStats(dates);
   renderCharts(dates);
   await renderFeed(dates);
+  // 第三方 emoji (Twemoji) 轉換動態產生的內容
+  if (window.twemoji) twemoji.parse(document.body);
 }
 
 function setupStickyFilters() {

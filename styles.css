@@ -434,6 +434,8 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 .chg-table th{color:var(--faint);font-weight:500;width:88px}
 .maint-note{display:flex;gap:8px;align-items:flex-start;margin:8px 0 2px;padding:9px 12px;border-radius:10px;font-size:13px;line-height:1.55;background:color-mix(in srgb,var(--amber) 13%,transparent);border:1px solid color-mix(in srgb,var(--amber) 38%,transparent);color:var(--ink)}
 .maint-note .mnt-ic{flex:none;font-size:15px;line-height:1.4}
+.maint-note .mnt-ic img.emoji{height:15px;width:15px;vertical-align:-2px}
+img.emoji{height:1em;width:1em;margin:0 .05em 0 .1em;vertical-align:-0.1em}
 .maint-note b{font-weight:700}
 .chg-table td.b{color:var(--muted);text-decoration:line-through}
 .chg-table td.a{color:var(--lime)}
