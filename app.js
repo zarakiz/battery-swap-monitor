@@ -396,7 +396,9 @@ function changedRow(net, c) {
     const r = c.maint.reason;
     const rtx = r != null ? (REASON_ZH[r] || '暫停服務') : '暫停服務';
     const period = c.maint.start ? `${fmtTWT(c.maint.start)}${c.maint.end ? ' → ' + fmtTWT(c.maint.end) : ''}` : '';
-    maint = `<div class="maint-note"><span class="mnt-ic">🔧</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
+    // 設備保養用 🔧，其他暫停原因用 ⏸️（更符合「暫停」的意思）
+    const ic = r === 2 ? '🔧' : '⏸️';
+    maint = `<div class="maint-note"><span class="mnt-ic">${ic}</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
   } else if (c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null) {
     // 保養完成：暫停原因從設備保養變回空值，位置與風格跟設備保養公告相同
     maint = `<div class="maint-note"><span class="mnt-ic">✅</span><span><b>保養完成</b></span></div>`;
@@ -779,6 +781,8 @@ async function loadVisitorCount() {
   initTheme();
   chartDefaults();
   bindUI();
+  // 靜態內容（今日訪客 👁 等）先轉一次，不等動態渲染
+  if (window.twemoji) twemoji.parse(document.body);
   loadVisitorCount(); // 不阻塞主流程，失敗靜默
   await loadAll();
   setupStickyFilters();
