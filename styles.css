@@ -429,7 +429,7 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 .b-net-i{background:rgba(255,192,120,.10);color:var(--ionex);border:1px solid rgba(255,192,120,.28)}
 .b-dist{background:transparent;color:var(--muted);border:1px solid var(--line);font-weight:500}
 .b-chg{background:var(--lime-dim);color:var(--lime);border:1px solid rgba(205,235,77,.35)}
-.b-done{background:rgba(140,233,154,.14);color:var(--up);border:1px solid rgba(140,233,154,.35)}
+.b-done{background:color-mix(in srgb,var(--amber) 13%,transparent);color:var(--amber);border:1px solid color-mix(in srgb,var(--amber) 38%,transparent)}
 .chg-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
 .chg-table th,.chg-table td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line-soft)}
 .chg-table th{color:var(--faint);font-weight:500;width:88px}
