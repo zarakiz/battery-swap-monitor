@@ -35,7 +35,7 @@ const S = {
   dailyCache: {},        // net -> {date: daily}
   charts: {},
 };
-const FIELD_ZH = { rid: '站點編號', name: '站名', address: '地址', city: '縣市', district: '區', zip: '郵遞區號', lat: '緯度', lng: '經度', state: '營運狀態', state_raw: '原始狀態碼', reason: '暫停原因碼', maint_start: '暫停開始', maint_end: '暫停結束', h24: '24小時營業', hours: '營業時間' };
+const FIELD_ZH = { rid: '站點編號', name: '站名', address: '地址', city: '縣市', district: '區', zip: '郵遞區號', lat: '緯度', lng: '經度', state: '營運狀態', state_raw: '原始狀態碼', reason: '暫停原因碼', maint_start: '暫停開始', maint_end: '暫停結束', h24: '24小時營業', hours: '營業時間', istatus: '內部狀態' };
 const REASON_ZH = { 2: '設備保養' };
 // Iconoir 圖標 (inline SVG，取代 emoji；stroke 用 currentColor 跟著文字顏色)
 const IC = {
@@ -61,6 +61,7 @@ const fmtVal = (f, v) => {
   if (f === 'h24') return v ? '是' : '否';
   if (f === 'maint_start' || f === 'maint_end') return fmtTWT(v);
   if (f === 'reason') return REASON_ZH[v] ? `${REASON_ZH[v]} (${v})` : `暫停服務 (${v})`;
+  if (f === 'istatus') return { AUTO: '正常營運', MAINTENANCE: '設備保養', BUILDING: '建置中' }[v] || String(v);
   return String(v);
 };
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -407,6 +408,12 @@ function changedRow(net, c) {
     maint = `<div class="maint-note"><span class="mnt-ic">${ic}</span><span><b>${esc(rtx)}</b>${period ? `：${esc(period)} 暫停服務` : '，暫時不提供交換電池服務'}</span></div>`;
   } else if (c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null) {
     // 保養完成：暫停原因從設備保養變回空值，位置與風格跟設備保養公告相同
+    maint = `<div class="maint-note"><span class="mnt-ic">${IC.checkCircle}</span><span><b>保養完成</b></span></div>`;
+  } else if (c.fields.includes('istatus') && c.after.istatus === 'MAINTENANCE') {
+    // Ionex 內部狀態進保養（App 內部 API，公開 API 無此欄位）
+    maint = `<div class="maint-note"><span class="mnt-ic">${IC.tools}</span><span><b>設備保養</b>，暫時不提供交換電池服務</span></div>`;
+  } else if (c.fields.includes('istatus') && c.before.istatus === 'MAINTENANCE' && c.after.istatus === 'AUTO') {
+    // Ionex 保養完成：內部狀態從維修中變回正常
     maint = `<div class="maint-note"><span class="mnt-ic">${IC.checkCircle}</span><span><b>保養完成</b></span></div>`;
   }
   return `<div class="station">
