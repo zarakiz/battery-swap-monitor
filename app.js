@@ -390,6 +390,8 @@ function changedRow(net, c) {
     `<tr><th>${esc(FIELD_ZH[f] || f)}</th><td class="b">${esc(fmtVal(f, c.before[f]))}</td><td class="a">${esc(fmtVal(f, c.after[f]))}</td></tr>`).join('');
   const nc = net === 'gogoro' ? 'b-net-g' : 'b-net-i';
   const nl = net === 'gogoro' ? 'Gogoro' : 'Ionex';
+  // 保養完成：暫停原因從設備保養 (reason=2) 變回空值
+  const maintDone = c.fields.includes('reason') && c.before.reason === 2 && c.after.reason == null;
   // 暫停服務詳細公告 (如:設備保養期間)
   let maint = '';
   if (c.maint && (c.maint.reason != null || c.maint.start)) {
@@ -401,6 +403,7 @@ function changedRow(net, c) {
   return `<div class="station">
     <span class="badge ${nc}">${nl}</span>
     <span class="badge b-chg">異動</span>
+    ${maintDone ? `<span class="badge b-done">保養完成</span>` : ''}
     <div class="grow">
       <div class="nm">${esc(c.name || '(未命名)')}</div>
       ${[c.city, c.district].filter(Boolean).join('・') ? `<div class="distline">${esc([c.city, c.district].filter(Boolean).join('・'))}</div>` : ''}
