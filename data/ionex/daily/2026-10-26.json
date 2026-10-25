@@ -1,0 +1,29 @@
+{
+ "date": "2026-10-26",
+ "network": "ionex",
+ "total": 2322,
+ "active": 2310,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "161",
+   "rid": "b98d448a",
+   "name": "新北-昇龍智慧電能有限公司",
+   "city": "新北市",
+   "district": "板橋區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "MAINTENANCE"
+   },
+   "after": {
+    "istatus": "AUTO"
+   }
+  }
+ ]
+}
