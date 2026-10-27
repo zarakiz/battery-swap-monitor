@@ -376,7 +376,8 @@ function stationRow(net, s, badge) {
   const dist = [s.city, s.district].filter(Boolean).join('・');
   const nc = net === 'gogoro' ? 'b-net-g' : 'b-net-i';
   const nl = net === 'gogoro' ? 'Gogoro' : 'Ionex';
-  return `<div class="station">
+  const ft = badge.cls === 'b-add' ? 'a' : 'r';
+  return `<div class="station" data-ft="${ft}">
     <span class="badge ${nc}">${nl}</span>
     <span class="badge ${badge.cls}">${badge.tx}</span>
     <div class="grow">
@@ -416,7 +417,7 @@ function changedRow(net, c) {
     // Ionex 保養完成：內部狀態從維修中變回正常
     maint = `<div class="maint-note"><span class="mnt-ic">${IC.checkCircle}</span><span><b>保養完成</b></span></div>`;
   }
-  return `<div class="station">
+  return `<div class="station" data-ft="c">
     <span class="badge ${nc}">${nl}</span>
     <span class="badge b-chg">異動</span>
     <div class="grow">
@@ -472,6 +473,32 @@ async function renderFeed(dates) {
     box.appendChild(div);
   });
   if (!total) box.innerHTML = '<div class="feed-empty">這段期間、這個地區沒有站點異動。</div>';
+  applyFeedFilter();
+}
+
+/* ---------- 每日異動類型篩選 (新增/移除/異動,可複選) ---------- */
+function applyFeedFilter() {
+  const on = new Set([...document.querySelectorAll('.feed-filter input:checked')].map(i => i.dataset.ft));
+  const blocks = document.querySelectorAll('#feedList .dayblock');
+  let anyVisible = false;
+  blocks.forEach(b => {
+    let va = 0, vr = 0, vc = 0;
+    b.querySelectorAll('.station').forEach(row => {
+      const show = on.has(row.dataset.ft);
+      row.style.display = show ? '' : 'none';
+      if (!show) return;
+      if (row.dataset.ft === 'a') va++;
+      else if (row.dataset.ft === 'r') vr++;
+      else vc++;
+    });
+    const vis = (va + vr + vc) > 0;
+    b.style.display = vis ? '' : 'none';
+    if (vis) anyVisible = true;
+    const dc = b.querySelector('.dcount');
+    if (dc) dc.textContent = `新增 ${va}・移除 ${vr}・異動 ${vc}`;
+  });
+  const nom = document.getElementById('feedNoMatch');
+  if (nom) nom.style.display = (blocks.length > 0 && !anyVisible) ? '' : 'none';
 }
 
 /* ---------- 主流程 ---------- */
@@ -753,6 +780,8 @@ function bindUI() {
   };
   $('#expandAll').addEventListener('click', () => setAllDays(true));
   $('#collapseAll').addEventListener('click', () => setAllDays(false));
+  document.querySelectorAll('.feed-filter input').forEach(i =>
+    i.addEventListener('change', applyFeedFilter));
   ddCity = makeDropdown('ddCity', {
     placeholder: '全台灣',
     onSelect: async v => {

@@ -401,6 +401,14 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 }
 .feed-tools button:hover{border-color:var(--lime);color:var(--ink);transform:translateY(-1px)}
 .feed-tools button:active{transform:none}
+.feed-filter{flex-basis:100%;display:flex;align-items:center;gap:8px}
+.ff-label{font-size:12.5px;color:var(--faint)}
+.ff-opt{position:relative;border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:12.5px;color:var(--muted);cursor:pointer;transition:all .18s ease;user-select:none;white-space:nowrap}
+.ff-opt input{position:absolute;opacity:0;pointer-events:none}
+.ff-opt:hover{color:var(--ink);transform:translateY(-1px)}
+.ff-opt.ff-a:has(input:checked){background:rgba(140,233,154,.14);color:var(--up);border-color:rgba(140,233,154,.35)}
+.ff-opt.ff-r:has(input:checked){background:rgba(255,135,135,.12);color:var(--down);border-color:rgba(255,135,135,.35)}
+.ff-opt.ff-c:has(input:checked){background:var(--lime-dim);color:var(--lime);border-color:rgba(205,235,77,.35)}
 @media (prefers-reduced-motion:reduce){
   .daybody{transition:none}
   .daychev{transition:none}
