@@ -463,7 +463,7 @@ async function renderFeed(dates) {
     div.innerHTML = `<button type="button" class="dayhead" aria-expanded="false">`
       + `<svg class="daychev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`
       + `<span class="daydate">${esc(d)}</span>`
-      + `<span class="dcount">新增 ${cnt.a}・移除 ${cnt.r}・異動 ${cnt.c}</span>`
+      + `<span class="dcount">新增 <span class="dcn" data-t="a">${cnt.a}</span>・移除 <span class="dcn" data-t="r">${cnt.r}</span>・異動 <span class="dcn" data-t="c">${cnt.c}</span></span>`
       + `</button><div class="daybody"><div class="daybody-in"><div class="daybody-pad">${html}</div></div></div>`;
     const head = div.querySelector('.dayhead');
     head.addEventListener('click', () => {
@@ -482,20 +482,18 @@ function applyFeedFilter() {
   const blocks = document.querySelectorAll('#feedList .dayblock');
   let anyVisible = false;
   blocks.forEach(b => {
-    let va = 0, vr = 0, vc = 0;
+    let vis = false;
     b.querySelectorAll('.station').forEach(row => {
       const show = on.has(row.dataset.ft);
       row.style.display = show ? '' : 'none';
-      if (!show) return;
-      if (row.dataset.ft === 'a') va++;
-      else if (row.dataset.ft === 'r') vr++;
-      else vc++;
+      if (show) vis = true;
     });
-    const vis = (va + vr + vc) > 0;
     b.style.display = vis ? '' : 'none';
     if (vis) anyVisible = true;
-    const dc = b.querySelector('.dcount');
-    if (dc) dc.textContent = `新增 ${va}・移除 ${vr}・異動 ${vc}`;
+    // 取消勾選的類型：數字保留原數、只加刪除線，不歸零
+    b.querySelectorAll('.dcount .dcn').forEach(n => {
+      n.classList.toggle('off', !on.has(n.dataset.t));
+    });
   });
   const nom = document.getElementById('feedNoMatch');
   if (nom) nom.style.display = (blocks.length > 0 && !anyVisible) ? '' : 'none';

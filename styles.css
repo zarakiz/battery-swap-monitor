@@ -389,6 +389,7 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 .daychev{width:14px;height:14px;flex:none;color:var(--muted);transform:rotate(-90deg);transition:transform .28s cubic-bezier(.4,0,.2,1)}
 .dayblock.open .daychev{transform:rotate(0deg);color:var(--lime)}
 .dayhead .dcount{font-weight:400;font-size:12.5px;color:var(--faint);margin-left:auto}
+.dcount .dcn.off{text-decoration:line-through}
 .daybody{display:grid;grid-template-rows:0fr;transition:grid-template-rows .34s cubic-bezier(.4,0,.2,1)}
 .dayblock.open .daybody{grid-template-rows:1fr}
 .daybody-in{overflow:hidden;min-height:0}
