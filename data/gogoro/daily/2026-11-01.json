@@ -1,0 +1,197 @@
+{
+ "date": "2026-11-01",
+ "network": "gogoro",
+ "total": 4033,
+ "active": 4000,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 7,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "006e6ccc-7a51-439e-b275-ca9e30e21320",
+   "rid": "TW9008101A",
+   "name": "全聯屏東萬年店站",
+   "city": "屏東縣",
+   "district": "屏東市",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-31T14:30:00Z",
+    "end": "2026-11-03T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "0dd883e2-ec21-480e-abbd-dccdfb43e701",
+   "rid": "TW3004402A",
+   "name": "宏佳騰新竹北大店站",
+   "city": "新竹市",
+   "district": "北區",
+   "fields": [
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "reason": 7,
+    "maint_start": "2026-10-30T21:00:00Z",
+    "maint_end": "2026-10-31T10:00:00Z"
+   },
+   "after": {
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "23a06f6c-28c9-4295-ab22-0196d417f49e",
+   "rid": "TW2344301B",
+   "name": "新北市永和仁愛公園站(仁愛路側)B",
+   "city": "新北市",
+   "district": "永和區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-31T08:00:00Z",
+    "end": "2026-11-02T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "644e07d5-3d0e-4d2b-b93a-fe59c569c199",
+   "rid": "TW7324204A",
+   "name": "中油白河中山加油站",
+   "city": "台南市",
+   "district": "白河區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 5
+   },
+   "maint": {
+    "reason": 5,
+    "start": "2026-11-30T01:00:00Z",
+    "end": "2026-11-30T04:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "856f96a4-8dcc-4c6c-8125-937fce524ad7",
+   "rid": "TW4065401A",
+   "name": "中油北屯加油站",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7,
+    "maint_start": "2026-10-30T19:30:00Z",
+    "maint_end": "2026-11-02T10:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "a34f6e39-167f-4fe2-aa0e-a7378ae8be51",
+   "rid": "TW7096501A",
+   "name": "中油和順加油站",
+   "city": "台南市",
+   "district": "安南區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-31T06:00:00Z",
+    "end": "2026-11-02T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "ee2f4dfb-0625-4c5f-9ea8-07b5bed826a5",
+   "rid": "TW7024401B",
+   "name": "HiLife 台南南都店站B",
+   "city": "台南市",
+   "district": "南區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-10-31T15:00:00Z",
+    "end": "2026-11-02T10:00:00Z",
+    "state_raw": 98
+   }
+  }
+ ]
+}
