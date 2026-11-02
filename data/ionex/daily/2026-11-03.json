@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-03",
+ "network": "ionex",
+ "total": 2320,
+ "active": 2308,
+ "added_count": 0,
+ "removed_count": 1,
+ "changed_count": 1,
+ "added": [],
+ "removed": [
+  {
+   "id": "1020",
+   "rid": "7cb7e077",
+   "name": "台中-福山輪業",
+   "address": "台中市豐原區豐田路35號",
+   "city": "台中市",
+   "district": "豐原區",
+   "zip": "420",
+   "lat": 24.23965,
+   "lng": 120.71976,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  }
+ ],
+ "changed": [
+  {
+   "id": "810",
+   "rid": "6836addc",
+   "name": "新北-昇龍車業三站",
+   "city": "新北市",
+   "district": "板橋區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
