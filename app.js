@@ -431,6 +431,13 @@ function changedRow(net, c) {
   </div>`;
 }
 
+/* 展開時才把該天的卡片塞進 DOM（只做一次，用完釋放字串） */
+function fillDayBody(div) {
+  if (div._feedHtml == null) return;
+  div.querySelector('.daybody-pad').innerHTML = div._feedHtml;
+  div._feedHtml = null;
+}
+
 async function renderFeed(dates) {
   const box = $('#feedList');
   box.innerHTML = '';
@@ -464,11 +471,17 @@ async function renderFeed(dates) {
       + `<svg class="daychev" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`
       + `<span class="daydate">${esc(d)}</span>`
       + `<span class="dcount">新增 <span class="dcn" data-t="a">${cnt.a}</span>・移除 <span class="dcn" data-t="r">${cnt.r}</span>・異動 <span class="dcn" data-t="c">${cnt.c}</span></span>`
-      + `</button><div class="daybody"><div class="daybody-in"><div class="daybody-pad">${html}</div></div></div>`;
+      + `</button><div class="daybody"><div class="daybody-in"><div class="daybody-pad"></div></div></div>`;
+    // 延遲渲染：卡片 HTML 先存在 JS 變數裡，展開該天時才塞進 DOM。
+    // 之前是 30 天 900 張卡一次全塞（約 1.8 萬個節點），光排版就拖慢整頁，
+    // 電腦版視窗大、一次畫的範圍多，卡頓特別明顯。
+    div._feedHtml = html;
     const head = div.querySelector('.dayhead');
     head.addEventListener('click', () => {
+      fillDayBody(div);
       const open = div.classList.toggle('open');
       head.setAttribute('aria-expanded', String(open));
+      applyFeedFilter();
     });
     box.appendChild(div);
   });
@@ -482,11 +495,13 @@ function applyFeedFilter() {
   const blocks = document.querySelectorAll('#feedList .dayblock');
   let anyVisible = false;
   blocks.forEach(b => {
-    let vis = false;
+    // 卡片可能還沒塞進 DOM（延遲渲染），改用標頭的 dcount 數字判斷該天是否還有可見類型；
+    // dcount 是 renderFeed 用篩選後的筆數算的，跟卡片數一致，結果跟以前掃卡片相同。
+    const counts = {};
+    b.querySelectorAll('.dcount .dcn').forEach(n => { counts[n.dataset.t] = +n.textContent || 0; });
+    const vis = ['a', 'r', 'c'].some(t => on.has(t) && counts[t] > 0);
     b.querySelectorAll('.station').forEach(row => {
-      const show = on.has(row.dataset.ft);
-      row.style.display = show ? '' : 'none';
-      if (show) vis = true;
+      row.style.display = on.has(row.dataset.ft) ? '' : 'none';
     });
     b.style.display = vis ? '' : 'none';
     if (vis) anyVisible = true;
@@ -772,9 +787,11 @@ function bindUI() {
   $('#dEnd').addEventListener('change', customGo);
   const setAllDays = open => {
     document.querySelectorAll('#feedList .dayblock').forEach(b => {
+      if (open) fillDayBody(b);
       b.classList.toggle('open', open);
       b.querySelector('.dayhead').setAttribute('aria-expanded', String(open));
     });
+    if (open) applyFeedFilter();
   };
   $('#expandAll').addEventListener('click', () => setAllDays(true));
   $('#collapseAll').addEventListener('click', () => setAllDays(false));
