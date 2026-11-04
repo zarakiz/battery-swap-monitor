@@ -448,6 +448,7 @@ async function renderFeed(dates) {
     rev.map(d => Promise.all(NETS.map(n => getDaily(n.id, d))))
   );
   let total = 0;
+  const maxW = { a: 1, r: 1, c: 1 };
   rev.forEach((d, di) => {
     let cnt = { a: 0, r: 0, c: 0 };
     const groups = { a: [], r: [], c: [] };
@@ -465,6 +466,9 @@ async function renderFeed(dates) {
     const html = groups.a.join('') + groups.r.join('') + groups.c.join('');
     if (!html) return;
     total += cnt.a + cnt.r + cnt.c;
+    maxW.a = Math.max(maxW.a, String(cnt.a).length);
+    maxW.r = Math.max(maxW.r, String(cnt.r).length);
+    maxW.c = Math.max(maxW.c, String(cnt.c).length);
     const div = document.createElement('div');
     div.className = 'dayblock';
     div.innerHTML = `<button type="button" class="dayhead" aria-expanded="false">`
@@ -486,6 +490,11 @@ async function renderFeed(dates) {
     box.appendChild(div);
   });
   if (!total) box.innerHTML = '<div class="feed-empty">這段期間、這個地區沒有站點異動。</div>';
+  // 三欄數字各自以當次顯示的最大位數為寬、右對齊：位數少的行補空白對齊；
+  // 哪天某欄破 100，該欄自動撐到 3 位數，其他行跟著對齊。
+  box.style.setProperty('--dcn-wa', maxW.a + 'ch');
+  box.style.setProperty('--dcn-wr', maxW.r + 'ch');
+  box.style.setProperty('--dcn-wc', maxW.c + 'ch');
   applyFeedFilter();
 }
 
