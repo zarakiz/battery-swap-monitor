@@ -452,7 +452,9 @@ async function renderFeed(dates) {
   rev.forEach((d, di) => {
     let cnt = { a: 0, r: 0, c: 0 };
     const groups = { a: [], r: [], c: [] };
-    NETS.forEach((n, ni) => {
+    // 異動明細順位：Ionex 在前、Gogoro 在後（只改明細，其他地方 NETS 順序不動）。
+    [...NETS].reverse().forEach(n => {
+      const ni = NETS.indexOf(n);
       const daily = fetched[di][ni];
       if (!daily) return;
       const added = (daily.added || []).filter(inRegion);
