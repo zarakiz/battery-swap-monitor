@@ -451,21 +451,19 @@ async function renderFeed(dates) {
   const maxW = { a: 1, r: 1, c: 1 };
   rev.forEach((d, di) => {
     let cnt = { a: 0, r: 0, c: 0 };
-    const groups = { a: [], r: [], c: [] };
-    // 異動明細順位：Ionex 在前、Gogoro 在後（只改明細，其他地方 NETS 順序不動）。
-    [...NETS].reverse().forEach(n => {
+    // 總順位：Ionex 新增、移除、異動，再 Gogoro 新增、移除、異動（先照品牌分，再照類型分）。
+    const html = [...NETS].reverse().map(n => {
       const ni = NETS.indexOf(n);
       const daily = fetched[di][ni];
-      if (!daily) return;
+      if (!daily) return '';
       const added = (daily.added || []).filter(inRegion);
       const removed = (daily.removed || []).filter(inRegion);
       const changed = (daily.changed || []).filter(inRegion);
       cnt.a += added.length; cnt.r += removed.length; cnt.c += changed.length;
-      groups.a.push(...added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })));
-      groups.r.push(...removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })));
-      groups.c.push(...changed.map(c => changedRow(n.id, c)));
-    });
-    const html = groups.a.join('') + groups.r.join('') + groups.c.join('');
+      return added.map(s => stationRow(n.id, s, { cls: 'b-add', tx: '新增' })).join('')
+        + removed.map(s => stationRow(n.id, s, { cls: 'b-rm', tx: '移除' })).join('')
+        + changed.map(c => changedRow(n.id, c)).join('');
+    }).join('');
     if (!html) return;
     total += cnt.a + cnt.r + cnt.c;
     maxW.a = Math.max(maxW.a, String(cnt.a).length);
