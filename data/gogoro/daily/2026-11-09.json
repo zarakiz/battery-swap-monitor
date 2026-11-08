@@ -1,0 +1,317 @@
+{
+ "date": "2026-11-09",
+ "network": "gogoro",
+ "total": 4034,
+ "active": 3997,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 13,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "0dbb132d-a316-40db-8d82-f5277a6aee64",
+   "rid": "TW3255502A",
+   "name": "統一速邁樂龍潭二加油站A",
+   "city": "桃園市",
+   "district": "龍潭區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-09T01:00:00Z",
+    "end": "2026-11-09T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "0e2ef9bd-e316-4af7-8f4f-d00091fe09a3",
+   "rid": "TW3205402A",
+   "name": "全家中壢青埔店站A",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-12T01:00:00Z",
+    "end": "2026-11-12T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "1d5b2226-2684-4405-bf4f-4b099f7d6640",
+   "rid": "TW7108402A",
+   "name": "康是美康南藥局店站",
+   "city": "台南市",
+   "district": "永康區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason",
+    "maint_start",
+    "maint_end"
+   ],
+   "before": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7,
+    "maint_start": "2026-11-07T17:00:00Z",
+    "maint_end": "2026-11-13T10:00:00Z"
+   },
+   "after": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null,
+    "maint_start": null,
+    "maint_end": null
+   }
+  },
+  {
+   "id": "2ddcda22-9984-4c4b-8a87-2d29e3d30075",
+   "rid": "TW3205607A",
+   "name": "中油高鐵加油站",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-12T01:00:00Z",
+    "end": "2026-11-12T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "360c9704-ca73-4b52-9b40-03166a0a3425",
+   "rid": "TW3244303B",
+   "name": "桃園市新榮平面停車場站B",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-10T01:00:00Z",
+    "end": "2026-11-10T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "4b7f8473-6de3-4686-9cee-408a0f6af690",
+   "rid": "TW3264101A",
+   "name": "Gogoro 楊梅中山門市站A",
+   "city": "桃園市",
+   "district": "楊梅區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-13T01:00:00Z",
+    "end": "2026-11-13T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "718a2fd6-bce4-4580-ac3e-3f0300273733",
+   "rid": "TW1116602A",
+   "name": "宏佳騰士林承德店站",
+   "city": "台北市",
+   "district": "士林區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-12T07:00:00Z",
+    "end": "2026-11-12T09:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "8ac985fe-bb89-4c61-b220-cdde6a344865",
+   "rid": "TW3255502B",
+   "name": "統一速邁樂龍潭二加油站B",
+   "city": "桃園市",
+   "district": "龍潭區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-09T01:00:00Z",
+    "end": "2026-11-09T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "b13a27b4-d921-4675-9df4-478736cfd6a9",
+   "rid": "TW7006102A",
+   "name": "中油安平古堡加油站",
+   "city": "台南市",
+   "district": "中西區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-08T10:30:00Z",
+    "end": "2026-11-09T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "b502efe4-5be6-4eb8-9119-d0824496cf16",
+   "rid": "TW3264101B",
+   "name": "Gogoro 楊梅中山門市站B",
+   "city": "桃園市",
+   "district": "楊梅區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-13T01:00:00Z",
+    "end": "2026-11-13T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "c890e1e3-ecc9-42d8-a15c-2814c32f74a9",
+   "rid": "TW3244202A",
+   "name": "中華電信平鎮服務中心站A",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-10T01:00:00Z",
+    "end": "2026-11-10T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "d548a207-f59b-4866-8c2f-84bc20887607",
+   "rid": "TW3384504A",
+   "name": "7-ELEVEN 航福店站",
+   "city": "桃園市",
+   "district": "蘆竹區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-08T17:30:00Z",
+    "end": "2026-11-09T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "e8bcfc37-7ece-49e3-813d-3d7f8f66ba61",
+   "rid": "TW3285004A",
+   "name": "中油中新加油站",
+   "city": "桃園市",
+   "district": "觀音區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-11T01:00:00Z",
+    "end": "2026-11-11T10:00:00Z",
+    "state_raw": 1
+   }
+  }
+ ]
+}
