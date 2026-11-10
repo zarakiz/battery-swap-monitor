@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-11",
+ "network": "ionex",
+ "total": 2320,
+ "active": 2308,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1473",
+   "rid": "8db1243e",
+   "name": "屏東-永福車業行",
+   "city": "屏東縣",
+   "district": "麟洛鄉",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
