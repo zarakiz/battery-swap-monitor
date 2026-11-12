@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-13",
+ "network": "ionex",
+ "total": 2319,
+ "active": 2307,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 2,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1364",
+   "rid": "a547e752",
+   "name": "嘉義-蕭賜彥診所",
+   "city": "嘉義縣",
+   "district": "民雄鄉",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  },
+  {
+   "id": "1946",
+   "rid": "d8475933",
+   "name": "桃園-中油生曜站加油站",
+   "city": "桃園市",
+   "district": "龍潭區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
