@@ -1,0 +1,279 @@
+{
+ "date": "2026-11-15",
+ "network": "gogoro",
+ "total": 4035,
+ "active": 4000,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 11,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1d0cb020-0ce2-4fff-b5cb-5ac14706bdd6",
+   "rid": "TW1066202C",
+   "name": "臺北市民權公園站C",
+   "city": "台北市",
+   "district": "松山區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-14T09:30:00Z",
+    "end": "2026-11-16T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "36a4c67d-004e-4ecb-a4eb-2aee4e11612b",
+   "rid": "TW7108103A",
+   "name": "中油台糖永安加油站",
+   "city": "台南市",
+   "district": "永康區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-14T09:00:00Z",
+    "end": "2026-11-17T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "4802081a-8e32-489b-8dfd-42f88d8459fa",
+   "rid": "TW8156601B",
+   "name": "高雄市大社區農會站B",
+   "city": "高雄市",
+   "district": "大社區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-14T14:00:00Z",
+    "end": "2026-11-17T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "6b97c220-6b94-44c0-afa7-d2ded6f5c586",
+   "rid": "TW3006602A",
+   "name": "中油新竹明湖加油站",
+   "city": "新竹市",
+   "district": "東區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-19T02:00:00Z",
+    "end": "2026-11-19T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "99b4a222-8d29-41c2-b28b-bcf122401ccf",
+   "rid": "TW3004301A",
+   "name": "Gogoro 東區民權服務中心站",
+   "city": "新竹市",
+   "district": "東區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-18T04:00:00Z",
+    "end": "2026-11-18T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "9a758b53-8d4f-40cb-bde2-ce9374baed44",
+   "rid": "TW3694402A",
+   "name": "全家卓蘭水梨店站",
+   "city": "苗栗縣",
+   "district": "卓蘭鎮",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-17T02:00:00Z",
+    "end": "2026-11-17T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "9d7f29c2-056b-4550-8c43-401ef1fa0afe",
+   "rid": "TW3515403A",
+   "name": "中油頭份蘆竹加油站",
+   "city": "苗栗縣",
+   "district": "頭份市",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-14T13:30:00Z",
+    "end": "2026-11-16T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "afe69d36-e31c-4c5b-b27d-f72eaa936a28",
+   "rid": "TW3006906A",
+   "name": "新竹市東園市場停車場站A",
+   "city": "新竹市",
+   "district": "東區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-16T02:00:00Z",
+    "end": "2026-11-16T06:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "c0eeb750-a7d2-4618-b175-a4fb3c5a163f",
+   "rid": "TW3028502A",
+   "name": "7-ELEVEN 福崙店站",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-18T02:00:00Z",
+    "end": "2026-11-18T06:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "e1ca7d1e-b5ec-49b5-ab8a-40360cd8c5ba",
+   "rid": "TW3006906B",
+   "name": "新竹市東園市場停車場站B",
+   "city": "新竹市",
+   "district": "東區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-16T02:00:00Z",
+    "end": "2026-11-16T06:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "f2d693f9-48c1-4ffe-bb60-9f593388fe86",
+   "rid": "TW3026101A",
+   "name": "中油日清加油站",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 2
+   },
+   "maint": {
+    "reason": 2,
+    "start": "2026-11-20T02:30:00Z",
+    "end": "2026-11-20T06:30:00Z",
+    "state_raw": 1
+   }
+  }
+ ]
+}
