@@ -9,7 +9,7 @@
    "changed": 0
   }
  ],
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "parts": 25,
  "networks": {
   "gogoro": {
@@ -318,6 +318,14 @@
      "added": 0,
      "removed": 0,
      "changed": 11
+    },
+    {
+     "date": "2026-11-16",
+     "total": 4035,
+     "active": 3997,
+     "added": 0,
+     "removed": 0,
+     "changed": 4
     }
    ],
    "parts": 29,
@@ -987,6 +995,14 @@
     },
     {
      "date": "2026-11-15",
+     "total": 2319,
+     "active": 2307,
+     "added": 0,
+     "removed": 0,
+     "changed": 0
+    },
+    {
+     "date": "2026-11-16",
      "total": 2319,
      "active": 2307,
      "added": 0,

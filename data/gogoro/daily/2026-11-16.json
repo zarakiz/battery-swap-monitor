@@ -1,0 +1,119 @@
+{
+ "date": "2026-11-16",
+ "network": "gogoro",
+ "total": 4035,
+ "active": 3997,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 4,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "140c7179-9480-4cfb-9cd7-860463f4e64d",
+   "rid": "TW7016901A",
+   "name": "中油崇善加油站",
+   "city": "台南市",
+   "district": "東區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-15T11:30:00Z",
+    "end": "2026-11-17T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "505ee6ea-eda6-4d5e-8b30-f48cedde8dc1",
+   "rid": "TW4334203A",
+   "name": "康是美北勢門市站",
+   "city": "台中市",
+   "district": "沙鹿區",
+   "fields": [
+    "reason"
+   ],
+   "before": {
+    "reason": null
+   },
+   "after": {
+    "reason": 6
+   },
+   "maint": {
+    "reason": 6,
+    "start": "2026-11-19T01:00:00Z",
+    "end": "2026-11-19T10:00:00Z",
+    "state_raw": 1
+   }
+  },
+  {
+   "id": "822fcdb3-88c0-4359-99be-bc40442b32fd",
+   "rid": "TW2424402A",
+   "name": "新莊運動中心站A",
+   "city": "新北市",
+   "district": "新莊區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-14T20:30:00Z",
+    "end": "2026-11-17T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "9d4195f3-2eef-4ca3-8647-6864036086b7",
+   "rid": "TW3204301A",
+   "name": "7-ELEVEN 成豐店站",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-15T13:00:00Z",
+    "end": "2026-11-16T10:00:00Z",
+    "state_raw": 98
+   }
+  }
+ ]
+}
