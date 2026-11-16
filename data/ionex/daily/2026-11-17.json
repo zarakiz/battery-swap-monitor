@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-17",
+ "network": "ionex",
+ "total": 2319,
+ "active": 2307,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "130",
+   "rid": "2be24619",
+   "name": "台北-康達盛通內湖店",
+   "city": "台北市",
+   "district": "內湖區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
