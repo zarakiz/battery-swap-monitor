@@ -1,0 +1,57 @@
+{
+ "date": "2026-11-18",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 3,
+ "changed_count": 0,
+ "added": [],
+ "removed": [
+  {
+   "id": "130",
+   "rid": "2be24619",
+   "name": "台北-康達盛通內湖店",
+   "address": "台北市內湖區民善街88號",
+   "city": "台北市",
+   "district": "內湖區",
+   "zip": "114",
+   "lat": 25.06016,
+   "lng": 121.575,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業"
+  },
+  {
+   "id": "3955",
+   "rid": "0b807d3b",
+   "name": "桃園-慶源機車行",
+   "address": "桃園市楊梅區楊湖路三段517號",
+   "city": "桃園市",
+   "district": "楊梅區",
+   "zip": "326",
+   "lat": 24.91248,
+   "lng": 121.08766,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "761",
+   "rid": "d10ed260",
+   "name": "台中-立弘機車行",
+   "address": "台中市潭子區圓通南路282號",
+   "city": "台中市",
+   "district": "潭子區",
+   "zip": "427",
+   "lat": 24.20736,
+   "lng": 120.7024,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  }
+ ],
+ "changed": []
+}
