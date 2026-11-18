@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-19",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 2,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "2112",
+   "rid": "84c2e7d6",
+   "name": "桃園-康達盛通桃園文化七店",
+   "city": "桃園市",
+   "district": "龜山區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "桃園-便利購桃園文化七店"
+   },
+   "after": {
+    "name": "桃園-康達盛通桃園文化七店"
+   }
+  },
+  {
+   "id": "2376",
+   "rid": "ee8b9753",
+   "name": "苗栗-苗栗廣達機車行",
+   "city": "苗栗縣",
+   "district": "公館鄉",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
