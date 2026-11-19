@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-20",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "2984",
+   "rid": "7f241cac ",
+   "name": "台南-啟大機車",
+   "city": "台南市",
+   "district": "仁德區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
