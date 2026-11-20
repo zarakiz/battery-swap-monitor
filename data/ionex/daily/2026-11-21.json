@@ -1,0 +1,2467 @@
+{
+ "date": "2026-11-21",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 153,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1187",
+   "rid": "2fe5a23a",
+   "name": "新竹-冠昇機車行",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣竹北市三民路97號"
+   },
+   "after": {
+    "address": "新竹縣竹北市三民路93號"
+   }
+  },
+  {
+   "id": "1192",
+   "rid": "cbb46401",
+   "name": "苗栗-德山車行",
+   "city": "苗栗縣",
+   "district": "苑裡鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣苑裡鎮中正里10鄰42-2、43號"
+   },
+   "after": {
+    "address": "苗栗縣苑裡鎮中正里10鄰43號"
+   }
+  },
+  {
+   "id": "1741",
+   "rid": "c2e40628",
+   "name": "金門-翟山坑道",
+   "city": "金門縣",
+   "district": "金城鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金城鎮東宏山段362地號(金門縣金城鎮90號停車場)"
+   },
+   "after": {
+    "address": "金門縣金城鎮90號停車場"
+   }
+  },
+  {
+   "id": "1742",
+   "rid": "fadcb745",
+   "name": "金門-金門迎賓館",
+   "city": "金門縣",
+   "district": "金湖鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金湖鎮南雄段604地號(金門縣金湖鎮山外里山外72之1號停車場)"
+   },
+   "after": {
+    "address": "金門縣金湖鎮山外里山外72之1號停車場"
+   }
+  },
+  {
+   "id": "1743",
+   "rid": "1ecd6874",
+   "name": "金門-中山林停車場",
+   "city": "金門縣",
+   "district": "金寧鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金寧鄉中山林段185號(金門縣金寧鄉伯玉路二段460號停車場)"
+   },
+   "after": {
+    "address": "金門縣金寧鄉伯玉路二段460號停車場"
+   }
+  },
+  {
+   "id": "1744",
+   "rid": "144cc3db",
+   "name": "金門-馬山觀測站",
+   "city": "金門縣",
+   "district": "金沙鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金沙鎮官澳測段689-5號(金門縣金沙鎮光華路二段停車場)"
+   },
+   "after": {
+    "address": "金門縣金沙鎮光華路二段停車場"
+   }
+  },
+  {
+   "id": "1823",
+   "rid": "7138d100",
+   "name": "台中-千台機車行",
+   "city": "台中市",
+   "district": "豐原區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市豐原區永康路217號"
+   },
+   "after": {
+    "address": "台中市豐原區永康路108號"
+   }
+  },
+  {
+   "id": "1862",
+   "rid": "878e6c47",
+   "name": "新竹-7ELEVEN埔田店",
+   "city": "新竹縣",
+   "district": "新埔鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新埔鎮中正路7號1樓"
+   },
+   "after": {
+    "address": "新竹縣新埔鎮中正路7號"
+   }
+  },
+  {
+   "id": "1863",
+   "rid": "79311dfa",
+   "name": "台東-精誠輪業台東分公司",
+   "city": "台東縣",
+   "district": "台東市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台東縣台東市北平街6號1樓"
+   },
+   "after": {
+    "address": "台東縣台東市北平街6號"
+   }
+  },
+  {
+   "id": "1867",
+   "rid": "df8c0bdd",
+   "name": "台北-草山車業",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市北投區東陽街470號1樓"
+   },
+   "after": {
+    "address": "台北市北投區東陽街470號"
+   }
+  },
+  {
+   "id": "1888",
+   "rid": "d1a2f703",
+   "name": "台南-佶鼎車業",
+   "city": "台南市",
+   "district": "永康區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台南市永康區復國一路88號"
+   },
+   "after": {
+    "address": "台南市永康區復國路88號"
+   }
+  },
+  {
+   "id": "1915",
+   "rid": "6c9b28da",
+   "name": "苗栗-南勢山機車行",
+   "city": "苗栗縣",
+   "district": "後龍鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣後龍鎮南港里1鄰11之21號"
+   },
+   "after": {
+    "address": "苗栗縣後龍鎮南港里南勢山11-21號"
+   }
+  },
+  {
+   "id": "1922",
+   "rid": "0cf8a17c",
+   "name": "台北-雙欣車行",
+   "city": "台北市",
+   "district": "松山區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市松山區民生東路四段80巷13號1樓"
+   },
+   "after": {
+    "address": "台北市松山區民生東路四段80巷13號"
+   }
+  },
+  {
+   "id": "1944",
+   "rid": "be39e20d",
+   "name": "台東-中油金崙站加油站",
+   "city": "台東縣",
+   "district": "金峰鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台東縣金峰鄉寶茂路64號"
+   },
+   "after": {
+    "address": "台東縣金峰鄉賓茂路64號"
+   }
+  },
+  {
+   "id": "1973",
+   "rid": "ae07a458",
+   "name": "金門-烈嶼鄉公有加油站",
+   "city": "金門縣",
+   "district": "烈嶼鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣烈嶼鄉后井39號"
+   },
+   "after": {
+    "address": "金門縣烈嶼鄉上林村后井39號"
+   }
+  },
+  {
+   "id": "2013",
+   "rid": "a9beb27e",
+   "name": "台中-康達盛通台中大墩11店",
+   "city": "台中市",
+   "district": "南屯區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台中-便利購台中大墩11店"
+   },
+   "after": {
+    "name": "台中-康達盛通台中大墩11店"
+   }
+  },
+  {
+   "id": "2021",
+   "rid": "e3318fbc",
+   "name": "新竹-7ELEVEN宥昌店",
+   "city": "新竹縣",
+   "district": "芎林鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣芎林鄉文富街100號1樓"
+   },
+   "after": {
+    "address": "新竹縣芎林鄉文富街100號"
+   }
+  },
+  {
+   "id": "2026",
+   "rid": "2c581ca4",
+   "name": "新北-翔任機車行",
+   "city": "新北市",
+   "district": "淡水區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市淡水區北新路49號1樓"
+   },
+   "after": {
+    "address": "新北市淡水區北新路49號"
+   }
+  },
+  {
+   "id": "2028",
+   "rid": "0b955127",
+   "name": "苗栗-新英機車行",
+   "city": "苗栗縣",
+   "district": "苗栗市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣苗栗市南勢里3鄰南勢3之2號"
+   },
+   "after": {
+    "address": "苗栗縣苗栗市新英里19鄰南勢路3之2號"
+   }
+  },
+  {
+   "id": "2047",
+   "rid": "c2eead18",
+   "name": "台中-康達盛通台中進化店",
+   "city": "台中市",
+   "district": "北區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台中-便利購台中進化店"
+   },
+   "after": {
+    "name": "台中-康達盛通台中進化店"
+   }
+  },
+  {
+   "id": "2065",
+   "rid": "d52b4c25",
+   "name": "台中-康達盛通台中昌平店",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台中-便利購台中昌平店"
+   },
+   "after": {
+    "name": "台中-康達盛通台中昌平店"
+   }
+  },
+  {
+   "id": "2066",
+   "rid": "3a89ded7",
+   "name": "台中-康達盛通台中漢口店",
+   "city": "台中市",
+   "district": "北區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台中-便利購台中漢口店"
+   },
+   "after": {
+    "name": "台中-康達盛通台中漢口店"
+   }
+  },
+  {
+   "id": "2110",
+   "rid": "9b7099d0",
+   "name": "桃園-康達盛通桃園大興店",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "桃園-便利購桃園大興店"
+   },
+   "after": {
+    "name": "桃園-康達盛通桃園大興店"
+   }
+  },
+  {
+   "id": "2111",
+   "rid": "0fd53ad8",
+   "name": "桃園-康達盛通桃園龍安店",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "桃園-便利購桃園龍安店"
+   },
+   "after": {
+    "name": "桃園-康達盛通桃園龍安店"
+   }
+  },
+  {
+   "id": "2139",
+   "rid": "ad05e04f",
+   "name": "新北-順誠車業",
+   "city": "新北市",
+   "district": "貢寮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市貢寮區仁和路126號(媽祖廟對面)"
+   },
+   "after": {
+    "address": "新北市貢寮區仁和路126號"
+   }
+  },
+  {
+   "id": "2152",
+   "rid": "a92524e9",
+   "name": "新北-康達盛通蘆洲光華店",
+   "city": "新北市",
+   "district": "蘆洲區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購蘆洲光華店"
+   },
+   "after": {
+    "name": "新北-康達盛通蘆洲光華店"
+   }
+  },
+  {
+   "id": "2188",
+   "rid": "2725d2f1",
+   "name": "新北-康達盛通蘆洲三民店",
+   "city": "新北市",
+   "district": "蘆洲區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購蘆洲三民店"
+   },
+   "after": {
+    "name": "新北-康達盛通蘆洲三民店"
+   }
+  },
+  {
+   "id": "2211",
+   "rid": "108726b0",
+   "name": "新北-康達盛通淡水沙崙店",
+   "city": "新北市",
+   "district": "淡水區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購淡水沙崙店"
+   },
+   "after": {
+    "name": "新北-康達盛通淡水沙崙店"
+   }
+  },
+  {
+   "id": "2222",
+   "rid": "e92170ab",
+   "name": "新北-康達盛通林口文化三店",
+   "city": "新北市",
+   "district": "林口區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購林口文化三店"
+   },
+   "after": {
+    "name": "新北-康達盛通林口文化三店"
+   }
+  },
+  {
+   "id": "2225",
+   "rid": "20a8aae9",
+   "name": "桃園-康達盛通桃園大豐店",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "桃園-便利購桃園大豐店"
+   },
+   "after": {
+    "name": "桃園-康達盛通桃園大豐店"
+   }
+  },
+  {
+   "id": "2226",
+   "rid": "28628da3",
+   "name": "桃園-康達盛通平鎮文化店",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "桃園-便利購平鎮文化店"
+   },
+   "after": {
+    "name": "桃園-康達盛通平鎮文化店"
+   }
+  },
+  {
+   "id": "2240",
+   "rid": "23380d6f",
+   "name": "台北-康達盛通士林雨聲店",
+   "city": "台北市",
+   "district": "士林區",
+   "fields": [
+    "name",
+    "address"
+   ],
+   "before": {
+    "name": "台北-便利購士林雨聲店",
+    "address": "台北市士林區雨聲街52號、52-1號、52巷1號"
+   },
+   "after": {
+    "name": "台北-康達盛通士林雨聲店",
+    "address": "台北市士林區雨聲街52號"
+   }
+  },
+  {
+   "id": "2302",
+   "rid": "7d0b249f",
+   "name": "雲林-OK便利商店虎尾德興店",
+   "city": "雲林縣",
+   "district": "虎尾鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "雲林縣虎尾鎮德興路22之12號"
+   },
+   "after": {
+    "address": "雲林縣虎尾鎮德興里復興路15號"
+   }
+  },
+  {
+   "id": "2329",
+   "rid": "025bd0af",
+   "name": "基隆-OK便利商店基隆暖碇店",
+   "city": "基隆市",
+   "district": "暖暖區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市暖暖區源遠路190號1樓"
+   },
+   "after": {
+    "address": "基隆市暖暖區源遠路190號"
+   }
+  },
+  {
+   "id": "2330",
+   "rid": "b1738779",
+   "name": "基隆-OK便利商店基隆長安店",
+   "city": "基隆市",
+   "district": "七堵區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市七堵區明德三路45號1樓"
+   },
+   "after": {
+    "address": "基隆市七堵區明德三路45號"
+   }
+  },
+  {
+   "id": "2348",
+   "rid": "139d6537",
+   "name": "新北-康達盛通三重重陽店",
+   "city": "新北市",
+   "district": "三重區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購三重重陽店"
+   },
+   "after": {
+    "name": "新北-康達盛通三重重陽店"
+   }
+  },
+  {
+   "id": "2349",
+   "rid": "ee93b2a5",
+   "name": "新北-康達盛通三重仁愛二店",
+   "city": "新北市",
+   "district": "三重區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購三重仁愛二店"
+   },
+   "after": {
+    "name": "新北-康達盛通三重仁愛二店"
+   }
+  },
+  {
+   "id": "2358",
+   "rid": "5370f0a9",
+   "name": "高雄-清文車業行",
+   "city": "高雄市",
+   "district": "前鎮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "高雄市前鎮區管仲路47號1樓"
+   },
+   "after": {
+    "address": "高雄市前鎮區管仲路47號"
+   }
+  },
+  {
+   "id": "2360",
+   "rid": "700f202f",
+   "name": "新竹-OK便利商店新豐福興店",
+   "city": "新竹縣",
+   "district": "新豐鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新豐鄉福興村9鄰十一股93號1樓"
+   },
+   "after": {
+    "address": "新竹縣新豐鄉福興村93號"
+   }
+  },
+  {
+   "id": "2363",
+   "rid": "095b53ee",
+   "name": "新竹-OK便利商店新埔田新店",
+   "city": "新竹縣",
+   "district": "新埔鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新埔鎮田新路682號1樓(新埔水利大樓)"
+   },
+   "after": {
+    "address": "新竹縣新埔鎮田新路682號"
+   }
+  },
+  {
+   "id": "2376",
+   "rid": "ee8b9753",
+   "name": "苗栗-廣達機車行",
+   "city": "苗栗縣",
+   "district": "公館鄉",
+   "fields": [
+    "name",
+    "address"
+   ],
+   "before": {
+    "name": "苗栗-苗栗廣達機車行",
+    "address": "苗栗縣公館鄉鶴山村11鄰鶴山136-1號"
+   },
+   "after": {
+    "name": "苗栗-廣達機車行",
+    "address": "苗栗縣公館鄉鶴山村鶴山136-1號"
+   }
+  },
+  {
+   "id": "2379",
+   "rid": "8d9939b5",
+   "name": "新北-康達盛通新店安康二店",
+   "city": "新北市",
+   "district": "新店區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購新店安康二店"
+   },
+   "after": {
+    "name": "新北-康達盛通新店安康二店"
+   }
+  },
+  {
+   "id": "2382",
+   "rid": "e1104a2f",
+   "name": "新北-OK便利商店瑞芳建基店",
+   "city": "新北市",
+   "district": "瑞芳區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市瑞芳區建基路一段64號1樓"
+   },
+   "after": {
+    "address": "新北市瑞芳區建基路一段64號"
+   }
+  },
+  {
+   "id": "2383",
+   "rid": "e683a59b",
+   "name": "新北-OK便利商店瑞芳逢甲店",
+   "city": "新北市",
+   "district": "瑞芳區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市瑞芳區逢甲路198、200號1樓"
+   },
+   "after": {
+    "address": "新北市瑞芳區逢甲路198、200號"
+   }
+  },
+  {
+   "id": "2391",
+   "rid": "8e7b0a5c",
+   "name": "台北-7ELEVEN華興店",
+   "city": "台北市",
+   "district": "文山區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市文山區木柵路一段284號286號1樓"
+   },
+   "after": {
+    "address": "台北市文山區木柵路一段284號286號"
+   }
+  },
+  {
+   "id": "2406",
+   "rid": "01445ddc",
+   "name": "台北-OK便利商店內湖金龍店",
+   "city": "台北市",
+   "district": "內湖區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市內湖區內湖路三段60巷10弄1號1樓及地下一樓"
+   },
+   "after": {
+    "address": "台北市內湖區內湖路三段60巷10弄1號"
+   }
+  },
+  {
+   "id": "2412",
+   "rid": "2bbb4420",
+   "name": "金門-環保公園低碳教育館",
+   "city": "金門縣",
+   "district": "金湖鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金湖鎮金門縣金湖鎮尚義環保公園"
+   },
+   "after": {
+    "address": "金門縣金湖鎮正義里100號"
+   }
+  },
+  {
+   "id": "2415",
+   "rid": "b33fbc94",
+   "name": "台北-OK便利商店台北景聯店",
+   "city": "台北市",
+   "district": "信義區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市信義區吳興街110號1樓"
+   },
+   "after": {
+    "address": "台北市信義區吳興街110號"
+   }
+  },
+  {
+   "id": "2422",
+   "rid": "fa3cf31a",
+   "name": "桃園-OK便利商店觀音中興店",
+   "city": "桃園市",
+   "district": "觀音區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市觀音區中興路17、19-1號1樓"
+   },
+   "after": {
+    "address": "桃園市觀音區中興路17、19-1號"
+   }
+  },
+  {
+   "id": "2426",
+   "rid": "f2d91716",
+   "name": "新北-康達盛通淡水中山北店",
+   "city": "新北市",
+   "district": "淡水區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購淡水中山北店"
+   },
+   "after": {
+    "name": "新北-康達盛通淡水中山北店"
+   }
+  },
+  {
+   "id": "2445",
+   "rid": "741eb35b",
+   "name": "台北-康達盛通台北酒泉店",
+   "city": "台北市",
+   "district": "大同區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台北-便利購台北酒泉店"
+   },
+   "after": {
+    "name": "台北-康達盛通台北酒泉店"
+   }
+  },
+  {
+   "id": "2477",
+   "rid": "a55c7663",
+   "name": "新北-康達盛通新莊龍安店",
+   "city": "新北市",
+   "district": "新莊區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新北-便利購新莊龍安店"
+   },
+   "after": {
+    "name": "新北-康達盛通新莊龍安店"
+   }
+  },
+  {
+   "id": "2621",
+   "rid": "4daa0660",
+   "name": "桃園-OK便利商店觀音草漯店",
+   "city": "桃園市",
+   "district": "觀音區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市觀音區大觀路二段161號1樓"
+   },
+   "after": {
+    "address": "桃園市觀音區大觀路二段161號"
+   }
+  },
+  {
+   "id": "2631",
+   "rid": "b3ea0169",
+   "name": "桃園-OK便利商店桃園博愛店",
+   "city": "桃園市",
+   "district": "桃園區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市桃園區博愛路97號1樓"
+   },
+   "after": {
+    "address": "桃園市桃園區博愛路97號"
+   }
+  },
+  {
+   "id": "2639",
+   "rid": "80afe401",
+   "name": "桃園-OK便利商店員樹林店",
+   "city": "桃園市",
+   "district": "大溪區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市大溪區員林路二段409、411號1樓"
+   },
+   "after": {
+    "address": "桃園市大溪區員林路二段409、411號"
+   }
+  },
+  {
+   "id": "2641",
+   "rid": "2293a55c",
+   "name": "桃園-OK便利商店平鎮龍恩店",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市平鎮區游泳路120巷1弄2、4號1樓"
+   },
+   "after": {
+    "address": "桃園市平鎮區游泳路120巷1弄2、4號"
+   }
+  },
+  {
+   "id": "2645",
+   "rid": "f54b5e55",
+   "name": "桃園-OK便利商店平鎮華光店",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市平鎮區金陵路三段249號1樓"
+   },
+   "after": {
+    "address": "桃園市平鎮區金陵路三段249號"
+   }
+  },
+  {
+   "id": "2649",
+   "rid": "b59b1a71",
+   "name": "桃園-OK便利商店蘆竹海山店",
+   "city": "桃園市",
+   "district": "蘆竹區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市蘆竹區海山路一段232號1樓"
+   },
+   "after": {
+    "address": "桃園市蘆竹區海山路一段232號"
+   }
+  },
+  {
+   "id": "2651",
+   "rid": "35decf85",
+   "name": "桃園-OK便利商店中壢復華店",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市中壢區復華街50號1樓"
+   },
+   "after": {
+    "address": "桃園市中壢區復華街50號"
+   }
+  },
+  {
+   "id": "2653",
+   "rid": "3ad2b7a9",
+   "name": "桃園-OK便利商店中壢仁愛店",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市中壢區新中北路840、842號1樓"
+   },
+   "after": {
+    "address": "桃園市中壢區新中北路840、842號"
+   }
+  },
+  {
+   "id": "2661",
+   "rid": "27f89029",
+   "name": "桃園-OK便利商店中壢文化店",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市中壢區文化路336號1樓"
+   },
+   "after": {
+    "address": "桃園市中壢區文化路336號"
+   }
+  },
+  {
+   "id": "2662",
+   "rid": "f9856a8d",
+   "name": "台中-OK便利商店后里三豐店",
+   "city": "台中市",
+   "district": "后里區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市后里區公安路一段1號、3號1樓"
+   },
+   "after": {
+    "address": "台中市后里區公安路一段1號、3號"
+   }
+  },
+  {
+   "id": "2664",
+   "rid": "d917f88e",
+   "name": "台中-OK便利商店台中永成店",
+   "city": "台中市",
+   "district": "太平區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市太平區成功東路153號1+2樓"
+   },
+   "after": {
+    "address": "台中市太平區成功東路153號"
+   }
+  },
+  {
+   "id": "2669",
+   "rid": "ea437d0d",
+   "name": "台中-OK便利商店台中公館店",
+   "city": "台中市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市西區南屯路一段49-1號1樓"
+   },
+   "after": {
+    "address": "台中市西區南屯路一段49-1號"
+   }
+  },
+  {
+   "id": "2678",
+   "rid": "c41dad2b ",
+   "name": "台中-OK便利商店大甲和平店",
+   "city": "台中市",
+   "district": "大甲區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市大甲區和平路194號1樓"
+   },
+   "after": {
+    "address": "台中市大甲區和平路194號"
+   }
+  },
+  {
+   "id": "2684",
+   "rid": "49addd45",
+   "name": "屏東-OK便利商店屏東麟洛店",
+   "city": "屏東縣",
+   "district": "麟洛鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "屏東縣麟洛鄉民族路120號1+2樓"
+   },
+   "after": {
+    "address": "屏東縣麟洛鄉民族路120號"
+   }
+  },
+  {
+   "id": "2685",
+   "rid": "492a5b75",
+   "name": "屏東-OK便利商店屏東萬丹店",
+   "city": "屏東縣",
+   "district": "萬丹鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "屏東縣萬丹鄉萬丹路三段2、6號1樓"
+   },
+   "after": {
+    "address": "屏東縣萬丹鄉萬丹路三段2、6號"
+   }
+  },
+  {
+   "id": "2689",
+   "rid": "184e101d",
+   "name": "新北-OK便利商店三芝三民店",
+   "city": "新北市",
+   "district": "三芝區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市三芝區三民街27巷2、4號1樓"
+   },
+   "after": {
+    "address": "新北市三芝區三民街27巷2、4號"
+   }
+  },
+  {
+   "id": "2695",
+   "rid": "9d1084d2",
+   "name": "宜蘭-OK便利商店冬山香中店",
+   "city": "宜蘭縣",
+   "district": "冬山鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "宜蘭縣冬山鄉香中路279、281號1樓"
+   },
+   "after": {
+    "address": "宜蘭縣冬山鄉香中路279、281號"
+   }
+  },
+  {
+   "id": "2698",
+   "rid": "7e95ba69",
+   "name": "宜蘭-OK便利商店五結國民店",
+   "city": "宜蘭縣",
+   "district": "五結鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "宜蘭縣五結鄉五結中路二段361巷1號1樓"
+   },
+   "after": {
+    "address": "宜蘭縣五結鄉五結中路二段361巷1號"
+   }
+  },
+  {
+   "id": "2699",
+   "rid": "5f6e65d3",
+   "name": "宜蘭-OK便利商店五結協和店",
+   "city": "宜蘭縣",
+   "district": "五結鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "宜蘭縣五結鄉五結路二段317號1樓"
+   },
+   "after": {
+    "address": "宜蘭縣五結鄉五結路二段317號"
+   }
+  },
+  {
+   "id": "2716",
+   "rid": "713fad00",
+   "name": "台中-OK便利商店神岡中正店",
+   "city": "台中市",
+   "district": "神岡區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市神岡區神岡路122號1樓"
+   },
+   "after": {
+    "address": "台中市神岡區神岡路122號"
+   }
+  },
+  {
+   "id": "2748",
+   "rid": "65a49f76",
+   "name": "台北-振昇機車行",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台北市北投區中和街241號1樓"
+   },
+   "after": {
+    "address": "台北市北投區中和街241號"
+   }
+  },
+  {
+   "id": "2749",
+   "rid": "6dafe9f2",
+   "name": "高雄-旺倈車業",
+   "city": "高雄市",
+   "district": "小港區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "高雄市小港區平和路61號"
+   },
+   "after": {
+    "address": "高雄市小港區孔鳳路87號"
+   }
+  },
+  {
+   "id": "2768",
+   "rid": "ecfe18f8",
+   "name": "新竹-康達盛通竹北華興店",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新竹-便利購竹北華興店"
+   },
+   "after": {
+    "name": "新竹-康達盛通竹北華興店"
+   }
+  },
+  {
+   "id": "2771",
+   "rid": "5abf5c14",
+   "name": "高雄-OK便利商店大寮三隆店",
+   "city": "高雄市",
+   "district": "大寮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "高雄市大寮區三隆路486號1樓"
+   },
+   "after": {
+    "address": "高雄市大寮區三隆路486號"
+   }
+  },
+  {
+   "id": "2773",
+   "rid": "fa197fe8",
+   "name": "高雄-OK便利商店大寮仁德店",
+   "city": "高雄市",
+   "district": "大寮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "高雄市大寮區仁德路118號1樓"
+   },
+   "after": {
+    "address": "高雄市大寮區仁德路118號"
+   }
+  },
+  {
+   "id": "2779",
+   "rid": "b0102b71",
+   "name": "新竹-OK便利商店湖口德興店",
+   "city": "新竹縣",
+   "district": "湖口鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣湖口鄉八德路二段76號1樓"
+   },
+   "after": {
+    "address": "新竹縣湖口鄉八德路二段76號"
+   }
+  },
+  {
+   "id": "2785",
+   "rid": "c52a2c52",
+   "name": "新竹-OK便利商店新埔埔興店",
+   "city": "新竹縣",
+   "district": "新埔鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新埔鎮新關路五埔段78號1樓"
+   },
+   "after": {
+    "address": "新竹縣新埔鎮新關路五埔段78號"
+   }
+  },
+  {
+   "id": "2787",
+   "rid": "3e5cd599",
+   "name": "新竹-OK便利商店竹東學興店",
+   "city": "新竹縣",
+   "district": "竹東鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣竹東鎮學府路80+82號1樓"
+   },
+   "after": {
+    "address": "新竹縣竹東鎮學府路80號"
+   }
+  },
+  {
+   "id": "2789",
+   "rid": "c1e5dbe4",
+   "name": "新竹-OK便利商店新埔楊新店",
+   "city": "新竹縣",
+   "district": "新埔鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新埔鎮楊新路１段881號1樓"
+   },
+   "after": {
+    "address": "新竹縣新埔鎮楊新路一段881號"
+   }
+  },
+  {
+   "id": "2803",
+   "rid": "c1fc832a",
+   "name": "台中-OK便利商店太平興隆店",
+   "city": "台中市",
+   "district": "太平區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市太平區光興路1428、1430號一樓"
+   },
+   "after": {
+    "address": "台中市太平區光興路1428、1430號"
+   }
+  },
+  {
+   "id": "2809",
+   "rid": "4f61a801",
+   "name": "彰化-OK便利商店北斗舜耕店",
+   "city": "彰化縣",
+   "district": "北斗鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣北斗鎮中山路１段88.90號"
+   },
+   "after": {
+    "address": "彰化縣北斗鎮中山路一段88、90號"
+   }
+  },
+  {
+   "id": "2812",
+   "rid": "b66f0cdd",
+   "name": "台中-OK便利商店台中和祥店",
+   "city": "台中市",
+   "district": "北屯區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市北屯區東山路一段373之3、375號1樓"
+   },
+   "after": {
+    "address": "台中市北屯區東山路一段373之3、375號"
+   }
+  },
+  {
+   "id": "2832",
+   "rid": "0f4a55c2",
+   "name": "新竹-康達盛通竹北成功店",
+   "city": "新竹縣",
+   "district": "竹北市",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "新竹-便利購竹北成功店"
+   },
+   "after": {
+    "name": "新竹-康達盛通竹北成功店"
+   }
+  },
+  {
+   "id": "2857",
+   "rid": "6bb9f1a5",
+   "name": "苗栗-OK便利商店苗栗銅鑼店",
+   "city": "苗栗縣",
+   "district": "銅鑼鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣銅鑼鄉中正路207號1樓"
+   },
+   "after": {
+    "address": "苗栗縣銅鑼鄉中正路207號"
+   }
+  },
+  {
+   "id": "2940",
+   "rid": "97230f3a",
+   "name": "彰化-新財機車行",
+   "city": "彰化縣",
+   "district": "彰化市",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  },
+  {
+   "id": "3012",
+   "rid": "48e3bd2e",
+   "name": "嘉義-中油新港站加油站",
+   "city": "嘉義縣",
+   "district": "新港鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義縣新港鄉菜公村菜公厝64之1號"
+   },
+   "after": {
+    "address": "嘉義縣新港鄉菜公村菜公厝64-1號"
+   }
+  },
+  {
+   "id": "3014",
+   "rid": "714dc5f4",
+   "name": "嘉義-中油蒜頭站加油站",
+   "city": "嘉義縣",
+   "district": "六腳鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義縣六腳鄉蒜頭村1之15號"
+   },
+   "after": {
+    "address": "嘉義縣六腳鄉蒜頭村1-15號"
+   }
+  },
+  {
+   "id": "3017",
+   "rid": "d75f20db",
+   "name": "彰化-7ELEVEN員昌店",
+   "city": "彰化縣",
+   "district": "員林市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣員林市黎明里12鄰南昌路70號72號"
+   },
+   "after": {
+    "address": "彰化縣員林市黎明里南昌路72號"
+   }
+  },
+  {
+   "id": "3025",
+   "rid": "66e45148",
+   "name": "苗栗-OK便利商店頭份陽興店",
+   "city": "苗栗縣",
+   "district": "頭份市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣頭份市水源路324、326號1樓"
+   },
+   "after": {
+    "address": "苗栗縣頭份市水源路324、326號"
+   }
+  },
+  {
+   "id": "3026",
+   "rid": "91ae02f8",
+   "name": "苗栗-OK便利商店竹南大埔店",
+   "city": "苗栗縣",
+   "district": "竹南鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣竹南鎮大埔里15鄰仁愛路1221巷1"
+   },
+   "after": {
+    "address": "苗栗縣竹南鎮大埔里仁愛路1221巷1號"
+   }
+  },
+  {
+   "id": "3029",
+   "rid": "3e7b9fce",
+   "name": "彰化-7ELEVEN員埔店",
+   "city": "彰化縣",
+   "district": "埔心鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣埔心鄉員鹿路二段248.250號1樓"
+   },
+   "after": {
+    "address": "彰化縣埔心鄉員鹿路二段248、250號"
+   }
+  },
+  {
+   "id": "3030",
+   "rid": "69c2dcaf",
+   "name": "彰化-7ELEVEN埔成店",
+   "city": "彰化縣",
+   "district": "埔心鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣埔心鄉中正路一段137號139號1樓"
+   },
+   "after": {
+    "address": "彰化縣埔心鄉中正路一段137、139號"
+   }
+  },
+  {
+   "id": "3034",
+   "rid": "daf611db",
+   "name": "宜蘭-OK便利商店羅東集祥店",
+   "city": "宜蘭縣",
+   "district": "羅東鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "宜蘭縣羅東鎮天津路6號1樓"
+   },
+   "after": {
+    "address": "宜蘭縣羅東鎮天津路6號"
+   }
+  },
+  {
+   "id": "3066",
+   "rid": "2410a1bb",
+   "name": "宜蘭-中油南聖湖站加油站",
+   "city": "宜蘭縣",
+   "district": "蘇澳鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "宜蘭縣蘇澳鎮中山路二段399號"
+   },
+   "after": {
+    "address": "宜蘭縣蘇澳鎮新城里中山路二段399號"
+   }
+  },
+  {
+   "id": "3237",
+   "rid": "f568dbfe\t",
+   "name": "澎湖-西北行機車行",
+   "city": "澎湖縣",
+   "district": "馬公市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "澎湖縣馬公市馬公市新生路72號"
+   },
+   "after": {
+    "address": "澎湖縣馬公市新生路72號"
+   }
+  },
+  {
+   "id": "3771",
+   "rid": "dfaf981b",
+   "name": "嘉義-錦全機車行",
+   "city": "嘉義縣",
+   "district": "新港鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義縣新港鄉菜公村菜公厝67號附3"
+   },
+   "after": {
+    "address": "嘉義縣新港鄉菜公村菜公厝67號之3"
+   }
+  },
+  {
+   "id": "378",
+   "rid": "7b988c21",
+   "name": "台中-新豐輪車行",
+   "city": "台中市",
+   "district": "潭子區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市潭子區栗林里中山路三段239號"
+   },
+   "after": {
+    "address": "台中市潭子區中山路三段239號"
+   }
+  },
+  {
+   "id": "3806",
+   "rid": "9892e391",
+   "name": "屏東-億信車業行二站",
+   "city": "屏東縣",
+   "district": "萬丹鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "屏東縣萬丹鄉崙頂路678號"
+   },
+   "after": {
+    "address": "屏東縣萬丹鄉崙頂村崙頂路678號"
+   }
+  },
+  {
+   "id": "3848",
+   "rid": "b30454f8",
+   "name": "新竹-永豐機車行",
+   "city": "新竹縣",
+   "district": "新豐鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新竹縣新豐鄉埔和村埔頂477之3號"
+   },
+   "after": {
+    "address": "新竹縣新豐鄉埔和村477-3號"
+   }
+  },
+  {
+   "id": "3892",
+   "rid": "e6a55acf",
+   "name": "彰化-二林石屚磘巷站",
+   "city": "彰化縣",
+   "district": "二林鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣二林鎮原竹路附近"
+   },
+   "after": {
+    "address": "彰化縣二林鎮石屚磘巷29號"
+   }
+  },
+  {
+   "id": "394",
+   "rid": "7291e40c",
+   "name": "台南-亞洲機車行",
+   "city": "台南市",
+   "district": "東山區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台南市東山區東中里新東路一段23號"
+   },
+   "after": {
+    "address": "台南市東山區新東路一段23號"
+   }
+  },
+  {
+   "id": "3987",
+   "rid": "4aae68cc",
+   "name": "高雄-左營左營大路站",
+   "city": "高雄市",
+   "district": "左營區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "高雄市左營區高雄市左營區左營大路713之1號"
+   },
+   "after": {
+    "address": "高雄市左營區左營大路713之1號"
+   }
+  },
+  {
+   "id": "4045",
+   "rid": "4fe43539",
+   "name": "彰化-7ELEVEN員慶店",
+   "city": "彰化縣",
+   "district": "員林市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣員林市化縣員林市山腳路一段386號"
+   },
+   "after": {
+    "address": "彰化縣員林市山腳路一段386號"
+   }
+  },
+  {
+   "id": "4047",
+   "rid": "bf6bb8a0",
+   "name": "嘉義-康達盛通嘉義仁愛店",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "嘉義-便利購嘉義仁愛店"
+   },
+   "after": {
+    "name": "嘉義-康達盛通嘉義仁愛店"
+   }
+  },
+  {
+   "id": "4048",
+   "rid": "3edd7b8a",
+   "name": "嘉義-康達盛通嘉義德明店",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "嘉義-便利購嘉義德明店"
+   },
+   "after": {
+    "name": "嘉義-康達盛通嘉義德明店"
+   }
+  },
+  {
+   "id": "4088",
+   "rid": "1f6db128",
+   "name": "花蓮-全聯花蓮美崙店",
+   "city": "花蓮縣",
+   "district": "花蓮市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "花蓮縣花蓮市蓮縣花蓮市中美路113-6、113-7、"
+   },
+   "after": {
+    "address": "花蓮縣花蓮市中美路113-6、113-7、113-8號"
+   }
+  },
+  {
+   "id": "4151",
+   "rid": "c0de7ef0",
+   "name": "台東-東河包子站",
+   "city": "台東縣",
+   "district": "東河鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台東縣東河鄉東河鄉南東河422號"
+   },
+   "after": {
+    "address": "台東縣東河鄉南東河422號"
+   }
+  },
+  {
+   "id": "4152",
+   "rid": "2fbcd43b",
+   "name": "花蓮-中油瑞穗站加油站",
+   "city": "花蓮縣",
+   "district": "瑞穗鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "花蓮縣瑞穗鄉中正南路一段105號"
+   },
+   "after": {
+    "address": "花蓮縣瑞穗鄉瑞穗村中正南路一段105號"
+   }
+  },
+  {
+   "id": "4240",
+   "rid": "c8574e87",
+   "name": "彰化-7ELEVEN順風店",
+   "city": "彰化縣",
+   "district": "彰化市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣彰化市化縣彰化市中華西路212號"
+   },
+   "after": {
+    "address": "彰化縣彰化市中華西路212號"
+   }
+  },
+  {
+   "id": "4241",
+   "rid": "0d152f6b",
+   "name": "台南-康達盛通台南北安店",
+   "city": "台南市",
+   "district": "北區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台南-便利購台南北安店"
+   },
+   "after": {
+    "name": "台南-康達盛通台南北安店"
+   }
+  },
+  {
+   "id": "428",
+   "rid": "8cbc94ae",
+   "name": "彰化-鋐奇機車行",
+   "city": "彰化縣",
+   "district": "彰化市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣彰化市中正里中正路1段89號1樓"
+   },
+   "after": {
+    "address": "彰化縣彰化市中正路一段89號"
+   }
+  },
+  {
+   "id": "4309",
+   "rid": "dec632af",
+   "name": "彰化-7ELEVEN睿奇店",
+   "city": "彰化縣",
+   "district": "員林市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣員林市和平街18號1樓"
+   },
+   "after": {
+    "address": "彰化縣員林市和平街18號"
+   }
+  },
+  {
+   "id": "4328",
+   "rid": "7742888a",
+   "name": "彰化-7ELEVEN員大店",
+   "city": "彰化縣",
+   "district": "員林市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣員林市彰化縣員林市員大路一段374號"
+   },
+   "after": {
+    "address": "彰化縣員林市員大路一段374號"
+   }
+  },
+  {
+   "id": "4329",
+   "rid": "fbfc5e32",
+   "name": "彰化-7ELEVEN順澤店",
+   "city": "彰化縣",
+   "district": "埔鹽鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "彰化縣埔鹽鄉彰化縣埔鹽鄉彰水路一段301號305號"
+   },
+   "after": {
+    "address": "彰化縣埔鹽鄉彰水路一段301、305號"
+   }
+  },
+  {
+   "id": "4378",
+   "rid": "199ae8bd",
+   "name": "連江-福澳兵兵友禮",
+   "city": "連江縣",
+   "district": "南竿鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "連江縣南竿鄉129號"
+   },
+   "after": {
+    "address": "連江縣南竿鄉福澳村129號"
+   }
+  },
+  {
+   "id": "4379",
+   "rid": "4c1de157",
+   "name": "連江-介壽兵兵友禮",
+   "city": "連江縣",
+   "district": "南竿鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "連江縣南竿鄉87之1號"
+   },
+   "after": {
+    "address": "連江縣南竿鄉介壽村87之1號"
+   }
+  },
+  {
+   "id": "4389",
+   "rid": "2b0316b6",
+   "name": "嘉義-台塑新港廠區",
+   "city": "嘉義縣",
+   "district": "新港鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義縣新港鄉三間厝38號"
+   },
+   "after": {
+    "address": "嘉義縣新港鄉中洋工業區3號"
+   }
+  },
+  {
+   "id": "4403",
+   "rid": "aac6e83d",
+   "name": "基隆-正砂里里民中心",
+   "city": "基隆市",
+   "district": "中正區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市中正區中正區中正路211號"
+   },
+   "after": {
+    "address": "基隆市中正區中正路211號"
+   }
+  },
+  {
+   "id": "4447",
+   "rid": "b914728d",
+   "name": "基隆-龍都新城社區",
+   "city": "基隆市",
+   "district": "中正區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市中正區基隆市中正區新豐街345號"
+   },
+   "after": {
+    "address": "基隆市中正區新豐街345之1號"
+   }
+  },
+  {
+   "id": "4466",
+   "rid": "783e1695",
+   "name": "台中-康達盛通大雅民生二店",
+   "city": "台中市",
+   "district": "大雅區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台中-便利購大雅民生二店"
+   },
+   "after": {
+    "name": "台中-康達盛通大雅民生二店"
+   }
+  },
+  {
+   "id": "4467",
+   "rid": "1e63c034",
+   "name": "彰化-康達盛通員林博愛店",
+   "city": "彰化縣",
+   "district": "員林市",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "彰化-便利購員林博愛店"
+   },
+   "after": {
+    "name": "彰化-康達盛通員林博愛店"
+   }
+  },
+  {
+   "id": "4468",
+   "rid": "b5d133ad",
+   "name": "台南-康達盛通台南裕農店",
+   "city": "台南市",
+   "district": "東區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台南-便利購台南裕農店"
+   },
+   "after": {
+    "name": "台南-康達盛通台南裕農店"
+   }
+  },
+  {
+   "id": "4469",
+   "rid": "cbf997cc",
+   "name": "高雄-康達盛通楠梓益群店",
+   "city": "高雄市",
+   "district": "楠梓區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "高雄-便利購楠梓益群店"
+   },
+   "after": {
+    "name": "高雄-康達盛通楠梓益群店"
+   }
+  },
+  {
+   "id": "4471",
+   "rid": "fd565d36",
+   "name": "高雄-康達盛通左營崇德店",
+   "city": "高雄市",
+   "district": "左營區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "高雄-便利購左營崇德店"
+   },
+   "after": {
+    "name": "高雄-康達盛通左營崇德店"
+   }
+  },
+  {
+   "id": "4515",
+   "rid": "39ab0543",
+   "name": "台中-中油太平站加油站",
+   "city": "台中市",
+   "district": "太平區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市太平區太平里太平路651號"
+   },
+   "after": {
+    "address": "台中市太平區太平路651號"
+   }
+  },
+  {
+   "id": "4520",
+   "rid": "2edd1ae2",
+   "name": "台中-中油豐潭站加油站",
+   "city": "台中市",
+   "district": "潭子區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市潭子區栗林里中山路三段249號"
+   },
+   "after": {
+    "address": "台中市潭子區中山路三段249號"
+   }
+  },
+  {
+   "id": "4526",
+   "rid": "e1eaf04c",
+   "name": "桃園-中油平鎮站加油站",
+   "city": "桃園市",
+   "district": "平鎮區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市平鎮區義興里延平路二段152號"
+   },
+   "after": {
+    "address": "桃園市平鎮區延平路二段152號"
+   }
+  },
+  {
+   "id": "4543",
+   "rid": "5d84b40b",
+   "name": "雲林-中油永美站加油站",
+   "city": "雲林縣",
+   "district": "虎尾鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "雲林縣虎尾鎮延平里三鄰中南58號"
+   },
+   "after": {
+    "address": "雲林縣虎尾鎮延平里3鄰中南58號"
+   }
+  },
+  {
+   "id": "4554",
+   "rid": "3d089a34",
+   "name": "嘉義-西區停9停車場",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區友忠路與北港路口(嘉義市東區竹圍子段244-6地號"
+   },
+   "after": {
+    "address": "嘉義市西區友忠路與北港路口"
+   }
+  },
+  {
+   "id": "4555",
+   "rid": "edeca168",
+   "name": "嘉義-北社尾公園",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區北社尾路(嘉義市西區北園段1553、1554地號)"
+   },
+   "after": {
+    "address": "嘉義市西區北社尾路"
+   }
+  },
+  {
+   "id": "4556",
+   "rid": "0840c3c7",
+   "name": "嘉義-長榮公園",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區長榮街(嘉義市西區雲檜段1186地號)"
+   },
+   "after": {
+    "address": "嘉義市西區長榮街(嘉義市東區安和街205號對面)"
+   }
+  },
+  {
+   "id": "4557",
+   "rid": "80309531",
+   "name": "嘉義-綠映水漾公園",
+   "city": "嘉義市",
+   "district": "東區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市東區彌陀路與學府路口之八掌溪人行景觀橋旁(嘉義市東區下"
+   },
+   "after": {
+    "address": "嘉義市東區彌陀路與學府路口之八掌溪人行景觀橋旁"
+   }
+  },
+  {
+   "id": "4564",
+   "rid": "c0060c69",
+   "name": "苗栗-中油奕榮頭份站加油站",
+   "city": "苗栗縣",
+   "district": "頭份市",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "苗栗縣頭份市蘆竹里永貞路一段22號"
+   },
+   "after": {
+    "address": "苗栗縣頭份市永貞路一段22號"
+   }
+  },
+  {
+   "id": "4592",
+   "rid": "rjgbkadu",
+   "name": "嘉義-北香湖公園",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區文化路600號(嘉義市西區埤仔頭段202-5地號)"
+   },
+   "after": {
+    "address": "嘉義市西區文化路600號"
+   }
+  },
+  {
+   "id": "4593",
+   "rid": "tf8zxsdd",
+   "name": "嘉義-中央廣場",
+   "city": "嘉義市",
+   "district": "東區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市東區文化路與民權路口(嘉義市東區北門六小段25地號)"
+   },
+   "after": {
+    "address": "嘉義市東區文化路與民權路口"
+   }
+  },
+  {
+   "id": "4597",
+   "rid": "1e871494",
+   "name": "嘉義-興嘉公園",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區興業西路422號(嘉義市西區車店段336-2地號)"
+   },
+   "after": {
+    "address": "嘉義市西區興業西路422號"
+   }
+  },
+  {
+   "id": "4598",
+   "rid": "0fc55b0b",
+   "name": "嘉義-二二八國家紀念公園",
+   "city": "嘉義市",
+   "district": "西區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "嘉義市西區大富路(嘉義市西區劉厝段玉山小段112地號)"
+   },
+   "after": {
+    "address": "嘉義市西區大富路250號對面"
+   }
+  },
+  {
+   "id": "4602",
+   "rid": "0ccebb3b",
+   "name": "台南-銘揚車業行",
+   "city": "台南市",
+   "district": "永康區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台南市永康區中山路262.264號"
+   },
+   "after": {
+    "address": "台南市永康區中山路262號"
+   }
+  },
+  {
+   "id": "4607",
+   "rid": "5ab7ffa0",
+   "name": "基隆-加雄車業",
+   "city": "基隆市",
+   "district": "信義區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市信義區培德路2巷2號"
+   },
+   "after": {
+    "address": "基隆市信義區培德路2巷5號"
+   }
+  },
+  {
+   "id": "4608",
+   "rid": "74fbd4d8",
+   "name": "基隆-六堵工業區管理中心",
+   "city": "基隆市",
+   "district": "七堵區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "基隆市七堵區建北路1之2號"
+   },
+   "after": {
+    "address": "基隆市七堵區工建北路1之2號"
+   }
+  },
+  {
+   "id": "4612",
+   "rid": "8b9a7a88",
+   "name": "台北-威摩復北換電站",
+   "city": "台北市",
+   "district": "中山區",
+   "fields": [
+    "name"
+   ],
+   "before": {
+    "name": "台北-威摩復北充電站    "
+   },
+   "after": {
+    "name": "台北-威摩復北換電站"
+   }
+  },
+  {
+   "id": "4622",
+   "rid": "es-ionex-1783037958335-oiyy7hrmqp",
+   "name": "新北-三重三張公園",
+   "city": "新北市",
+   "district": "三重區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市三重區三張街"
+   },
+   "after": {
+    "address": "新北市三重區信安里大智街135號對面"
+   }
+  },
+  {
+   "id": "4623",
+   "rid": "es-ionex-1782979813499-2ztshymmzs",
+   "name": "新北-板橋區懷仁街站",
+   "city": "新北市",
+   "district": "板橋區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市板橋區光仁段852地號"
+   },
+   "after": {
+    "address": "新北市板橋區廣新里懷仁街11號旁"
+   }
+  },
+  {
+   "id": "4627",
+   "rid": "es-ionex-1766391377599-jqpv5t2iqy",
+   "name": "新北-水碓派出所旁綠地",
+   "city": "新北市",
+   "district": "淡水區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市淡水區中山北路一段166號附近"
+   },
+   "after": {
+    "address": "新北市淡水區中山北路一段166號旁"
+   }
+  },
+  {
+   "id": "522",
+   "rid": "96f1fceb",
+   "name": "新北-民見機車行",
+   "city": "新北市",
+   "district": "蘆洲區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "新北市蘆洲區中山一路267號"
+   },
+   "after": {
+    "address": "新北市蘆洲區中山一路​267號"
+   }
+  },
+  {
+   "id": "535",
+   "rid": "6fa99410",
+   "name": "台中-趣洗車西屯店",
+   "city": "台中市",
+   "district": "西屯區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市西屯區石平街(石平街11號)與號順平二街交乂路口"
+   },
+   "after": {
+    "address": "台中市西屯區石平街11號與號順平二街交叉路口"
+   }
+  },
+  {
+   "id": "545",
+   "rid": "825b3159",
+   "name": "桃園-猴猴停八德停車場",
+   "city": "桃園市",
+   "district": "八德區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市八德區豐田段1456地號(桃園市八德區豐田一路132號旁)"
+   },
+   "after": {
+    "address": "桃園市八德區豐田一路132號旁"
+   }
+  },
+  {
+   "id": "633",
+   "rid": "42e83186",
+   "name": "台中-日成機車行",
+   "city": "台中市",
+   "district": "南區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "台中市南區正義街35號"
+   },
+   "after": {
+    "address": "台中市南區建成路1193號"
+   }
+  },
+  {
+   "id": "655",
+   "rid": "dcd5c922",
+   "name": "桃園-大溪中華路站",
+   "city": "桃園市",
+   "district": "大溪區",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "桃園市大溪區田心仔段1153-1地號(桃園市大溪區中華路220號旁停車場)"
+   },
+   "after": {
+    "address": "桃園市大溪區中華路220號旁停車場"
+   }
+  },
+  {
+   "id": "721",
+   "rid": "340fa3be",
+   "name": "南投-大同街站",
+   "city": "南投縣",
+   "district": "埔里鎮",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "南投縣埔里鎮忠良段485地號(南投縣埔里鎮大同街29號旁)"
+   },
+   "after": {
+    "address": "南投縣埔里鎮大同街29號旁"
+   }
+  },
+  {
+   "id": "725",
+   "rid": "0a7a5dfe",
+   "name": "金門-自然中心停車場",
+   "city": "金門縣",
+   "district": "金寧鄉",
+   "fields": [
+    "address"
+   ],
+   "before": {
+    "address": "金門縣金寧鄉赤岑段1地號(金門縣金寧鄉古寧村南山1之6號停車場)"
+   },
+   "after": {
+    "address": "金門縣金寧鄉古寧村南山1之6號停車場"
+   }
+  }
+ ]
+}
