@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-22",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "170",
+   "rid": "bb9f095d",
+   "name": "新北-建順機車行",
+   "city": "新北市",
+   "district": "三重區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}

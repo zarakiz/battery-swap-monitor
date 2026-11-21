@@ -1,0 +1,175 @@
+{
+ "date": "2026-11-22",
+ "network": "gogoro",
+ "total": 4044,
+ "active": 3999,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 6,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "08cfd15d-b4ab-4019-b691-cc63d872f8f4",
+   "rid": "TW1105802B",
+   "name": "臺北市象山公園站B",
+   "city": "台北市",
+   "district": "信義區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-21T16:00:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "70339927-f0d8-4c95-8939-52c8515b423b",
+   "rid": "TW1128701A",
+   "name": "Gogoro 北投文林北門市站A",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 9
+   },
+   "maint": {
+    "reason": 9,
+    "start": "2026-11-21T06:30:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "82956e19-612b-4bae-9cd8-74ca5caa1c4f",
+   "rid": "TW3037302A",
+   "name": "HiLife 竹縣東光店站",
+   "city": "新竹縣",
+   "district": "湖口鄉",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-21T13:30:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "a13b4c50-09f1-4dc3-82f5-d0d3d2bf235f",
+   "rid": "TW1128701B",
+   "name": "Gogoro 北投文林北門市站B",
+   "city": "台北市",
+   "district": "北投區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 9
+   },
+   "maint": {
+    "reason": 9,
+    "start": "2026-11-21T06:30:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "b31c7704-20d9-4949-a981-552243d628e7",
+   "rid": "TW2415002B",
+   "name": "新北市三重龍門公園站B",
+   "city": "新北市",
+   "district": "三重區",
+   "fields": [
+    "maint_start"
+   ],
+   "before": {
+    "maint_start": "2026-11-20T17:00:00Z"
+   },
+   "after": {
+    "maint_start": "2026-11-21T13:00:00Z"
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-21T13:00:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  },
+  {
+   "id": "cdf34387-17ed-4b2e-b274-5a8f4512ee51",
+   "rid": "TW1164201B",
+   "name": "臺北市考選部國家考場站B",
+   "city": "台北市",
+   "district": "文山區",
+   "fields": [
+    "state",
+    "state_raw",
+    "reason"
+   ],
+   "before": {
+    "state": 1,
+    "state_raw": 1,
+    "reason": null
+   },
+   "after": {
+    "state": 0,
+    "state_raw": 98,
+    "reason": 7
+   },
+   "maint": {
+    "reason": 7,
+    "start": "2026-11-21T01:00:00Z",
+    "end": "2026-11-23T10:00:00Z",
+    "state_raw": 98
+   }
+  }
+ ]
+}
