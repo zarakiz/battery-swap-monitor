@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-23",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "62",
+   "rid": "39dfcd7a",
+   "name": "高雄-鋒成機車材料行",
+   "city": "高雄市",
+   "district": "楠梓區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  }
+ ]
+}
