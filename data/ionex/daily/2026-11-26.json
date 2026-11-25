@@ -1,0 +1,32 @@
+{
+ "date": "2026-11-26",
+ "network": "ionex",
+ "total": 2316,
+ "active": 2304,
+ "added_count": 0,
+ "removed_count": 0,
+ "changed_count": 1,
+ "added": [],
+ "removed": [],
+ "changed": [
+  {
+   "id": "4474",
+   "rid": "6513b094",
+   "name": "高雄-小港鳳源里站",
+   "city": "高雄市",
+   "district": "小港區",
+   "fields": [
+    "lat",
+    "lng"
+   ],
+   "before": {
+    "lat": 22.52755,
+    "lng": 120.34287
+   },
+   "after": {
+    "lat": 22.52733,
+    "lng": 120.34224
+   }
+  }
+ ]
+}
