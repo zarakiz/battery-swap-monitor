@@ -358,6 +358,13 @@ select:focus{box-shadow:0 0 0 3px var(--lime-dim)}
 [data-theme="dark"] .logo-gogoro{filter:invert(1)}
 .mstats{display:flex;gap:clamp(20px,4.5vw,52px);margin-left:auto}
 .mstat{display:flex;flex-direction:column;min-width:0}
+/* 桌機版：四欄固定最小寬，兩品牌橫條等寬，總站數左緣對齊（否則各欄寬度隨數字變，兩列左緣會差十幾 px）。手機版是等分 grid，不用這組。 */
+@media (min-width:901px){
+  .mstat:nth-child(1){min-width:7em}
+  .mstat:nth-child(2){min-width:3em}
+  .mstat:nth-child(3){min-width:3em}
+  .mstat:nth-child(4){min-width:4em}
+}
 .mlabel{font-size:12px;color:var(--muted);letter-spacing:.14em;white-space:nowrap}
 .mnum{font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);font-weight:900;line-height:1.25;font-variant-numeric:tabular-nums;white-space:nowrap}
 .mnum.up{color:var(--up)} .mnum.down{color:var(--down)}
