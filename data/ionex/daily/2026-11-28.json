@@ -1,0 +1,320 @@
+{
+ "date": "2026-11-28",
+ "network": "ionex",
+ "total": 2333,
+ "active": 2320,
+ "added_count": 17,
+ "removed_count": 0,
+ "changed_count": 3,
+ "added": [
+  {
+   "id": "117",
+   "rid": "1354eae5",
+   "name": "台北-康達盛通三民店(2F)",
+   "address": "台北市松山區三民路160號",
+   "city": "台北市",
+   "district": "松山區",
+   "zip": "105",
+   "lat": 25.06156,
+   "lng": 121.56437,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "1299",
+   "rid": "15016ad3",
+   "name": "花蓮-精誠輪業",
+   "address": "花蓮縣花蓮市節約街9號",
+   "city": "花蓮縣",
+   "district": "花蓮市",
+   "zip": "970",
+   "lat": 23.97807,
+   "lng": 121.60652,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "130",
+   "rid": "2be24619",
+   "name": "台北-康達盛通內湖店",
+   "address": "台北市內湖區民善街88號",
+   "city": "台北市",
+   "district": "內湖區",
+   "zip": "114",
+   "lat": 25.06065,
+   "lng": 121.57516,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "3139",
+   "rid": "8d829841",
+   "name": "高雄-三民覺民路站",
+   "address": "高雄市三民區覺民路288巷25號",
+   "city": "高雄市",
+   "district": "三民區",
+   "zip": "807",
+   "lat": 22.6414,
+   "lng": 120.33672,
+   "state": 0,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4350",
+   "rid": "6ef25a47",
+   "name": "台北-盛鑫電能有限公司",
+   "address": "台北市士林區永平街35號",
+   "city": "台北市",
+   "district": "士林區",
+   "zip": "111",
+   "lat": 25.09064,
+   "lng": 121.50507,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4369",
+   "rid": "1859d2f9",
+   "name": "台北-安忻車業",
+   "address": "台北市南港區南港路三段314巷16號",
+   "city": "台北市",
+   "district": "南港區",
+   "zip": "115",
+   "lat": 25.05208,
+   "lng": 121.58133,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4618",
+   "rid": "es-ionex-1785206742719-5byr1od3dw",
+   "name": "彰化-二林三和街站",
+   "address": "彰化縣二林鎮北平里三和街124號",
+   "city": "彰化縣",
+   "district": "二林鎮",
+   "zip": "526",
+   "lat": 23.90239,
+   "lng": 120.36769,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4619",
+   "rid": "es-ionex-1768448418575-fdd9uxccry",
+   "name": "台北-信興車業",
+   "address": "台北市士林區福港街214號",
+   "city": "台北市",
+   "district": "士林區",
+   "zip": "111",
+   "lat": 25.08568,
+   "lng": 121.51768,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4631",
+   "rid": "es-ionex-1794205734532-bfwsgbpuzl",
+   "name": "台北-康達盛通重慶店(2F)",
+   "address": "台北市大同區重慶北路二段171號",
+   "city": "台北市",
+   "district": "大同區",
+   "zip": "103",
+   "lat": 25.05936,
+   "lng": 121.51457,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4640",
+   "rid": "es-6c4435c5-be1f-4e91-bd71-b450691ec969",
+   "name": "台中-功利輪業商行",
+   "address": "台中市南區南區國光路31號",
+   "city": "台中市",
+   "district": "南區",
+   "zip": "402",
+   "lat": 24.13136,
+   "lng": 120.6769,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4641",
+   "rid": "es-325d0870-1a18-45d1-82de-5c6df6994861",
+   "name": "嘉義-康達盛通超市太保祥和店",
+   "address": "嘉義縣太保市太保二路111號",
+   "city": "嘉義縣",
+   "district": "太保市",
+   "zip": "612",
+   "lat": 23.45643,
+   "lng": 120.29522,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4642",
+   "rid": "es-ionex-1777881608860-pjwh1pohkz",
+   "name": "屏東-琉球擎翔租車",
+   "address": "屏東縣琉球鄉白沙段401地號等",
+   "city": "屏東縣",
+   "district": "琉球鄉",
+   "zip": "929",
+   "lat": 22.34969,
+   "lng": 120.38353,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4643",
+   "rid": "es-4a25a9f5-6228-41e4-ae4f-cd17d9ba53a8",
+   "name": "新北-雙勝車業三站",
+   "address": "新北市板橋區雙十路二段67號",
+   "city": "新北市",
+   "district": "板橋區",
+   "zip": "220",
+   "lat": 25.02687,
+   "lng": 121.47627,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4644",
+   "rid": "es-e6508450-25f4-46e1-9f55-1f56e026055e",
+   "name": "台中-富源行",
+   "address": "台中市中區臺灣大道一段398號",
+   "city": "台中市",
+   "district": "中區",
+   "zip": "400",
+   "lat": 24.14295,
+   "lng": 120.67897,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4645",
+   "rid": "es-923c65b2-3389-40a6-bb49-1854e4f7e174",
+   "name": "花蓮-康達盛通超市花蓮林森店",
+   "address": "花蓮縣花蓮市林森路349號",
+   "city": "花蓮縣",
+   "district": "花蓮市",
+   "zip": "970",
+   "lat": 23.98099,
+   "lng": 121.60478,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4646",
+   "rid": "es-6e470388-b38d-426e-930d-a208bf93a762",
+   "name": "台中-全營機車行",
+   "address": "台中市東勢區東坑路353號",
+   "city": "台中市",
+   "district": "東勢區",
+   "zip": "423",
+   "lat": 24.24485,
+   "lng": 120.83984,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  },
+  {
+   "id": "4647",
+   "rid": "es-ionex-1764730655412-oxswqeguxn",
+   "name": "台北-康達盛通桂林店",
+   "address": "台北市萬華區桂林路1號",
+   "city": "台北市",
+   "district": "萬華區",
+   "zip": "108",
+   "lat": 25.03772,
+   "lng": 121.50525,
+   "state": 1,
+   "h24": true,
+   "hours": "24小時營業",
+   "istatus": "AUTO"
+  }
+ ],
+ "removed": [],
+ "changed": [
+  {
+   "id": "1139",
+   "rid": "1e6d8620",
+   "name": "台北-中山松江路站",
+   "city": "台北市",
+   "district": "中山區",
+   "fields": [
+    "istatus"
+   ],
+   "before": {
+    "istatus": "AUTO"
+   },
+   "after": {
+    "istatus": null
+   }
+  },
+  {
+   "id": "1734",
+   "rid": "41e69112",
+   "name": "台北-車麗屋松江店",
+   "city": "台北市",
+   "district": "中山區",
+   "fields": [
+    "lat",
+    "lng"
+   ],
+   "before": {
+    "lat": 25.06721,
+    "lng": 121.53304
+   },
+   "after": {
+    "lat": 25.0673,
+    "lng": 121.53324
+   }
+  },
+  {
+   "id": "4091",
+   "rid": "04673828",
+   "name": "桃園-躍紫綠能",
+   "city": "桃園市",
+   "district": "中壢區",
+   "fields": [
+    "lat"
+   ],
+   "before": {
+    "lat": 25.00554
+   },
+   "after": {
+    "lat": 25.00538
+   }
+  }
+ ]
+}
